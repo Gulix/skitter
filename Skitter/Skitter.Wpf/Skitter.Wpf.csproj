@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{70BAF9A0-A5B2-486D-9EBC-8FC12AD12830}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Skitter.Wpf</RootNamespace>
+    <AssemblyName>Skitter.Wpf</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirstFloor.ModernUI">
+      <HintPath>..\..\..\Librairies\ModernUI\ModernUI.1.0.5\net40\FirstFloor.ModernUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Shell">
+      <HintPath>..\..\..\Librairies\ModernUI\ModernUI.1.0.5\net40\Microsoft.Windows.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\DetailEquipe.xaml.cs">
+      <DependentUpon>DetailEquipe.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\DetailJoueur.xaml.cs">
+      <DependentUpon>DetailJoueur.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\PageHymnes.xaml.cs">
+      <DependentUpon>PageHymnes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\PageListeEquipes.xaml.cs">
+      <DependentUpon>PageListeEquipes.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\BoutonIntervertirHautBas.xaml.cs">
+      <DependentUpon>BoutonIntervertirHautBas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BoutonLireHymne.xaml.cs">
+      <DependentUpon>BoutonLireHymne.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClickSelectTextBox.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\NullToVisibilityConverter.cs" />
+    <Compile Include="Deroulement\PageRonde.cs" />
+    <Compile Include="Deroulement\PageRonde1.xaml.cs">
+      <DependentUpon>PageRonde1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Deroulement\PageRonde2.xaml.cs">
+      <DependentUpon>PageRonde2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Deroulement\PageRonde3.xaml.cs">
+      <DependentUpon>PageRonde3.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Deroulement\PageRonde4.xaml.cs">
+      <DependentUpon>PageRonde4.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Deroulement\PageRonde5.xaml.cs">
+      <DependentUpon>PageRonde5.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Deroulement\UCPreparationCoach.xaml.cs">
+      <DependentUpon>UCPreparationCoach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Deroulement\UCPreparationEquipe.xaml.cs">
+      <DependentUpon>UCPreparationEquipe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Deroulement\UCPreparationRencontre.xaml.cs">
+      <DependentUpon>UCPreparationRencontre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Deroulement\UCSaisieDuel.xaml.cs">
+      <DependentUpon>UCSaisieDuel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Deroulement\UCSaisieRencontre.xaml.cs">
+      <DependentUpon>UCSaisieRencontre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\WPFAssemblyInfo.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resultats\PageResultatsRonde5.xaml.cs">
+      <DependentUpon>PageResultatsRonde5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resultats\PageResultatsRonde4.xaml.cs">
+      <DependentUpon>PageResultatsRonde4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resultats\PageResultatsRonde3.xaml.cs">
+      <DependentUpon>PageResultatsRonde3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resultats\PageResultatsRonde2.xaml.cs">
+      <DependentUpon>PageResultatsRonde2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resultats\PageResultatsRonde.cs" />
+    <Compile Include="Resultats\PageResultatsRonde1.xaml.cs">
+      <DependentUpon>PageResultatsRonde1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Systeme\PageApropos.xaml.cs">
+      <DependentUpon>PageApropos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Systeme\PageInitialisation.xaml.cs">
+      <DependentUpon>PageInitialisation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Systeme\PageSauvegarde.xaml.cs">
+      <DependentUpon>PageSauvegarde.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Configuration\DetailEquipe.xaml" />
+    <Page Include="Configuration\DetailJoueur.xaml" />
+    <Page Include="Configuration\PageHymnes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Configuration\PageListeEquipes.xaml" />
+    <Page Include="Controls\BoutonIntervertirHautBas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\BoutonLireHymne.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Deroulement\PageRonde1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Deroulement\PageRonde2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Deroulement\PageRonde3.xaml" />
+    <Page Include="Deroulement\PageRonde4.xaml" />
+    <Page Include="Deroulement\PageRonde5.xaml" />
+    <Page Include="Deroulement\UCPreparationCoach.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Deroulement\UCPreparationEquipe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Deroulement\UCPreparationRencontre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Deroulement\UCSaisieDuel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Deroulement\UCSaisieRencontre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml" />
+    <Page Include="Resultats\PageResultatsRonde5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resultats\PageResultatsRonde4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resultats\PageResultatsRonde3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resultats\PageResultatsRonde2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resultats\PageResultatsRonde1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Systeme\PageApropos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Systeme\PageInitialisation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Systeme\PageSauvegarde.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="intervertir_haut_bas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Skitter.ViewModel\Skitter.ViewModel.csproj">
+      <Project>{4CD23052-89D7-4D10-8D61-FB416C41CA49}</Project>
+      <Name>Skitter.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="template_rencontres.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tournoi xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Equipes>
+    <Equipe>
+      <IdEquipe>2</IdEquipe>
+      <NomEquipe>**Les deux papas et leur ballerine</NomEquipe>
+      <Capitaine>
+        <IdCoach>4</IdCoach>
+        <NomCoach>Colonel Castor</NomCoach>
+        <NumeroNAF>8731</NumeroNAF>
+        <PseudoNAF>Royal_castor</PseudoNAF>
+        <IdRoster>10</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>5</IdCoach>
+        <NomCoach>Tosty</NomCoach>
+        <NumeroNAF>18838</NumeroNAF>
+        <PseudoNAF>tosty</PseudoNAF>
+        <IdRoster>6</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>6</IdCoach>
+        <NomCoach>Belette</NomCoach>
+        <NumeroNAF>14633</NumeroNAF>
+        <PseudoNAF>belette</PseudoNAF>
+        <IdRoster>24</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Dark Vador Theme.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>3</IdEquipe>
+      <NomEquipe>**Les 3 mousquetaires</NomEquipe>
+      <Capitaine>
+        <IdCoach>7</IdCoach>
+        <NomCoach>Stragen</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>5</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>8</IdCoach>
+        <NomCoach>Popov</NomCoach>
+        <NumeroNAF>16211</NumeroNAF>
+        <IdRoster>6</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>9</IdCoach>
+        <NomCoach>Lionnoir</NomCoach>
+        <NumeroNAF>16209</NumeroNAF>
+        <IdRoster>19</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Albert le 5e mousquetaire.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>4</IdEquipe>
+      <NomEquipe>**Mor(dor)bihannaise 1</NomEquipe>
+      <Capitaine>
+        <IdCoach>10</IdCoach>
+        <NomCoach>"Go the hakes !!"</NomCoach>
+        <NumeroNAF>18444</NumeroNAF>
+        <PseudoNAF>Go_the_Hakes</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>11</IdCoach>
+        <NomCoach>Fantomas</NomCoach>
+        <NumeroNAF>18445</NumeroNAF>
+        <PseudoNAF>Fantomas</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>12</IdCoach>
+        <NomCoach>Merlu</NomCoach>
+        <NumeroNAF>18446</NumeroNAF>
+        <PseudoNAF>Merlu</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+      <HymneEquipe>La biguine au biniou.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>5</IdEquipe>
+      <NomEquipe>**Mordorbignan Brutal Bloodbowl Team</NomEquipe>
+      <Capitaine>
+        <IdCoach>13</IdCoach>
+        <NomCoach>Boggo le gobbo</NomCoach>
+        <NumeroNAF>19185</NumeroNAF>
+        <PseudoNAF>Boggolegobbo</PseudoNAF>
+        <IdRoster>8</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>14</IdCoach>
+        <NomCoach>Gailn Kharghelen</NomCoach>
+        <NumeroNAF>19341</NumeroNAF>
+        <PseudoNAF>gailn_kharghelen</PseudoNAF>
+        <IdRoster>10</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>15</IdCoach>
+        <NomCoach>Lothurn</NomCoach>
+        <NumeroNAF>20595</NumeroNAF>
+        <PseudoNAF>Lothurn</PseudoNAF>
+        <IdRoster>15</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Renaud - 3 matelots (live).mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>6</IdEquipe>
+      <NomEquipe>**Jéjélo</NomEquipe>
+      <Capitaine>
+        <IdCoach>16</IdCoach>
+        <NomCoach>Petitepoire</NomCoach>
+        <NumeroNAF>14086</NumeroNAF>
+        <PseudoNAF />
+        <IdRoster>2</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>17</IdCoach>
+        <NomCoach>Sirjam</NomCoach>
+        <NumeroNAF>19457</NumeroNAF>
+        <IdRoster>8</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>18</IdCoach>
+        <NomCoach>Rhum et eau</NomCoach>
+        <NumeroNAF>17703</NumeroNAF>
+        <IdRoster>15</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Je Collectionne Des Canards (Vivants).mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>7</IdEquipe>
+      <NomEquipe>**Massacreurs turons</NomEquipe>
+      <Capitaine>
+        <IdCoach>19</IdCoach>
+        <NomCoach>Bourpif</NomCoach>
+        <NumeroNAF>19071</NumeroNAF>
+        <PseudoNAF>bourpif</PseudoNAF>
+        <IdRoster>3</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>20</IdCoach>
+        <NomCoach>Olivierdulac</NomCoach>
+        <NumeroNAF>18901</NumeroNAF>
+        <PseudoNAF>Olivierdulac</PseudoNAF>
+        <IdRoster>5</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>21</IdCoach>
+        <NomCoach>Samdulac</NomCoach>
+        <NumeroNAF>19452</NumeroNAF>
+        <PseudoNAF>Samdulac</PseudoNAF>
+        <IdRoster>15</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Macarena.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>8</IdEquipe>
+      <NomEquipe>**Les Dalton -1</NomEquipe>
+      <Capitaine>
+        <IdCoach>22</IdCoach>
+        <NomCoach>Chicagork</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>5</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>23</IdCoach>
+        <NomCoach>Rom</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>24</IdCoach>
+        <NomCoach>Mezcal</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Les visiteurs et on lui pelera le jonc.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>9</IdEquipe>
+      <NomEquipe>**Nort de Merlin</NomEquipe>
+      <Capitaine>
+        <IdCoach>25</IdCoach>
+        <NomCoach>Célénite</NomCoach>
+        <NumeroNAF>17225</NumeroNAF>
+        <IdRoster>2</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>26</IdCoach>
+        <NomCoach>Merlin</NomCoach>
+        <NumeroNAF>14083</NumeroNAF>
+        <IdRoster>6</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>27</IdCoach>
+        <NomCoach>Zegroumf</NomCoach>
+        <NumeroNAF>14312</NumeroNAF>
+        <IdRoster>8</IdRoster>
+      </Equipier2>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>10</IdEquipe>
+      <NomEquipe>**C.C.C.P.</NomEquipe>
+      <Capitaine>
+        <IdCoach>28</IdCoach>
+        <NomCoach>DDS</NomCoach>
+        <NumeroNAF>15805</NumeroNAF>
+        <PseudoNAF>Dents_de_sabre</PseudoNAF>
+        <IdRoster>22</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>29</IdCoach>
+        <NomCoach>Longusbarbe</NomCoach>
+        <NumeroNAF>20371</NumeroNAF>
+        <PseudoNAF>LonGusBarbe</PseudoNAF>
+        <IdRoster>10</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>30</IdCoach>
+        <NomCoach>Guizmo</NomCoach>
+        <NumeroNAF>14084</NumeroNAF>
+        <PseudoNAF>Guizmo</PseudoNAF>
+        <IdRoster>8</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Soviet National Anthem.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>11</IdEquipe>
+      <NomEquipe>**BAF not dead</NomEquipe>
+      <Capitaine>
+        <IdCoach>31</IdCoach>
+        <NomCoach>Atomnik</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>24</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>32</IdCoach>
+        <NomCoach>The Mad Lombric</NomCoach>
+        <NumeroNAF>16579</NumeroNAF>
+        <IdRoster>2</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>33</IdCoach>
+        <NomCoach>Leif</NomCoach>
+        <NumeroNAF>8735</NumeroNAF>
+        <IdRoster>6</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Johnny Cash - The Man comes around.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>12</IdEquipe>
+      <NomEquipe>**BN Legends</NomEquipe>
+      <Capitaine>
+        <IdCoach>34</IdCoach>
+        <NomCoach>Mimic</NomCoach>
+        <NumeroNAF>16210</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>35</IdCoach>
+        <NomCoach>Tran</NomCoach>
+        <NumeroNAF>16670</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>36</IdCoach>
+        <NomCoach>Pixmen</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>13</IdEquipe>
+      <NomEquipe>**Turones Bashlords</NomEquipe>
+      <Capitaine>
+        <IdCoach>37</IdCoach>
+        <NomCoach>Karaak</NomCoach>
+        <NumeroNAF>13455</NumeroNAF>
+        <PseudoNAF>Karaak</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>38</IdCoach>
+        <NomCoach>Gros Nain</NomCoach>
+        <NumeroNAF>14524</NumeroNAF>
+        <PseudoNAF>grosnain</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>39</IdCoach>
+        <NomCoach>Justiculum</NomCoach>
+        <NumeroNAF>12319</NumeroNAF>
+        <PseudoNAF>Justicium</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+      <HymneEquipe>DJ Visage Formula 1 Schumacher song.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>14</IdEquipe>
+      <NomEquipe>**Turone, Milf &amp; Cognac</NomEquipe>
+      <Capitaine>
+        <IdCoach>40</IdCoach>
+        <NomCoach>Kindé</NomCoach>
+        <NumeroNAF>17591</NumeroNAF>
+        <PseudoNAF>kin</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>41</IdCoach>
+        <NomCoach>SimonMLF</NomCoach>
+        <NumeroNAF>17603</NumeroNAF>
+        <PseudoNAF>Simon_MLF</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>42</IdCoach>
+        <NomCoach>Oninokolas</NomCoach>
+        <NumeroNAF>20370</NumeroNAF>
+        <PseudoNAF>Oninokolas</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Les rabins volants -- Coin coin.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>15</IdEquipe>
+      <NomEquipe>**Les Choco Boys</NomEquipe>
+      <Capitaine>
+        <IdCoach>43</IdCoach>
+        <NomCoach>Croco</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>16</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>44</IdCoach>
+        <NomCoach>Darkmoule</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>3</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>45</IdCoach>
+        <NomCoach>Giom</NomCoach>
+        <NumeroNAF>20591</NumeroNAF>
+        <IdRoster>20</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Cocoboy.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>16</IdEquipe>
+      <NomEquipe>**Assez d'Décès</NomEquipe>
+      <Capitaine>
+        <IdCoach>46</IdCoach>
+        <NomCoach>Baltus</NomCoach>
+        <NumeroNAF>12499</NumeroNAF>
+        <PseudoNAF>Baltus</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>47</IdCoach>
+        <NomCoach>Flo</NomCoach>
+        <NumeroNAF>17492</NumeroNAF>
+        <PseudoNAF>flo</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>48</IdCoach>
+        <NomCoach>Artus</NomCoach>
+        <NumeroNAF>16604</NumeroNAF>
+        <PseudoNAF>artus</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Highway to Hell.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>17</IdEquipe>
+      <NomEquipe>**KTS 2</NomEquipe>
+      <Capitaine>
+        <IdCoach>49</IdCoach>
+        <NomCoach>Lord fantur</NomCoach>
+        <NumeroNAF>14665</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>50</IdCoach>
+        <NomCoach>Khelby</NomCoach>
+        <NumeroNAF>8072</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>51</IdCoach>
+        <NomCoach>Turenne</NomCoach>
+        <NumeroNAF>12639</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>18</IdEquipe>
+      <NomEquipe>**LCD 1</NomEquipe>
+      <Capitaine>
+        <IdCoach>52</IdCoach>
+        <NomCoach>Darkboy</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>15</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>53</IdCoach>
+        <NomCoach>Davey</NomCoach>
+        <NumeroNAF>17711</NumeroNAF>
+        <IdRoster>2</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>54</IdCoach>
+        <NomCoach>Leg'Rolas</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>14</IdRoster>
+      </Equipier2>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>19</IdEquipe>
+      <NomEquipe>**La Cathim</NomEquipe>
+      <Capitaine>
+        <IdCoach>55</IdCoach>
+        <NomCoach>Feerikon</NomCoach>
+        <NumeroNAF>19424</NumeroNAF>
+        <IdRoster>19</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>56</IdCoach>
+        <NomCoach>Enor</NomCoach>
+        <NumeroNAF>19168</NumeroNAF>
+        <IdRoster>15</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>57</IdCoach>
+        <NomCoach>Kaoragh</NomCoach>
+        <NumeroNAF>19142</NumeroNAF>
+        <IdRoster>5</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Ah la salope !.flv.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>20</IdEquipe>
+      <NomEquipe>**BAF en string</NomEquipe>
+      <Capitaine>
+        <IdCoach>58</IdCoach>
+        <NomCoach>RenoFeroce</NomCoach>
+        <NumeroNAF>14087</NumeroNAF>
+        <IdRoster>1</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>59</IdCoach>
+        <NomCoach>Cedbzh</NomCoach>
+        <NumeroNAF>12083</NumeroNAF>
+        <IdRoster>19</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>60</IdCoach>
+        <NomCoach>Dimiento</NomCoach>
+        <NumeroNAF>12461</NumeroNAF>
+        <IdRoster>9</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Nananana de l'elfe.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>21</IdEquipe>
+      <NomEquipe>**KBBL Breizh Punishers</NomEquipe>
+      <Capitaine>
+        <IdCoach>61</IdCoach>
+        <NomCoach>Jean-Bibi</NomCoach>
+        <NumeroNAF>15808</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>62</IdCoach>
+        <NomCoach>Squamata</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>63</IdCoach>
+        <NomCoach>Pyjama</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>22</IdEquipe>
+      <NomEquipe>**Les Caballerines</NomEquipe>
+      <Capitaine>
+        <IdCoach>64</IdCoach>
+        <NomCoach>Acryosis</NomCoach>
+        <NumeroNAF>19207</NumeroNAF>
+        <IdRoster>4</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>65</IdCoach>
+        <NomCoach>Ourouk</NomCoach>
+        <NumeroNAF>19455</NumeroNAF>
+        <IdRoster>15</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>66</IdCoach>
+        <NomCoach>Garaty</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>2</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Kasabian - Shoot the Runner.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>23</IdEquipe>
+      <NomEquipe>**Los Caballeros </NomEquipe>
+      <Capitaine>
+        <IdCoach>67</IdCoach>
+        <NomCoach>PLT</NomCoach>
+        <NumeroNAF>19345</NumeroNAF>
+        <IdRoster>23</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>68</IdCoach>
+        <NomCoach>Ramba</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>8</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>69</IdCoach>
+        <NomCoach>Big Mikowsky</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>15</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Rammstein - Te Quiero Puta.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>24</IdEquipe>
+      <NomEquipe>**Team 1/2</NomEquipe>
+      <Capitaine>
+        <IdCoach>70</IdCoach>
+        <NomCoach>Skink Compact</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>71</IdCoach>
+        <NomCoach>Chevalier Noir</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>72</IdCoach>
+        <NomCoach>GobMarley</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>25</IdEquipe>
+      <NomEquipe>**Les Sales P'tins d'Branques</NomEquipe>
+      <Capitaine>
+        <IdCoach>73</IdCoach>
+        <NomCoach>Skavena</NomCoach>
+        <NumeroNAF>17337</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>74</IdCoach>
+        <NomCoach>Kaazor</NomCoach>
+        <NumeroNAF>15082</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>75</IdCoach>
+        <NomCoach>Petitgars</NomCoach>
+        <NumeroNAF>15292</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>26</IdEquipe>
+      <NomEquipe>**More than BAF</NomEquipe>
+      <Capitaine>
+        <IdCoach>76</IdCoach>
+        <NomCoach>Paonpaon </NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>77</IdCoach>
+        <NomCoach>Cotin</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>78</IdCoach>
+        <NomCoach>BoZoH</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>27</IdEquipe>
+      <NomEquipe>**So Socks'</NomEquipe>
+      <Capitaine>
+        <IdCoach>79</IdCoach>
+        <NomCoach>Bucks</NomCoach>
+        <NumeroNAF>10346</NumeroNAF>
+        <PseudoNAF>Bucks</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>80</IdCoach>
+        <NomCoach>Harti</NomCoach>
+        <NumeroNAF>13583</NumeroNAF>
+        <PseudoNAF>Harti</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>81</IdCoach>
+        <NomCoach>Sebotouno</NomCoach>
+        <NumeroNAF>16213</NumeroNAF>
+        <PseudoNAF>Sebotouno</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+      <HymneEquipe>Joe cocker - You can leave your hat on.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>28</IdEquipe>
+      <NomEquipe>**The A-Team</NomEquipe>
+      <Capitaine>
+        <IdCoach>82</IdCoach>
+        <NomCoach>Cocka</NomCoach>
+        <NumeroNAF>19208</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>83</IdCoach>
+        <NomCoach>Gayoc</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>84</IdCoach>
+        <NomCoach>Khellen</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+      <HymneEquipe>L'agence Tous Risques.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>29</IdEquipe>
+      <NomEquipe>**The Korrigan Show</NomEquipe>
+      <Capitaine>
+        <IdCoach>85</IdCoach>
+        <NomCoach>Legalodec</NomCoach>
+        <NumeroNAF>15810</NumeroNAF>
+        <PseudoNAF>Legalodec</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>86</IdCoach>
+        <NomCoach>Korso</NomCoach>
+        <NumeroNAF>17349</NumeroNAF>
+        <PseudoNAF>chicken</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>87</IdCoach>
+        <NomCoach>Doc Nova</NomCoach>
+        <NumeroNAF>15807</NumeroNAF>
+        <PseudoNAF>DocNova</PseudoNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+      <HymneEquipe>parabellum - saturnin.mp3</HymneEquipe>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>30</IdEquipe>
+      <NomEquipe>**Team Arkhandzar</NomEquipe>
+      <Capitaine>
+        <IdCoach>91</IdCoach>
+        <NomCoach>Arkhandzar</NomCoach>
+        <NumeroNAF>419</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>92</IdCoach>
+        <NomCoach>Patchanka</NomCoach>
+        <NumeroNAF>16302</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>93</IdCoach>
+        <NomCoach>Arctulipe</NomCoach>
+        <NumeroNAF xsi:nil="true" />
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+    </Equipe>
+    <Equipe>
+      <IdEquipe>31</IdEquipe>
+      <NomEquipe>**Les SBOONS</NomEquipe>
+      <Capitaine>
+        <IdCoach>94</IdCoach>
+        <NomCoach>Lizardcore</NomCoach>
+        <NumeroNAF>4824</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Capitaine>
+      <Equipier1>
+        <IdCoach>95</IdCoach>
+        <NomCoach>Sladmortis</NomCoach>
+        <NumeroNAF>2464</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier1>
+      <Equipier2>
+        <IdCoach>96</IdCoach>
+        <NomCoach>Oon</NomCoach>
+        <NumeroNAF>8861</NumeroNAF>
+        <IdRoster>0</IdRoster>
+      </Equipier2>
+      <HymneEquipe>benny hill vs eminem music video.mp3</HymneEquipe>
+    </Equipe>
+  </Equipes>
+  <PhaseEnCours>Configuration</PhaseEnCours>
+  <RencontresRonde1 />
+  <RencontresRonde2 />
+  <RencontresRonde3 />
+  <RencontresRonde4 />
+  <RencontresRonde5 />
+</Tournoi>

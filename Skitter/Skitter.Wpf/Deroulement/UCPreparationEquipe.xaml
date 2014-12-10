@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Skitter.Wpf.Deroulement.UCPreparationEquipe"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:local="clr-namespace:Skitter.Wpf.Deroulement"
+             xmlns:locCtrl="clr-namespace:Skitter.Wpf.Controls"
+             >
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />        
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=NomEquipe}" 
+                   HorizontalAlignment="Center"
+                   FontWeight="Bold" FontSize="18"/>
+
+        <Border BorderBrush="#86C3F0" BorderThickness="1" Padding="5" Margin="5,5,0,5" Grid.Row="1" Grid.Column="1"
+                Background="{Binding Path=Coach1BackgroundBrush}" ToolTip="{Binding Path=Coach1ControleTooltip}">
+            <local:UCPreparationCoach DataContext="{Binding Path=CoachRang1}" />
+        </Border>
+        <Border BorderBrush="#86C3F0" BorderThickness="1" Padding="5" Margin="5,5,0,5" Grid.Row="2" Grid.Column="1"
+                Background="{Binding Path=Coach2BackgroundBrush}" ToolTip="{Binding Path=Coach2ControleTooltip}">
+            <local:UCPreparationCoach DataContext="{Binding Path=CoachRang2}" />
+        </Border>
+        <Border BorderBrush="#86C3F0" BorderThickness="1" Padding="5" Margin="5,5,0,5" Grid.Row="3" Grid.Column="1"
+                Background="{Binding Path=Coach3BackgroundBrush}" ToolTip="{Binding Path=Coach3ControleTooltip}">
+            <local:UCPreparationCoach DataContext="{Binding Path=CoachRang3}" />
+        </Border>
+
+        <locCtrl:BoutonIntervertirHautBas x:Name="btnMonterRang2" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" 
+                                          ToolTip="Echanger la position du 1er et du 2e"
+                                          VerticalAlignment="Center" />
+        <locCtrl:BoutonIntervertirHautBas x:Name="btnDescendreRang2" Grid.Row="2" Grid.RowSpan="2" Grid.Column="2" 
+                                          ToolTip="Echanger la position du 2e et du 3e"
+                                          VerticalAlignment="Center" />
+    </Grid>
+</UserControl>

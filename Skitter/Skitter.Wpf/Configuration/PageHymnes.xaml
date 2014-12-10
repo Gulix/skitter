@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Skitter.Wpf.Configuration.PageHymnes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <UniformGrid Columns="1" Grid.Row="0">
+            <Button Content="Ajouter" x:Name="btnAjouterHymne" IsEnabled="{Binding Path=IsAjoutPossible}" />
+            <Button Content="Supprimer" x:Name="btnSupprimerHymne" IsEnabled="{Binding Path=IsSuppressionPossible}" />
+            <Button Content="Ecouter" x:Name="btnEcouterHymne" IsEnabled="{Binding Path=IsSuppressionPossible}" />
+            <Button Content="Ouvrir" x:Name="btnOuvrirRepertoire" />
+        </UniformGrid>
+        
+        
+    </Grid>
+</UserControl>

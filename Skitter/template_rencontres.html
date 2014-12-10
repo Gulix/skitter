@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<head>
+    <title>Feuille de résultats - {{DescriptifRondeCourt}}</title>
+    <style>
+        body {
+            margin: 5px;
+        }
+ 
+        table {
+            width: 600px;
+        }
+        
+        tr.nomsEquipes {
+            background-color: #C1C1C1;
+        }
+        
+        td.elemLeft {
+            text-align: right;
+        }
+        
+        td.elemRight {
+            text-align: left;
+        }
+        
+        td.elemCentre {
+            text-align: center;
+        }
+        
+        td.colonneCentre {
+            width: 130px;
+        }
+        
+        td.colonneLaterale {
+            width: 230px;
+        }
+    </style>
+</head>
+<body>
+  {{#Rencontres}}
+    
+    {{#Duels}}
+    
+      <table>
+        <tr>
+          <th colspan="3">{{DescriptifRondeLong}}</tr>
+        </tr>
+        <tr class="nomsEquipes">
+          <td class="elemLeft colonneLaterale">{{NomEquipe1}}</td>
+          <td class="colonneCentre">&nbsp;</td>
+          <td class="elemRight colonneLaterale">{{NomEquipe2}}</td>
+        </tr>
+        <tr>
+          <td class="elemLeft colonneLaterale">{{NomCoach1}}</td>
+          <td class="colonneCentre"> vs </td>
+          <td class="elemRight colonneLaterale">{{NomCoach2}}</td>
+        </tr>
+        <tr>
+          <td class="elemLeft colonneLaterale">{{RosterJoue1}}</td>
+          <td class="colonneCentre">&nbsp;</td>
+          <td class="elemRight colonneLaterale">{{RosterJoue2}}</td>
+        </tr>
+        <tr>
+          <td class="colonneLaterale">&nbsp;</td>
+          <td class="elemCentre colonneCentre">TD</td>
+          <td class="colonneLaterale">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="colonneLaterale">&nbsp;</td>
+          <td class="elemCentre colonneCentre">Sorties</td>
+          <td class="colonneLaterale">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="colonneLaterale">&nbsp;</td>
+          <td class="elemCentre colonneCentre">Vicieuses</td>
+          <td class="colonneLaterale">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="3" class="elemCentre">{{InformationTable}}</td>
+        </tr>
+      </table>
+      <p>Dans <b>Sorties</b>, indiquez toutes les sorties sauf <b>Vicieuses</b> subies par votre adversaire : blocage, esquive, paquet, public, rocher, ...</p>
+      <p>Dans <b>Vicieuses</b>, indiquez toutes les sorties obtenues par Aggression, Poignard, Tronçonneuse, Bombes, ...</p>
+    
+    {{/Duels}}
+    
+  {{/Rencontres}} 
+</body>
+</html>

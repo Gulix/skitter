@@ -1,0 +1,58 @@
+﻿<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:Skitter.Wpf.Configuration"
+      xmlns:conv="clr-namespace:Skitter.Wpf.Converters"
+	  x:Class="Skitter.Wpf.Configuration.PageListeEquipes"      
+      >
+	
+    <Grid.Resources>
+        <DataTemplate x:Key="DT_NomEquipe">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="15" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="!!" Foreground="DarkRed" FontWeight="Bold" 
+                           Visibility="{Binding Path=ErreurVisibility}"/>
+                <TextBlock Grid.Column="1" Text="{Binding Path=NomEquipe}" />
+            </Grid>
+        </DataTemplate>
+
+        <conv:NullableToVisibilityConverter x:Key="nullToVisConverter" />
+
+    </Grid.Resources>
+    
+	<Grid.ColumnDefinitions>
+    	<ColumnDefinition Width="2*" />
+    	<ColumnDefinition Width="3*" />
+    </Grid.ColumnDefinitions>
+	<Grid.RowDefinitions>
+    	<RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />    	    
+    </Grid.RowDefinitions>
+	    
+	<ListView Grid.Row="1" Grid.Column="0" 
+              x:Name="lvEquipes"
+              SelectedItem="{Binding Path=EquipeSelectionnee}"
+              ItemsSource="{Binding Path=ListeEquipes}"
+              ItemTemplate="{StaticResource DT_NomEquipe}"
+              SelectionMode="Single"
+              />
+
+    <UniformGrid Columns="2" Grid.Row="0" Grid.Column="0" >
+        <Button Content="Ajouter" Grid.Column="0"  x:Name="btnAjouterEquipe" IsEnabled="{Binding Path=IsAjoutPossible}" />
+        <Button Content="Supprimer" Grid.Column="1"  x:Name="btnSupprimerEquipe" IsEnabled="{Binding Path=IsSuppressionPossible}" />
+    </UniformGrid>
+    
+    <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"
+           Visibility="{Binding Path=AvertissementModificationVisibility}"
+           Style="{StaticResource S_WarningLabel}"
+           Content="La configuration est achevée, faites attention aux modifications !" />
+    
+    <!-- Détail d'une équipe -->
+    <local:DetailEquipe Grid.Row="1" Grid.Column="1" Margin="10,0"
+                        DataContext="{Binding Path=EquipeSelectionnee}"
+                        Visibility="{Binding Converter={StaticResource nullToVisConverter}}"
+                         />
+	    
+</Grid>

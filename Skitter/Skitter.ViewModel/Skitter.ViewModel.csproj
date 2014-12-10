@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{4CD23052-89D7-4D10-8D61-FB416C41CA49}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Skitter.ViewModel</RootNamespace>
+    <AssemblyName>Skitter.ViewModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirstFloor.ModernUI">
+      <HintPath>..\..\..\Librairies\ModernUI\ModernUI.1.0.5\net40\FirstFloor.ModernUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Nustache.Core">
+      <HintPath>..\..\..\..\Downloads\Nustache\Nustache.Core\obj\Debug\Nustache.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fonctionnel\ControleRencontreCoach.cs" />
+    <Compile Include="Fonctionnel\DuelRonde.cs" />
+    <Compile Include="Fonctionnel\FileAndDirectory.cs" />
+    <Compile Include="Fonctionnel\Mp3Player.cs" />
+    <Compile Include="Fonctionnel\ResultatPalmares.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Classements\ClassementCoachesViewModel.cs" />
+    <Compile Include="ViewModels\Classements\ResultatsCoachViewModel.cs" />
+    <Compile Include="ViewModels\Classements\ResultatsEquipeViewModel.cs" />
+    <Compile Include="ViewModels\Classements\ResultatsRonde1ViewModel.cs" />
+    <Compile Include="ViewModels\Classements\ResultatsRonde2ViewModel.cs" />
+    <Compile Include="ViewModels\Classements\ResultatsRonde3ViewModel.cs" />
+    <Compile Include="ViewModels\Classements\ResultatsRonde4ViewModel.cs" />
+    <Compile Include="ViewModels\Classements\ResultatsRonde5ViewModel.cs" />
+    <Compile Include="ViewModels\Classements\ResultatsViewModel.cs" />
+    <Compile Include="ViewModels\CoachRondeViewModel.cs" />
+    <Compile Include="ViewModels\HymneViewModel.cs" />
+    <Compile Include="ViewModels\Rondes\GenerationFeuilleResultatViewModel.cs" />
+    <Compile Include="ViewModels\Rondes\Ronde1ViewModel.cs" />
+    <Compile Include="ViewModels\Rondes\Ronde2ViewModel.cs" />
+    <Compile Include="ViewModels\Rondes\Ronde3ViewModel.cs" />
+    <Compile Include="ViewModels\Rondes\Ronde4ViewModel.cs" />
+    <Compile Include="ViewModels\Rondes\Ronde5ViewModel.cs" />
+    <Compile Include="ViewModels\SaisieDuelViewModel.cs" />
+    <Compile Include="ViewModels\CoachViewModel.cs" />
+    <Compile Include="ViewModels\ConfigurationListeEquipesViewModel.cs" />
+    <Compile Include="ViewModels\EquipeViewModel.cs" />
+    <Compile Include="ViewModels\InitialisationViewModel.cs" />
+    <Compile Include="ViewModels\PreparationEquipeViewModel.cs" />
+    <Compile Include="ViewModels\PreparationRencontreViewModel.cs" />
+    <Compile Include="ViewModels\Rondes\RondeViewModel.cs" />
+    <Compile Include="ViewModels\RosterViewModel.cs" />
+    <Compile Include="ViewModels\SaisieRencontreViewModel.cs" />
+    <Compile Include="ViewModels\SauvegardeViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Skitter.Object\Skitter.Object.csproj">
+      <Project>{59D59399-4AC9-4C2B-A8AA-41A1F8885AE5}</Project>
+      <Name>Skitter.Object</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

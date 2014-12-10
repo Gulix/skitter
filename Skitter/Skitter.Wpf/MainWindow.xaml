@@ -1,0 +1,42 @@
+<mui:ModernWindow x:Class="MuiTest.MainWindow"
+	              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+                  Title="MainWindow" Height="768" Width="1024"
+                  ContentSource="/Systeme/PageInitialisation.xaml"
+	>
+
+	<mui:ModernWindow.MenuLinkGroups>
+		<mui:LinkGroup DisplayName="Systeme">
+			<mui:LinkGroup.Links>
+				<mui:Link DisplayName="Initialisation" Source="/Systeme/PageInitialisation.xaml"/>
+				<mui:Link DisplayName="Sauvegarde" Source="/Systeme/PageSauvegarde.xaml" />
+				<mui:Link DisplayName="A Propos" Source="/Systeme/PageApropos.xaml"/>
+			</mui:LinkGroup.Links>
+		</mui:LinkGroup>
+		<mui:LinkGroup DisplayName="Configuration">
+			<mui:LinkGroup.Links>
+				<mui:Link DisplayName="Equipes" Source="/Configuration/PageListeEquipes.xaml" />
+			</mui:LinkGroup.Links>
+		</mui:LinkGroup>
+        <mui:LinkGroup DisplayName="Deroulement">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Ronde 1" Source="/Deroulement/PageRonde1.xaml"/>
+                <mui:Link DisplayName="Ronde 2" Source="/Deroulement/PageRonde2.xaml"/>
+                <mui:Link DisplayName="Ronde 3" Source="/Deroulement/PageRonde3.xaml"/>
+                <mui:Link DisplayName="Ronde 4" Source="/Deroulement/PageRonde4.xaml"/>
+                <mui:Link DisplayName="Ronde 5" Source="/Deroulement/PageRonde5.xaml"/>
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="Resultats">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Ronde 1" Source="/Resultats/PageResultatsRonde1.xaml" />
+                <mui:Link DisplayName="Ronde 2" Source="/Resultats/PageResultatsRonde2.xaml" />
+                <mui:Link DisplayName="Ronde 3" Source="/Resultats/PageResultatsRonde3.xaml" />
+                <mui:Link DisplayName="Ronde 4" Source="/Resultats/PageResultatsRonde4.xaml" />
+                <mui:Link DisplayName="Ronde 5" Source="/Resultats/PageResultatsRonde5.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+	</mui:ModernWindow.MenuLinkGroups>
+</mui:ModernWindow>
+

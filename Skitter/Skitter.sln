@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 4.4
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skitter.Wpf", "Skitter.Wpf\Skitter.Wpf.csproj", "{70BAF9A0-A5B2-486D-9EBC-8FC12AD12830}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skitter.Object", "Skitter.Object\Skitter.Object.csproj", "{59D59399-4AC9-4C2B-A8AA-41A1F8885AE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skitter.ViewModel", "Skitter.ViewModel\Skitter.ViewModel.csproj", "{4CD23052-89D7-4D10-8D61-FB416C41CA49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70BAF9A0-A5B2-486D-9EBC-8FC12AD12830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70BAF9A0-A5B2-486D-9EBC-8FC12AD12830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70BAF9A0-A5B2-486D-9EBC-8FC12AD12830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70BAF9A0-A5B2-486D-9EBC-8FC12AD12830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59D59399-4AC9-4C2B-A8AA-41A1F8885AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59D59399-4AC9-4C2B-A8AA-41A1F8885AE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59D59399-4AC9-4C2B-A8AA-41A1F8885AE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59D59399-4AC9-4C2B-A8AA-41A1F8885AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD23052-89D7-4D10-8D61-FB416C41CA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD23052-89D7-4D10-8D61-FB416C41CA49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD23052-89D7-4D10-8D61-FB416C41CA49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CD23052-89D7-4D10-8D61-FB416C41CA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+EndGlobal

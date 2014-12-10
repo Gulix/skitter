@@ -1,0 +1,4021 @@
+{
+  "slides": [
+    {
+      "components": [
+        {
+          "src": "http://i.imgur.com/1lhsW6p.jpg",
+          "type": "Image",
+          "x": 263,
+          "y": 17,
+          "scale": {
+            "x": 0.8516666666666667,
+            "y": 0.8516666666666667,
+            "width": 511,
+            "height": 723.065
+          },
+          "imageType": "JPG",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0.7,
+      "rotateZ": 0,
+      "index": 0,
+      "selected": false,
+      "active": false,
+      "x": 413,
+      "y": 377,
+      "markdown": "",
+      "surface": "bg-surf-grad-light",
+      "background": "bg-solid-light"
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 105,
+          "y": 23,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<div align=\"center\"><font color=\"#008d16\"><b>DragonBowl VII - Rappels</b></font></div>",
+          "size": 73,
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 61,
+          "y": 134,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "text": "<b>1 - Vérifier la feuille de votre adversaire</b><br>",
+          "size": 48,
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 60,
+          "y": 246,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<b>2 - La victoire d'équipe est importante<br></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 61,
+          "y": 354,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<b>3 - On comptabilise toutes les sorties subies<br></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 61,
+          "y": 460,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<b>4 - Les sorties vicieuses sont à part<br></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 61,
+          "y": 575,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<b>5 - On peut demander le chrono<br></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 194,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<i>Les orgas sont là pour régler toute interrogation</i><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 303,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<i>Tous les classements seront par équipe</i><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 408,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<i>Blocages, Public, Esquive, Soif de sang, Paquet, ...</i><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 523,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<i>Agressions, Poignard, Bombes, Tronçonneuses et Boulet</i><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 629,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<i>Les orgas peuvent aussi l'imposer en fin de ronde</i><br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 0,
+      "index": 1,
+      "selected": false,
+      "active": false,
+      "x": 614,
+      "y": 375,
+      "markdown": "",
+      "background": "bg-solid-light"
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 355,
+          "y": 293,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 144,
+          "text": "<font face=\"'League Gothic', sans-serif\"><b><font color=\"#ffd600\">Ronde 1</font></b></font><br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 1.57,
+      "index": 2,
+      "selected": false,
+      "active": false,
+      "background": "bg-solid-grass",
+      "x": 815,
+      "y": 68
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 146,
+          "y": 10,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 64,
+          "text": "<b>Ronde 1</b><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 672,
+          "y": 16,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<i>On joue son Roster</i><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 31,
+          "y": 105,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 1</font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 235,
+          "y": 114,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "{{Ronde1.Table1.LibelleEquipe1}} vs {{Ronde1.Table1.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 186,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 2<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 197,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table2.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 186,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 9<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 535,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<font face=\"'League Gothic', sans-serif\"><b><font color=\"#000000\">Table 14</font></b></font>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 10<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 326,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 11<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 396,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 12<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 3<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 466,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 13<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 326,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 4<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 396,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 5<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 466,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 6<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 536,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 7<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 606,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"'League Gothic', sans-serif\">Table 15<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 606,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 8<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 222,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table2.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 617,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table8.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 197,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table9.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 267,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table3.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 337,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table4.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 407,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table5.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 477,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table6.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 547,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table7.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 267,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table10.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 337,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table11.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 407,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table12.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 477,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table13.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 547,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table14.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 617,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde1.Table15.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 292,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table3.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 362,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table4.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 432,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table5.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 502,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table6.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 572,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table7.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 642,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table8.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 222,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table9.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 292,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table10.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 362,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table11.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 432,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table12.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 502,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table13.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 572,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table14.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 642,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde1.Table15.LibelleEquipe2}}<br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 1.57,
+      "index": 3,
+      "selected": false,
+      "active": false,
+      "background": "bg-solid-light",
+      "x": 998,
+      "y": 68
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 355,
+          "y": 293,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 144,
+          "text": "<font face=\"'League Gothic', sans-serif\"><b><font color=\"#ffd600\">Ronde 1</font></b></font><br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 1.57,
+      "index": 2,
+      "selected": false,
+      "active": false,
+      "background": "bg-solid-grass",
+      "x": 815,
+      "y": 318
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 146,
+          "y": 10,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 64,
+          "text": "<b>Ronde 1</b><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 672,
+          "y": 16,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<i>On joue son Roster</i><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 31,
+          "y": 105,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 1</font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 235,
+          "y": 114,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "{{Ronde2.Table1.LibelleEquipe1}} vs {{Ronde2.Table1.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 186,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 2<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 197,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table2.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 186,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 9<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 535,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<font face=\"'League Gothic', sans-serif\"><b><font color=\"#000000\">Table 14</font></b></font>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 10<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 326,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 11<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 396,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 12<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 3<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 466,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 13<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 326,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 4<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 396,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 5<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 466,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 6<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 536,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 7<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 606,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"'League Gothic', sans-serif\">Table 15<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 606,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 8<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 222,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table2.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 617,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table8.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 197,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table9.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 267,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table3.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 337,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table4.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 407,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table5.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 477,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table6.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 547,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table7.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 267,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table10.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 337,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table11.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 407,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table12.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 477,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table13.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 547,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table14.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 617,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde2.Table15.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 292,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table3.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 362,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table4.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 432,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table5.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 502,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table6.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 572,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table7.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 642,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table8.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 222,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table9.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 292,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table10.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 362,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table11.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 432,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table12.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 502,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table13.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 572,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table14.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 642,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde2.Table15.LibelleEquipe2}}<br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 1.57,
+      "index": 3,
+      "selected": false,
+      "active": false,
+      "background": "bg-solid-light",
+      "x": 998,
+      "y": 318
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 355,
+          "y": 293,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 144,
+          "text": "<font face=\"'League Gothic', sans-serif\"><b><font color=\"#ffd600\">Ronde 1</font></b></font><br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 1.57,
+      "index": 2,
+      "selected": false,
+      "active": false,
+      "background": "bg-solid-grass",
+      "x": 815,
+      "y": 568
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 146,
+          "y": 10,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 64,
+          "text": "<b>Ronde 1</b><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 672,
+          "y": 16,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<i>On joue son Roster</i><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 31,
+          "y": 105,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 1</font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 235,
+          "y": 114,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "{{Ronde3.Table1.LibelleEquipe1}} vs {{Ronde3.Table1.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 186,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 2<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 197,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table2.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 186,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 9<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 535,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<font face=\"'League Gothic', sans-serif\"><b><font color=\"#000000\">Table 14</font></b></font>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 10<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 326,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 11<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 396,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 12<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 3<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 466,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 13<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 326,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 4<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 396,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 5<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 466,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 6<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 536,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 7<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 606,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"'League Gothic', sans-serif\">Table 15<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 606,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 8<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 222,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table2.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 617,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table8.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 197,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table9.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 267,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table3.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 337,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table4.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 407,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table5.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 477,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table6.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 547,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table7.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 267,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table10.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 337,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table11.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 407,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table12.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 477,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table13.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 547,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table14.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 617,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde3.Table15.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 292,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table3.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 362,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table4.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 432,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table5.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 502,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table6.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 572,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table7.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 642,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table8.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 222,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table9.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 292,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table10.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 362,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table11.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 432,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table12.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 502,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table13.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 572,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table14.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 642,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde3.Table15.LibelleEquipe2}}<br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 1.57,
+      "index": 3,
+      "selected": false,
+      "active": false,
+      "background": "bg-solid-light",
+      "x": 998,
+      "y": 568
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 355,
+          "y": 293,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 144,
+          "text": "<font face=\"'League Gothic', sans-serif\"><b><font color=\"#ffd600\">Ronde 1</font></b></font><br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 1.57,
+      "index": 2,
+      "selected": false,
+      "active": false,
+      "background": "bg-solid-grass",
+      "x": 815,
+      "y": 818
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 146,
+          "y": 10,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 64,
+          "text": "<b>Ronde 1</b><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 672,
+          "y": 16,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<i>On joue son Roster</i><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 31,
+          "y": 105,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 1</font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 235,
+          "y": 114,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "{{Ronde4.Table1.LibelleEquipe1}} vs {{Ronde4.Table1.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 186,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 2<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 197,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table2.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 186,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 9<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 535,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<font face=\"'League Gothic', sans-serif\"><b><font color=\"#000000\">Table 14</font></b></font>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 10<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 326,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 11<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 396,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 12<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 3<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 466,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 13<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 326,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 4<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 396,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 5<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 466,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 6<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 536,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 7<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 606,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"'League Gothic', sans-serif\">Table 15<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 606,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 8<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 222,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table2.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 617,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table8.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 197,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table9.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 267,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table3.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 337,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table4.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 407,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table5.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 477,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table6.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 547,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table7.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 267,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table10.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 337,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table11.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 407,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table12.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 477,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table13.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 547,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table14.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 617,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde4.Table15.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 292,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table3.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 362,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table4.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 432,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table5.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 502,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table6.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 572,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table7.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 642,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table8.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 222,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table9.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 292,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table10.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 362,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table11.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 432,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table12.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 502,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table13.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 572,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table14.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 642,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde4.Table15.LibelleEquipe2}}<br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 1.57,
+      "index": 3,
+      "selected": false,
+      "active": false,
+      "background": "bg-solid-light",
+      "x": 998,
+      "y": 818
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 355,
+          "y": 293,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 144,
+          "text": "<font face=\"'League Gothic', sans-serif\"><b><font color=\"#ffd600\">Ronde 1</font></b></font><br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 1.57,
+      "index": 2,
+      "selected": false,
+      "active": false,
+      "background": "bg-solid-grass",
+      "x": 815,
+      "y": 1068
+    },
+    {
+      "components": [
+        {
+          "TextBox": {},
+          "x": 146,
+          "y": 10,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 64,
+          "text": "<b>Ronde 1</b><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 672,
+          "y": 16,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 36,
+          "text": "<i>On joue son Roster</i><br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 31,
+          "y": 105,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 48,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 1</font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 235,
+          "y": 114,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "{{Ronde5.Table1.LibelleEquipe1}} vs {{Ronde5.Table1.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 186,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 2<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 197,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table2.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 186,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 9<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 535,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<font face=\"'League Gothic', sans-serif\"><b><font color=\"#000000\">Table 14</font></b></font>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 10<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 326,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 11<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 396,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 12<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 256,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 3<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 466,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 13<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 326,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 4<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 396,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 5<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 466,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 6<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 536,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 7<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 470,
+          "y": 606,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"'League Gothic', sans-serif\">Table 15<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 32,
+          "y": 606,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 34,
+          "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 8<br></font></b>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 222,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table2.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 617,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table8.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 197,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table9.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 267,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table3.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 337,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table4.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 407,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table5.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 477,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table6.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 126,
+          "y": 547,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table7.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 267,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table10.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 337,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table11.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 407,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table12.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 477,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table13.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 547,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table14.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 564,
+          "y": 617,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "{{Ronde5.Table15.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 292,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table3.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 362,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table4.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 432,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table5.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 502,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table6.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 572,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table7.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 104,
+          "y": 642,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table8.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 222,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table9.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 292,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table10.LibelleEquipe1}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 362,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table11.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 432,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table12.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 502,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table13.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 572,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table14.LibelleEquipe2}}<br>",
+          "selected": false
+        },
+        {
+          "TextBox": {},
+          "x": 542,
+          "y": 642,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "type": "TextBox",
+          "size": 19,
+          "text": "vs {{Ronde5.Table15.LibelleEquipe2}}<br>",
+          "selected": false
+        }
+      ],
+      "z": 0,
+      "impScale": 3,
+      "rotateX": 0,
+      "rotateY": 0,
+      "rotateZ": 1.57,
+      "index": 3,
+      "selected": true,
+      "active": true,
+      "background": "bg-solid-light",
+      "x": 998,
+      "y": 1068
+    }
+  ],
+  "background": "bg-solid-smoke",
+  "activeSlide": {
+    "components": [
+      {
+        "TextBox": {},
+        "x": 146,
+        "y": 10,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 64,
+        "text": "<b>Ronde 1</b><br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 672,
+        "y": 16,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 36,
+        "text": "<i>On joue son Roster</i><br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 31,
+        "y": 105,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 48,
+        "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 1</font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 235,
+        "y": 114,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "{{Ronde5.Table1.LibelleEquipe1}} vs {{Ronde5.Table1.LibelleEquipe2}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 32,
+        "y": 186,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 2<br></font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 126,
+        "y": 197,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table2.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 470,
+        "y": 186,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 9<br></font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 470,
+        "y": 535,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<font face=\"'League Gothic', sans-serif\"><b><font color=\"#000000\">Table 14</font></b></font>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 470,
+        "y": 256,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 10<br></font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 470,
+        "y": 326,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 11<br></font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 470,
+        "y": 396,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 12<br></font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 32,
+        "y": 256,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 3<br></font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 470,
+        "y": 466,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 13<br></font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 32,
+        "y": 326,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 4<br></font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 32,
+        "y": 396,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 5<br></font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 32,
+        "y": 466,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 6<br></font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 32,
+        "y": 536,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 7<br></font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 470,
+        "y": 606,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<b><font color=\"#000000\" face=\"'League Gothic', sans-serif\">Table 15<br></font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 32,
+        "y": 606,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 34,
+        "text": "<b><font color=\"#000000\" face=\"League Gothic\">Table 8<br></font></b>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 104,
+        "y": 222,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table2.LibelleEquipe2}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 126,
+        "y": 617,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table8.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 564,
+        "y": 197,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table9.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 126,
+        "y": 267,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table3.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 126,
+        "y": 337,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table4.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 126,
+        "y": 407,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table5.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 126,
+        "y": 477,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table6.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 126,
+        "y": 547,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table7.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 564,
+        "y": 267,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table10.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 564,
+        "y": 337,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table11.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 564,
+        "y": 407,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table12.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 564,
+        "y": 477,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table13.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 564,
+        "y": 547,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table14.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 564,
+        "y": 617,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "{{Ronde5.Table15.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 104,
+        "y": 292,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table3.LibelleEquipe2}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 104,
+        "y": 362,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table4.LibelleEquipe2}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 104,
+        "y": 432,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table5.LibelleEquipe2}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 104,
+        "y": 502,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table6.LibelleEquipe2}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 104,
+        "y": 572,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table7.LibelleEquipe2}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 104,
+        "y": 642,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table8.LibelleEquipe2}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 542,
+        "y": 222,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table9.LibelleEquipe2}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 542,
+        "y": 292,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table10.LibelleEquipe1}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 542,
+        "y": 362,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table11.LibelleEquipe2}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 542,
+        "y": 432,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table12.LibelleEquipe2}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 542,
+        "y": 502,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table13.LibelleEquipe2}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 542,
+        "y": 572,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table14.LibelleEquipe2}}<br>",
+        "selected": false
+      },
+      {
+        "TextBox": {},
+        "x": 542,
+        "y": 642,
+        "scale": {
+          "x": 1,
+          "y": 1
+        },
+        "type": "TextBox",
+        "size": 19,
+        "text": "vs {{Ronde5.Table15.LibelleEquipe2}}<br>",
+        "selected": false
+      }
+    ],
+    "z": 0,
+    "impScale": 3,
+    "rotateX": 0,
+    "rotateY": 0,
+    "rotateZ": 1.57,
+    "index": 3,
+    "selected": true,
+    "active": true,
+    "background": "bg-solid-light",
+    "x": 998,
+    "y": 1068
+  },
+  "fileName": "presentation-unnamed.strut",
+  "surface": "bg-surf-grad-black",
+  "deckVersion": "1.0",
+  "customBackgrounds": {
+    "bgs": []
+  },
+  "overviewX": 705.5,
+  "overviewY": 568
+}

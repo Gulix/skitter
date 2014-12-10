@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<head>
+    <title>Classement - {{DescriptionRonde}}</title>
+    <style>
+        body {
+            margin: 5px;
+        }        
+    </style>
+</head>
+<body>
+  <h1>{{DescriptionClassement}} - {{DescriptionRonde}}</h1>
+    
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Equipes</th>
+        <th>V / N / D</th>
+        <th>Valeur</th>
+        <th>Duels gagnés</th>
+        <th>Meilleur indiv.</th>
+        <th>TD +/-</th>
+        <th>Sorties +/-</th>
+        <th>Vicieux +/-</th>
+      </tr>
+      {{#ListeResultatsEquipes}}
+      <tr>
+        <td>{{RangEquipe}}</td>
+        <td>{{NomEquipe}}
+            <br />{{Equipe.Capitaine.NomCoach}} <i>({{Equipe.Capitaine.NomRoster}})</i>
+            <br />{{Equipe.Equipier1.NomCoach}} <i>({{Equipe.Equipier1.NomRoster}})</i>
+            <br />{{Equipe.Equipier2.NomCoach}} <i>({{Equipe.Equipier2.NomRoster}})</i></td>
+        <td>{{NbVictoires}} / {{NbNuls}} / {{NbDefaites}}</td>
+        <td>{{ValeurEquipe}}</td>
+        <td>{{DuelsRemportes}}</td>
+        <td>{{ClassementMeilleurJoueur}}</td>
+        <td>{{TDMarques}} / {{TDEncaisses}}</td>
+        <td>{{SortiesEffectuees}} / {{SortiesSubies}}</td>
+        <td>{{SortiesVicieusesEffectuees}} / {{SortiesVicieusesSubies}}</td>
+      </tr> 
+      {{/ListeResultatsEquipes}}
+    </table>
+
+</body>
+</html>
