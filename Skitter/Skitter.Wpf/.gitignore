@@ -1,0 +1,6 @@
+obj/*
+bin/Release/*
+bin/Debug/Hymnes/*.mp3
+bin/Debug/Skitter*.pdb
+bin/Debug/Skitter*.dll
+bin/Debug/Skitter*.exe*
