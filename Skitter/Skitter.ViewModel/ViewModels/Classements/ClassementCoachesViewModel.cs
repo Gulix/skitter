@@ -52,5 +52,14 @@ namespace Skitter.ViewModel.ViewModels.Classements
             return string.Format("{0}{1} en individuel : {2}/{3}/{4}",
                 iClassement, (iClassement > 1) ? "e" : "er", resultatsCoach.NbVictoires, resultatsCoach.NbNuls, resultatsCoach.NbDefaites);
         }
+
+        internal static int GetClassementFinalCoach(Coach coach)
+        {
+            if (coach == null)
+                return 0;
+
+            ClassementCoachesViewModel vm = new ClassementCoachesViewModel(Tournoi.GetRencontresApres(5));
+            return vm.ObtenirClassementCoach(coach.IdCoach);
+        }
     }
 }

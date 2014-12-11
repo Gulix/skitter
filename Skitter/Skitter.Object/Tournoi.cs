@@ -212,6 +212,11 @@ namespace Skitter.Object
         {
             return GetInstance().Coaches.FirstOrDefault(c => c.IdCoach == idCoach);
         }
+
+        public static Roster GetRoster(int idRoster)
+        {
+            return Roster.GetListeComplete().FirstOrDefault(r => r.IdRoster == idRoster);
+        }
         #endregion
 
         #region Rencontres
@@ -229,21 +234,38 @@ namespace Skitter.Object
 
             return lsRencontres;
         }
+
+        public static List<Rencontre> GetRencontresApres(int iNumeroRonde)
+        {
+            List<Rencontre> lsRencontres = new List<Rencontre>();
+            if (iNumeroRonde >= 1)
+                lsRencontres.AddRange(GetInstance().RencontresRonde1);
+            if (iNumeroRonde >= 2)
+                lsRencontres.AddRange(GetInstance().RencontresRonde2);
+            if (iNumeroRonde >= 3)
+                lsRencontres.AddRange(GetInstance().RencontresRonde3);
+            if (iNumeroRonde >= 4)
+                lsRencontres.AddRange(GetInstance().RencontresRonde4);
+            if (iNumeroRonde >= 5)
+                lsRencontres.AddRange(GetInstance().RencontresRonde5);
+
+            return lsRencontres;
+        }
         #endregion
         #endregion
 
-        public List<Rencontre> RencontresSelonRonde(int i)
+        public static List<Rencontre> GetRencontresSelonRonde(int i)
         {
             if (i == 1)
-                return RencontresRonde1;
+                return Tournoi.GetInstance().RencontresRonde1;
             if (i == 2)
-                return RencontresRonde2;
+                return Tournoi.GetInstance().RencontresRonde2;
             if (i == 3)
-                return RencontresRonde3;
+                return Tournoi.GetInstance().RencontresRonde3;
             if (i == 4)
-                return RencontresRonde4;
+                return Tournoi.GetInstance().RencontresRonde4;
             if (i == 5)
-                return RencontresRonde5;
+                return Tournoi.GetInstance().RencontresRonde5;
 
             return new List<Rencontre>();
         }

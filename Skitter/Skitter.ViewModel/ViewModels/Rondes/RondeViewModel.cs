@@ -373,7 +373,7 @@ namespace Skitter.ViewModel.ViewModels.Rondes
             {
                 string sRonde = "Ronde" + i.ToString();
                 Dictionary<string, Rencontre> dicRencontres = new Dictionary<string, Rencontre>();
-                List<Rencontre> lsRencontres = Tournoi.GetInstance().RencontresSelonRonde(i);
+                List<Rencontre> lsRencontres = Tournoi.GetRencontresSelonRonde(i);
                 for(int iRenc = 0; iRenc < lsRencontres.Count; iRenc++)
                 {
                     dicRencontres.Add("Table" + (iRenc + 1).ToString(), lsRencontres[iRenc]);

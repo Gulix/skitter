@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Fonctionnel\ControleRencontreCoach.cs" />
     <Compile Include="Fonctionnel\DuelRonde.cs" />
+    <Compile Include="Fonctionnel\ExportExcel.cs" />
     <Compile Include="Fonctionnel\FileAndDirectory.cs" />
     <Compile Include="Fonctionnel\Mp3Player.cs" />
     <Compile Include="Fonctionnel\ResultatPalmares.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="ViewModels\Classements\ResultatsRonde5ViewModel.cs" />
     <Compile Include="ViewModels\Classements\ResultatsViewModel.cs" />
     <Compile Include="ViewModels\CoachRondeViewModel.cs" />
+    <Compile Include="ViewModels\ExportNaf.cs" />
     <Compile Include="ViewModels\HymneViewModel.cs" />
     <Compile Include="ViewModels\Rondes\GenerationFeuilleResultatViewModel.cs" />
     <Compile Include="ViewModels\Rondes\Ronde1ViewModel.cs" />

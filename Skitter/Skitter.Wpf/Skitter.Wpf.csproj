@@ -153,6 +153,9 @@
     <Compile Include="Resultats\PageResultatsRonde1.xaml.cs">
       <DependentUpon>PageResultatsRonde1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Resultats\PageExportNaf.xaml.cs">
+      <DependentUpon>PageExportNaf.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Systeme\PageApropos.xaml.cs">
       <DependentUpon>PageApropos.xaml</DependentUpon>
     </Compile>
@@ -228,6 +231,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Resultats\PageResultatsRonde1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resultats\PageExportNaf.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

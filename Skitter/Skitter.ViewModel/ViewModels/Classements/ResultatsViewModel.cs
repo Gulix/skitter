@@ -168,33 +168,18 @@ namespace Skitter.ViewModel.ViewModels.Classements
         public void CopierVersExcel()
         {
             // Génération de la ligne d'en-tête
-            string sAvecVirgule = "Equipe,V,N,D,Coeff.,Duels gagnés,Meill. class.,TD+,TD-,Sorties+,Sorties-,Vicieux+,Vicieux-,Bless. subies,";
-            string sAvecTab = sAvecVirgule.Replace(',', '\t');
-                                           
+            string sAvecTab = "Equipe\tV\tN\tD\tCoeff.\tDuels gagnés\tMeill. class.\tTD+\tTD-\tSorties+\tSorties-\tVicieux+\tVicieux-\tBless. subies\t";
+                                                       
             // Génération des lignes des équipes
             foreach (ResultatsEquipeViewModel resVM in ListeResultatsEquipes)
             {
-                sAvecVirgule += "\n" + resVM.NomEquipe + "," + resVM.NbVictoires + "," + resVM.NbNuls + "," + resVM.NbDefaites + "," + resVM.ValeurEquipe
-                    + "," + resVM.DuelsRemportes + "," + resVM.ClassementMeilleurJoueur + "," + resVM.TDMarques + "," + resVM.TDEncaisses
-                    + "," + resVM.SortiesEffectuees + "," + resVM.SortiesSubies + "," + resVM.SortiesVicieusesEffectuees
-                    + "," + resVM.SortiesVicieusesSubies + "," + resVM.TotalSortiesSubies + ",";
-
                 sAvecTab += "\n" + resVM.NomEquipe + "\t" + resVM.NbVictoires + "\t" + resVM.NbNuls + "\t" + resVM.NbDefaites + "\t" + resVM.ValeurEquipe
                     + "\t" + resVM.DuelsRemportes + "\t" + resVM.ClassementMeilleurJoueur + "\t" + resVM.TDMarques + "\t" + resVM.TDEncaisses
                     + "\t" + resVM.SortiesEffectuees + "\t" + resVM.SortiesSubies + "\t" + resVM.SortiesVicieusesEffectuees
                     + "\t" + resVM.SortiesVicieusesSubies + "\t" + resVM.TotalSortiesSubies + "\t";
             }
 
-            DataObject dataObject = new System.Windows.DataObject();
-
-            dataObject.SetText(sAvecTab);
-            // Convert the CSV text to a UTF-8 byte stream before adding it to the container object.
-            var bytes = System.Text.Encoding.UTF8.GetBytes(sAvecVirgule);
-            var stream = new System.IO.MemoryStream(bytes);
-            dataObject.SetData(System.Windows.DataFormats.CommaSeparatedValue, stream);
-
-            // Copy the container object to the clipboard.
-            System.Windows.Clipboard.SetDataObject(dataObject, true);
+            ExportExcel.CopierDonneesExcelVersPressePapier(sAvecTab);
         }
         #endregion
 

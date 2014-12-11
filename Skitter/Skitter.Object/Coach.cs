@@ -94,6 +94,17 @@ namespace Skitter.Object
         {
             get { return Tournoi.GetInstance().Equipes.FirstOrDefault(e => e.ContientIdCoach(this.IdCoach)); }
         }
+
+        [XmlIgnore]
+        public string PseudoNafOuNormal
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(PseudoNAF))
+                    return NomCoach;
+                return PseudoNAF;
+            }
+        }
         #endregion
 
         public Coach()
@@ -108,6 +119,18 @@ namespace Skitter.Object
             if (rosterCoachJoue == null)
                 return null;
             return rosterCoachJoue.Roster;
+        }
+
+        public Roster GetRosterSelonRondeJouee(int iRonde)
+        {
+            return GetRosterSelonRondeJouee(RosterJoueSelonRonde(iRonde));
+        }
+
+        public static Roster GetRosterSelonRondeJouee(int idCoach, int iRonde)
+        {
+            eTypeRosterJoue typRoster = RosterJoueSelonRonde(iRonde);
+            Coach coach = Tournoi.GetCoach(idCoach);
+            return coach.GetRosterSelonRondeJouee(typRoster);
         }
 
         public Coach GetCoachRosterSelonRondeJouee(eTypeRosterJoue typRoster)

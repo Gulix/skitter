@@ -159,6 +159,42 @@ namespace Skitter.ViewModel.ViewModels.Classements
         }
         #endregion
 
+        #region Résultats individuels
+        ResultatsCoachViewModel _resultatsCapitaine;
+        ResultatsCoachViewModel _resultatsEquipier1;
+        ResultatsCoachViewModel _resultatsEquipier2;
+        
+        public ResultatsCoachViewModel ResultatsCapitaine
+        {
+            get
+            {
+                if (_resultatsCapitaine == null)
+                    _resultatsCapitaine = new ResultatsCoachViewModel(_equipe.Capitaine, _lsRencontres);
+                return _resultatsCapitaine;
+            }
+        }
+
+        public ResultatsCoachViewModel ResultatsEquipier1
+        {
+            get
+            {
+                if (_resultatsEquipier1 == null)
+                    _resultatsEquipier1 = new ResultatsCoachViewModel(_equipe.Equipier1, _lsRencontres);
+                return _resultatsEquipier1;
+            }
+        }
+
+        public ResultatsCoachViewModel ResultatsEquipier2
+        {
+            get
+            {
+                if (_resultatsEquipier2 == null)
+                    _resultatsEquipier2 = new ResultatsCoachViewModel(_equipe.Equipier2, _lsRencontres);
+                return _resultatsEquipier2;
+            }
+        }
+        #endregion
+
         #region Affichage du classement selon le tri
         private void RaiseFontWeightProperties()
         {
