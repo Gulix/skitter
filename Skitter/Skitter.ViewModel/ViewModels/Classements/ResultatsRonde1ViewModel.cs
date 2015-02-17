@@ -21,14 +21,6 @@ namespace Skitter.ViewModel.ViewModels.Classements
             get { return "Le classement de la ronde 1 ne sera disponible qu'une fois la ronde 1 terminée."; }
         }
         
-        public override List<Rencontre> GetListeRencontres()
-        {
-            List<Rencontre> lsRencontres = new List<Rencontre>();
-            lsRencontres.AddRange(Tournoi.GetInstance().RencontresRonde1);
-            
-            return lsRencontres;
-        }
-
         protected override int NumeroRonde
         {
             get { return 1; }

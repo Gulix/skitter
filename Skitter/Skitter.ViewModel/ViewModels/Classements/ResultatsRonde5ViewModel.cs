@@ -21,19 +21,6 @@ namespace Skitter.ViewModel.ViewModels.Classements
             get { return "Le classement de la ronde 5 ne sera disponible qu'une fois la ronde 5 terminée."; }
         }
         
-        public override List<Rencontre> GetListeRencontres()
-        {
-            List<Rencontre> lsRencontres = new List<Rencontre>();
-            lsRencontres.AddRange(Tournoi.GetInstance().RencontresRonde1);
-            lsRencontres.AddRange(Tournoi.GetInstance().RencontresRonde2);
-            lsRencontres.AddRange(Tournoi.GetInstance().RencontresRonde3);
-            lsRencontres.AddRange(Tournoi.GetInstance().RencontresRonde4);
-            lsRencontres.AddRange(Tournoi.GetInstance().RencontresRonde5);
-            
-            
-            return lsRencontres;
-        }
-
         protected override int NumeroRonde
         {
             get { return 5; }

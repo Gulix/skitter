@@ -18,7 +18,6 @@ namespace Skitter.ViewModel.ViewModels.Classements
         #region Méthodes abstraites
         protected abstract Tournoi.eTypePhaseTournoi GetPhaseSaisieNecessaire();
         public abstract string MessageBloquant {get;}
-        public abstract List<Rencontre> GetListeRencontres();
         protected abstract int NumeroRonde { get; }
         #endregion
         
@@ -42,15 +41,22 @@ namespace Skitter.ViewModel.ViewModels.Classements
             TrierGeneral();
         }
 
+        #region Liste des rencontres
+        protected List<Rencontre> GetListeRencontres()
+        {
+            return Tournoi.GetRencontresApres(NumeroRonde);
+        }
+        #endregion
+
         #region Visibility des éléments
         public Visibility VisibilityMessageBloquant
         {
-            get { return (Tournoi.GetInstance().PhaseEnCours <= GetPhaseSaisieNecessaire()) ? Visibility.Visible : Visibility.Collapsed; }
+            get { return (Tournoi.TypePhaseTournoi <= GetPhaseSaisieNecessaire()) ? Visibility.Visible : Visibility.Collapsed; }
         }
 
         public Visibility VisibilityClassement
         {
-            get { return (Tournoi.GetInstance().PhaseEnCours > GetPhaseSaisieNecessaire()) ? Visibility.Visible : Visibility.Collapsed; }
+            get { return (Tournoi.TypePhaseTournoi > GetPhaseSaisieNecessaire()) ? Visibility.Visible : Visibility.Collapsed; }
         }
         #endregion
 
@@ -63,7 +69,7 @@ namespace Skitter.ViewModel.ViewModels.Classements
             ClassementCoachesViewModel classementCoaches = new ClassementCoachesViewModel(lsRencontres);
 
             _lsResultats = new List<ResultatsEquipeViewModel>();
-            foreach (Equipe equipe in Tournoi.GetInstance().Equipes)
+            foreach (Equipe equipe in Tournoi.ListeEquipes)
             {
                 _lsResultats.Add(new ResultatsEquipeViewModel(equipe, lsRencontres, classementCoaches));
             }
