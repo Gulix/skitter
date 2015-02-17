@@ -15,7 +15,7 @@ namespace Skitter.ViewModel.ViewModels
 
         public static void ChargerTournoiExistant(string sPath)
         {
-            Tournoi.ChargerXml(sPath);
+            Tournoi.ChargerJSON(sPath);
         }
     }
 }

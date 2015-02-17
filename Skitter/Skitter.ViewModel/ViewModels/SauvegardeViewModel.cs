@@ -39,8 +39,8 @@ namespace Skitter.ViewModel.ViewModels
 
         public string FichierSauvegarde
         {
-            get { return Tournoi.GetInstance().NomFichier; }
-            set { Tournoi.GetInstance().NomFichier = value; RaisePropertyChanged("FichierSauvegarde"); }
+            get { return Tournoi.FichierSauvegarde; }
+            set { Tournoi.FichierSauvegarde = value; RaisePropertyChanged("FichierSauvegarde"); }
         }
         #endregion
 
@@ -51,12 +51,12 @@ namespace Skitter.ViewModel.ViewModels
 
         public void SauvegarderDonnees()
         {
-            if (string.IsNullOrEmpty(Tournoi.GetInstance().NomFichier))
+            if (string.IsNullOrEmpty(Tournoi.FichierSauvegarde))
                 return;
 
             try
             {
-                Tournoi.GetInstance().EnregistrerXml(Tournoi.GetInstance().NomFichier);
+                Tournoi.SauvegarderTournoi();
                 _dtLast = DateTime.Now;
                 RaisePropertyChanged("DerniereSauvegarde");
             }
