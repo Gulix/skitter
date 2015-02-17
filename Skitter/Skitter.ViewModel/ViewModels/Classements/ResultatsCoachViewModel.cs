@@ -20,12 +20,7 @@ namespace Skitter.ViewModel.ViewModels.Classements
             _lsDuels = new List<Duel>();
             foreach(Rencontre rencontre in lsRencontres)
             {
-                if ((rencontre.Duel1.IdCoach1 == _coach.IdCoach) ||(rencontre.Duel1.IdCoach2 == _coach.IdCoach))
-                    _lsDuels.Add(rencontre.Duel1);
-                if ((rencontre.Duel2.IdCoach1 == _coach.IdCoach) ||(rencontre.Duel2.IdCoach2 == _coach.IdCoach))
-                    _lsDuels.Add(rencontre.Duel2);
-                if ((rencontre.Duel3.IdCoach1 == _coach.IdCoach) ||(rencontre.Duel3.IdCoach2 == _coach.IdCoach))
-                    _lsDuels.Add(rencontre.Duel3);
+                _lsDuels.AddRange(rencontre.ListeDuels.Where(d => d.APrisPartAuDuel(coach)));
             }
         }
         #endregion

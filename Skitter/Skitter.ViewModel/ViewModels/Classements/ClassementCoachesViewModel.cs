@@ -17,7 +17,7 @@ namespace Skitter.ViewModel.ViewModels.Classements
         {
             _lsResultatsCoaches = new List<ResultatsCoachViewModel>();
             
-            foreach (Coach coach in Tournoi.GetInstance().Coaches)
+            foreach (Coach coach in Tournoi.ListeCoaches)
             {
                 _lsResultatsCoaches.Add(new ResultatsCoachViewModel(coach, lsRencontres));
             }
