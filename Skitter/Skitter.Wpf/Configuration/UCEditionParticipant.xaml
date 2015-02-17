@@ -1,0 +1,50 @@
+﻿<Grid x:Class="Skitter.Wpf.Configuration.UCEditionParticipant"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:Skitter.Wpf.Configuration"
+      >
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" />
+        <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+    <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right"
+           Margin="0,0,10,0" Content="Nom du participant" />
+    <TextBox Grid.Row="0" Grid.Column="1" x:Name="tbNomParticipant"
+             Text="{Binding Path=NomParticipant}" />
+
+    <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"
+           Margin="0,0,10,0" Content="Valeur 'Rosters'" />
+    <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbValeurRoster"
+             Text="{Binding Path=ValeurRosters, Mode=OneWay}"
+             IsReadOnly="True" />
+
+    <ItemsControl IsTabStop="False" ItemsSource="{Binding Path=CoachesViewModels}"
+                  Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <local:UCEditionCoach DataContext="{Binding}" />
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel />
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+    </ItemsControl>
+
+    <Label Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" 
+           Style="{StaticResource S_WarningLabel}"
+           Content="{Binding Path=Erreur}" 
+           Visibility="{Binding Path=ErreurVisibility}"/>
+
+</Grid>

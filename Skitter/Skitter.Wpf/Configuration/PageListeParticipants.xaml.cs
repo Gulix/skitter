@@ -20,13 +20,13 @@ using Skitter.ViewModel.ViewModels;
 namespace Skitter.Wpf.Configuration
 {
 	/// <summary>
-	/// Interaction logic for PageListeEquipes.xaml
+	/// Liste des participants au tournoi
 	/// </summary>
-	public partial class PageListeEquipes : Grid, IPage
+	public partial class PageListeParticipants : Grid, IPage
 	{
-        ConfigurationListeEquipesViewModel _viewModel;
+        ConfigurationListeParticipantsViewModel _viewModel;
 
-		public PageListeEquipes()
+		public PageListeParticipants()
 		{
             PageManager.AjouterPage(this);
 
@@ -40,8 +40,8 @@ namespace Skitter.Wpf.Configuration
 
         private void btnAjouterEquipe_Click(object sender, RoutedEventArgs e)
         {
-            _viewModel.AjouterNouvelleEquipe();
-            PageManager.ReinitialiserToutesPages(this);
+            _viewModel.AjouterNouveauParticipant();
+            PageManager.ReinitialiserToutesPages(this, false);
         }
 
         private void btnSupprimerEquipe_Click(object sender, RoutedEventArgs e)
@@ -51,15 +51,15 @@ namespace Skitter.Wpf.Configuration
             if (result != MessageBoxResult.Yes)
                 return;
             
-            _viewModel.SupprimerEquipe();
-            PageManager.ReinitialiserToutesPages(this);
+            _viewModel.SupprimerParticipantSelectionne();
+            PageManager.ReinitialiserToutesPages(this, false);
         }
 
         #region IPage Members
 
         public void ReinitialiserPage()
         {
-            _viewModel = new ConfigurationListeEquipesViewModel();
+            _viewModel = new ConfigurationListeParticipantsViewModel();
             DataContext = _viewModel;
         }
 

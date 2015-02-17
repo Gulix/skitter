@@ -2,7 +2,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:local="clr-namespace:Skitter.Wpf.Configuration"
       xmlns:conv="clr-namespace:Skitter.Wpf.Converters"
-	  x:Class="Skitter.Wpf.Configuration.PageListeEquipes"      
+	  x:Class="Skitter.Wpf.Configuration.PageListeParticipants"      
       >
 	
     <Grid.Resources>
@@ -14,7 +14,7 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" Text="!!" Foreground="DarkRed" FontWeight="Bold" 
                            Visibility="{Binding Path=ErreurVisibility}"/>
-                <TextBlock Grid.Column="1" Text="{Binding Path=NomEquipe}" />
+                <TextBlock Grid.Column="1" Text="{Binding Path=NomParticipant}" />
             </Grid>
         </DataTemplate>
 
@@ -28,13 +28,15 @@
     </Grid.ColumnDefinitions>
 	<Grid.RowDefinitions>
     	<RowDefinition Height="Auto" />
-        <RowDefinition Height="*" />    	    
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
     </Grid.RowDefinitions>
 	    
+    <!-- Liste des participants -->
 	<ListView Grid.Row="1" Grid.Column="0" 
               x:Name="lvEquipes"
-              SelectedItem="{Binding Path=EquipeSelectionnee}"
-              ItemsSource="{Binding Path=ListeEquipes}"
+              SelectedItem="{Binding Path=ParticipantSelectionne}"
+              ItemsSource="{Binding Path=ListeParticipants}"
               ItemTemplate="{StaticResource DT_NomEquipe}"
               SelectionMode="Single"
               />
@@ -43,6 +45,9 @@
         <Button Content="Ajouter" Grid.Column="0"  x:Name="btnAjouterEquipe" IsEnabled="{Binding Path=IsAjoutPossible}" />
         <Button Content="Supprimer" Grid.Column="1"  x:Name="btnSupprimerEquipe" IsEnabled="{Binding Path=IsSuppressionPossible}" />
     </UniformGrid>
+    <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center"
+               Text="{Binding Path=NbParticipants}" />
+    
     
     <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"
            Visibility="{Binding Path=AvertissementModificationVisibility}"
@@ -50,9 +55,9 @@
            Content="La configuration est achevée, faites attention aux modifications !" />
     
     <!-- Détail d'une équipe -->
-    <local:DetailEquipe Grid.Row="1" Grid.Column="1" Margin="10,0"
-                        DataContext="{Binding Path=EquipeSelectionnee}"
-                        Visibility="{Binding Converter={StaticResource nullToVisConverter}}"
-                         />
+    <local:UCEditionParticipant Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Margin="10,0"
+                                DataContext="{Binding Path=ParticipantSelectionne}"
+                                Visibility="{Binding Converter={StaticResource nullToVisConverter}}"
+                                />
 	    
 </Grid>

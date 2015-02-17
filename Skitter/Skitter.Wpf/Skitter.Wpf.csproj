@@ -83,9 +83,18 @@
     <Compile Include="Configuration\PageHymnes.xaml.cs">
       <DependentUpon>PageHymnes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Configuration\PageListeEquipes.xaml.cs">
-      <DependentUpon>PageListeEquipes.xaml</DependentUpon>
+    <Compile Include="Configuration\PageListeParticipants.xaml.cs">
+      <DependentUpon>PageListeParticipants.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\PageTournoi.xaml.cs">
+      <DependentUpon>PageTournoi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\UCEditionCoach.xaml.cs">
+      <DependentUpon>UCEditionCoach.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\UCEditionParticipant.xaml.cs">
+      <DependentUpon>UCEditionParticipant.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\BoutonIntervertirHautBas.xaml.cs">
       <DependentUpon>BoutonIntervertirHautBas.xaml</DependentUpon>
@@ -96,6 +105,7 @@
     <Compile Include="Controls\ClickSelectTextBox.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
     <Compile Include="Converters\NullToVisibilityConverter.cs" />
+    <Compile Include="Converters\TypeParticipantConverter.cs" />
     <Compile Include="Deroulement\PageRonde.cs" />
     <Compile Include="Deroulement\PageRonde1.xaml.cs">
       <DependentUpon>PageRonde1.xaml</DependentUpon>
@@ -130,6 +140,7 @@
     <Compile Include="Deroulement\UCSaisieRencontre.xaml.cs">
       <DependentUpon>UCSaisieRencontre.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MenuManager.cs" />
     <Compile Include="PageManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\WPFAssemblyInfo.cs" />
@@ -173,7 +184,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Configuration\PageListeEquipes.xaml" />
+    <Page Include="Configuration\PageListeParticipants.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Configuration\PageTournoi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Configuration\UCEditionCoach.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Configuration\UCEditionParticipant.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\BoutonIntervertirHautBas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

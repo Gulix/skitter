@@ -1,0 +1,66 @@
+﻿<Grid x:Class="Skitter.Wpf.Configuration.PageTournoi"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:conv="clr-namespace:Skitter.Wpf.Converters"
+      >
+    
+    <Grid.Resources>
+        <conv:TypeParticipantConverter x:Key="typParticipantConverter" />
+        
+        <DataTemplate x:Key="DT_TypeParticipant">
+            <TextBlock Text="{Binding Converter={StaticResource typParticipantConverter}}" />
+        </DataTemplate>
+    </Grid.Resources>
+    
+    <GroupBox Header="Configuration générale" 
+              IsEnabled="{Binding Path=IsConfigurationGeneraleEnabled}"
+              >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <!-- Type de tournoi -->
+            <Label Grid.Row="0" Grid.Column="0"
+                   HorizontalAlignment="Right"
+                   Content="Type de tournoi" />
+            <ComboBox Grid.Row="0" Grid.Column="1"
+                      ItemTemplate="{StaticResource DT_TypeParticipant}"
+                      ItemsSource="{Binding Path=ListeTypesParticipant}"
+                      SelectedItem="{Binding Path=TypeParticipantTournoi}"
+                      />
+            <!-- Nombre de coaches par équipe -->
+            <Label Grid.Row="1" Grid.Column="0"
+                   HorizontalAlignment="Right"
+                   Content="Nb de coaches par équipe" 
+                   Visibility="{Binding Path=NbCoachesVisibility}"
+                   />
+            <TextBox Grid.Row="1" Grid.Column="1"
+                     Visibility="{Binding Path=NbCoachesVisibility}"
+                     Text="{Binding Path=NbCoachesParEquipe}"
+                     />
+            
+            <!-- Nombre de rondes -->
+            <Label Grid.Row="2" Grid.Column="0"
+                   HorizontalAlignment="Right"
+                   Content="Nb de rondes" />
+            <TextBox Grid.Row="2" Grid.Column="1"
+                     Text="{Binding Path=NbRondes}"
+                     />
+            
+            <!-- Validation -->
+            <Button x:Name="btnValiderConfigurationGenerale"
+                    Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+                    HorizontalAlignment="Right"
+                    Content="Valider la configuration"
+                    />
+        </Grid>
+    </GroupBox>
+</Grid>
