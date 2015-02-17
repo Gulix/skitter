@@ -22,11 +22,18 @@ namespace Skitter.Wpf
 	/// <summary>
 	/// Interaction logic for Window1.xaml
 	/// </summary>
-	public partial class Window1 : ModernWindow
-	{
-		public Window1()
-		{
-			//InitializeComponent();
-		}
-	}
+    //public partial class MainWindow : ModernWindow
+    //{
+    //    public MainWindow()
+    //    {
+    //        //InitializeComponent();
+    //        UpdateMenus();
+    //        PageManager.UpdateMenus += UpdateMenus;
+    //    }
+
+    //    void UpdateMenus()
+    //    {
+    //        this.MenuLinkGroups = PageManager.ListeMenus;
+    //    }
+    //}
 }

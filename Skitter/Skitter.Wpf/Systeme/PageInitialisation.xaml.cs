@@ -19,7 +19,7 @@ namespace Skitter.Wpf.Systeme
     /// <summary>
     /// Interaction logic for PageInitialisation.xaml
     /// </summary>
-    public partial class PageInitialisation : System.Windows.Controls.UserControl
+    public partial class PageInitialisation : System.Windows.Controls.UserControl, IPage
     {
         public PageInitialisation()
         {
@@ -27,6 +27,9 @@ namespace Skitter.Wpf.Systeme
 
             btnNouveauTournoi.Click += btnNouveauTournoi_Click;
             btnChargementTournoi.Click += btnChargementTournoi_Click;
+
+            PageManager.AjouterPage(this);
+            PageManager.ReinitialiserToutesPages(true);
         }
 
         void btnNouveauTournoi_Click(object sender, RoutedEventArgs e)
@@ -38,7 +41,7 @@ namespace Skitter.Wpf.Systeme
 
             InitialisationViewModel.InitialiserNouveauTournoi();
 
-            PageManager.ReinitialiserToutesPages();
+            PageManager.ReinitialiserToutesPages(true);
         }
 
         void btnChargementTournoi_Click(object sender, RoutedEventArgs e)
@@ -60,7 +63,7 @@ namespace Skitter.Wpf.Systeme
             try
             {
                 InitialisationViewModel.ChargerTournoiExistant(openFileDialog.FileName);
-                PageManager.ReinitialiserToutesPages();
+                PageManager.ReinitialiserToutesPages(true);
                 System.Windows.MessageBox.Show("Chargement terminé !");
             }
             catch (Exception ex)
@@ -68,5 +71,14 @@ namespace Skitter.Wpf.Systeme
                 System.Windows.MessageBox.Show(ex.Message);
             }
         }
+
+        #region IPage Members
+
+        public void ReinitialiserPage()
+        {
+            
+        }
+
+        #endregion
     }
 }

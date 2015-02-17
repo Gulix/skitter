@@ -80,7 +80,7 @@ namespace Skitter.Wpf.Deroulement
             if (_viewModel != null)
             {
                 _viewModel.InitialiserSelonClassement();
-                PageManager.ReinitialiserToutesPages(this);
+                PageManager.ReinitialiserToutesPages(this, true);
             }
         }
 
@@ -89,7 +89,7 @@ namespace Skitter.Wpf.Deroulement
             if (_viewModel != null)
             {
                 _viewModel.InitialiserSelonAleatoire();
-                PageManager.ReinitialiserToutesPages(this);
+                PageManager.ReinitialiserToutesPages(this, true);
             }
         }
         #endregion
@@ -100,7 +100,7 @@ namespace Skitter.Wpf.Deroulement
             if (_viewModel != null)
             {
                 _viewModel.AnnulerOrganisation();
-                PageManager.ReinitialiserToutesPages(this);
+                PageManager.ReinitialiserToutesPages(this, true);
             }
         }
 
@@ -109,7 +109,7 @@ namespace Skitter.Wpf.Deroulement
             if (_viewModel != null)
             {
                 _viewModel.ValiderOrganisation();
-                PageManager.ReinitialiserToutesPages(this);
+                PageManager.ReinitialiserToutesPages(this, true);
             }
         }
         #endregion
@@ -120,7 +120,7 @@ namespace Skitter.Wpf.Deroulement
             if (_viewModel != null)
             {
                 _viewModel.ValiderSaisie();
-                PageManager.ReinitialiserToutesPages(this);
+                PageManager.ReinitialiserToutesPages(this, true);
             }
         }
 
@@ -129,7 +129,7 @@ namespace Skitter.Wpf.Deroulement
             if (_viewModel != null)
             {
                 _viewModel.AnnulerSaisie();
-                PageManager.ReinitialiserToutesPages(this);
+                PageManager.ReinitialiserToutesPages(this, true);
             }
         }
         #endregion

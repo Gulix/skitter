@@ -2,11 +2,12 @@
 	              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                   xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+                  xmlns:local="clr-namespace:Skitter.Wpf"
                   Title="Skitter" Height="768" Width="1024"
                   ContentSource="/Systeme/PageInitialisation.xaml"
 	>
 
-	<mui:ModernWindow.MenuLinkGroups>
+	<!--<mui:ModernWindow.MenuLinkGroups>
 		<mui:LinkGroup DisplayName="Systeme">
 			<mui:LinkGroup.Links>
 				<mui:Link DisplayName="Initialisation" Source="/Systeme/PageInitialisation.xaml"/>
@@ -16,7 +17,7 @@
 		</mui:LinkGroup>
 		<mui:LinkGroup DisplayName="Configuration">
 			<mui:LinkGroup.Links>
-				<mui:Link DisplayName="Equipes" Source="/Configuration/PageListeEquipes.xaml" />
+				<mui:Link DisplayName="Participants" Source="/Configuration/PageListeParticipants.xaml" />
 			</mui:LinkGroup.Links>
 		</mui:LinkGroup>
         <mui:LinkGroup DisplayName="Deroulement">
@@ -38,6 +39,6 @@
                 <mui:Link DisplayName="Export NAF" Source="/Resultats/PageExportNaf.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
-	</mui:ModernWindow.MenuLinkGroups>
+	</mui:ModernWindow.MenuLinkGroups>-->
 </mui:ModernWindow>
 

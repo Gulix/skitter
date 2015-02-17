@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows;
+using FirstFloor.ModernUI.Presentation;
+using FirstFloor.ModernUI.Windows.Controls;
 
 namespace Skitter.Wpf
 {
@@ -16,12 +19,12 @@ namespace Skitter.Wpf
             _lsPages.Add(page);
         }
 
-        public static void ReinitialiserToutesPages()
+        public static void ReinitialiserToutesPages(bool bRafraichirMenus)
         {
-            ReinitialiserToutesPages(null);
+            ReinitialiserToutesPages(null, bRafraichirMenus);
         }
 
-        public static void ReinitialiserToutesPages(IPage exceptThis)
+        public static void ReinitialiserToutesPages(IPage exceptThis, bool bRafraichirMenus)
         {
             if (_lsPages == null)
                 return;
@@ -31,7 +34,33 @@ namespace Skitter.Wpf
                 if (page != exceptThis)
                     page.ReinitialiserPage();
             }
+
+
+
+            if (bRafraichirMenus)
+            {
+                ModernWindow wnd = Application.Current.MainWindow as ModernWindow;
+
+                if (wnd != null)
+                {
+                    wnd.MenuLinkGroups = ListeMenus;
+                }
+            }
         }
+
+        #region Gestion des menus
+        static MenuManager _menu;
+        public static LinkGroupCollection ListeMenus
+        {
+            get
+            {
+                if (_menu == null)
+                    _menu = new MenuManager();
+                return _menu.ListeMenus;
+            }
+        }
+        #endregion
+
         
     }
 
