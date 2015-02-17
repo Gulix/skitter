@@ -75,16 +75,12 @@ namespace Skitter.ViewModel.Fonctionnel
             // On récupère les rencontres précédentes
             int idEquipe = coach.Equipe.IdEquipe;
             List<List<Rencontre>> lsRencontresParRonde = new List<List<Rencontre>>();
-            if (iRondeActuelle > 1)
-                lsRencontresParRonde.Add(Tournoi.GetInstance().RencontresRonde1.Where(r => (r.IdEquipe1 == idEquipe) || (r.IdEquipe2 == idEquipe)).ToList());
-            if (iRondeActuelle > 2)
-                lsRencontresParRonde.Add(Tournoi.GetInstance().RencontresRonde2.Where(r => (r.IdEquipe1 == idEquipe) || (r.IdEquipe2 == idEquipe)).ToList());
-            if (iRondeActuelle > 3)
-                lsRencontresParRonde.Add(Tournoi.GetInstance().RencontresRonde3.Where(r => (r.IdEquipe1 == idEquipe) || (r.IdEquipe2 == idEquipe)).ToList());
-            if (iRondeActuelle > 4)
-                lsRencontresParRonde.Add(Tournoi.GetInstance().RencontresRonde4.Where(r => (r.IdEquipe1 == idEquipe) || (r.IdEquipe2 == idEquipe)).ToList());
-
-            // On récupère les duels auxquels à participé le coach
+            for (int iRonde = 1; iRonde < iRondeActuelle; iRonde++ )
+            {
+                lsRencontresParRonde.Add(Tournoi.GetRencontresSelonRonde(iRonde).Where(r => (r.IdParticipant1 == idEquipe) || (r.IdParticipant2 == idEquipe)).ToList());
+            }
+                
+            // On récupère les duels auxquels a participé le coach
             List<DuelRonde> lsDuelsParRonde = new List<DuelRonde>();
             for (int iRonde = 0; iRonde < lsRencontresParRonde.Count; iRonde++)
             {

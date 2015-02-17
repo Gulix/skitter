@@ -28,12 +28,19 @@ namespace Skitter.ViewModel.Fonctionnel
 
         public static DuelRonde GetDuelCoach(Rencontre rencontre, Coach coach, int iNumeroRonde)
         {
-            if ((rencontre.Duel1.IdCoach1 == coach.IdCoach) || (rencontre.Duel1.IdCoach2 == coach.IdCoach))
-                return new DuelRonde(rencontre.Duel1, iNumeroRonde);
-            else if ((rencontre.Duel2.IdCoach1 == coach.IdCoach) || (rencontre.Duel2.IdCoach2 == coach.IdCoach))
-                return new DuelRonde(rencontre.Duel2, iNumeroRonde);
-            if ((rencontre.Duel3.IdCoach1 == coach.IdCoach) || (rencontre.Duel3.IdCoach2 == coach.IdCoach))
-                return new DuelRonde(rencontre.Duel3, iNumeroRonde);
+            if ((rencontre == null) || (coach == null))
+                return null;
+
+            try
+            {
+                Duel duel = rencontre.ListeDuels.Single(d => d.APrisPartAuDuel(coach));
+                if (duel != null)
+                    return new DuelRonde(duel, iNumeroRonde);
+            }
+            catch
+            {
+                return null;
+            }
 
             return null;
         }
