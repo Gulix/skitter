@@ -31,11 +31,8 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FirstFloor.ModernUI">
-      <HintPath>..\..\..\Librairies\ModernUI\ModernUI.1.0.5\net40\FirstFloor.ModernUI.dll</HintPath>
-    </Reference>
     <Reference Include="Nustache.Core">
-      <HintPath>..\..\..\..\Downloads\Nustache\Nustache.Core\obj\Debug\Nustache.Core.dll</HintPath>
+      <HintPath>..\external\Nustache.Core.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
@@ -58,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Fonctionnel\ControleRencontreCoach.cs" />
+    <Compile Include="Fonctionnel\Conv.cs" />
     <Compile Include="Fonctionnel\DuelRonde.cs" />
     <Compile Include="Fonctionnel\ExportExcel.cs" />
     <Compile Include="Fonctionnel\FileAndDirectory.cs" />
@@ -74,8 +72,10 @@
     <Compile Include="ViewModels\Classements\ResultatsRonde5ViewModel.cs" />
     <Compile Include="ViewModels\Classements\ResultatsViewModel.cs" />
     <Compile Include="ViewModels\CoachRondeViewModel.cs" />
+    <Compile Include="ViewModels\Configuration\ConfigurationTournoiViewModel.cs" />
     <Compile Include="ViewModels\ExportNaf.cs" />
     <Compile Include="ViewModels\HymneViewModel.cs" />
+    <Compile Include="ViewModels\MenuManagerViewModel.cs" />
     <Compile Include="ViewModels\Rondes\GenerationFeuilleResultatViewModel.cs" />
     <Compile Include="ViewModels\Rondes\Ronde1ViewModel.cs" />
     <Compile Include="ViewModels\Rondes\Ronde2ViewModel.cs" />
@@ -84,8 +84,8 @@
     <Compile Include="ViewModels\Rondes\Ronde5ViewModel.cs" />
     <Compile Include="ViewModels\SaisieDuelViewModel.cs" />
     <Compile Include="ViewModels\CoachViewModel.cs" />
-    <Compile Include="ViewModels\ConfigurationListeEquipesViewModel.cs" />
-    <Compile Include="ViewModels\EquipeViewModel.cs" />
+    <Compile Include="ViewModels\ConfigurationListeParticipantsViewModel.cs" />
+    <Compile Include="ViewModels\ParticipantViewModel.cs" />
     <Compile Include="ViewModels\InitialisationViewModel.cs" />
     <Compile Include="ViewModels\PreparationEquipeViewModel.cs" />
     <Compile Include="ViewModels\PreparationRencontreViewModel.cs" />
