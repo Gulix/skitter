@@ -85,9 +85,8 @@ namespace Skitter.ViewModel.ViewModels.Rondes
             _iNumeroTable = numeroTable;
             // Génération des duels
             _lsDuels = new List<GenerationFeuilleResultatDuelViewModel>();
-            _lsDuels.Add(new GenerationFeuilleResultatDuelViewModel(_rencontre.Duel1, this, 1));
-            _lsDuels.Add(new GenerationFeuilleResultatDuelViewModel(_rencontre.Duel2, this, 2));
-            _lsDuels.Add(new GenerationFeuilleResultatDuelViewModel(_rencontre.Duel3, this, 3));
+            for (int iDuel = 0; iDuel < _rencontre.ListeDuels.Count; iDuel++)
+                _lsDuels.Add(new GenerationFeuilleResultatDuelViewModel(_rencontre.ListeDuels[iDuel], this, iDuel + 1));
         }
     }
 
@@ -105,15 +104,15 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         }
 
         [DataMember]
-        public string NomEquipe1
+        public string NomParticipant1
         {
-            get { return _rencontreVM.Rencontre.LibelleEquipe1; }
+            get { return _rencontreVM.Rencontre.NomParticipant1; }
         }
 
         [DataMember]
-        public string NomEquipe2
+        public string NomParticipant2
         {
-            get { return _rencontreVM.Rencontre.LibelleEquipe2; }
+            get { return _rencontreVM.Rencontre.NomParticipant1; }
         }
 
         [DataMember]
@@ -168,7 +167,7 @@ namespace Skitter.ViewModel.ViewModels.Rondes
             if (coach == null)
                 return string.Empty;
 
-            if (coach.Equipe.Capitaine.IdCoach == idCoach)
+            if (coach.Equipe.ListeCoaches[0].IdCoach == idCoach)
                 return coach.NomCoach + " (capitaine)";
             return coach.NomCoach;
         }
