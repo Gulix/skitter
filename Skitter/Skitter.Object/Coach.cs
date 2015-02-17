@@ -7,8 +7,11 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
+using Skitter.Object.Interfaces;
 
 namespace Skitter.Object
 {
@@ -16,7 +19,7 @@ namespace Skitter.Object
 	/// Informations sur un coach
 	/// </summary>
 	[Serializable]
-	public class Coach
+	public class Coach : IParticipant
 	{
 		#region Variables
 		int _idCoach;
@@ -62,12 +65,14 @@ namespace Skitter.Object
 
         #region Accesseurs non-sérialisés
         [XmlIgnore]
+        [JsonIgnore]
         private Roster Roster
         {
             get { return Roster.GetListeComplete().FirstOrDefault(r => r.IdRoster == IdRoster); }
         }
 
         [XmlIgnore]
+        [JsonIgnore]
         public int ValeurRoster
         {
             get
@@ -79,6 +84,7 @@ namespace Skitter.Object
         }
 
         [XmlIgnore]
+        [JsonIgnore]
         public string NomRoster
         {
             get
@@ -90,12 +96,14 @@ namespace Skitter.Object
         }
 
         [XmlIgnore]
+        [JsonIgnore]
         public Equipe Equipe
         {
-            get { return Tournoi.GetInstance().Equipes.FirstOrDefault(e => e.ContientIdCoach(this.IdCoach)); }
+            get { return Tournoi.ListeEquipes.FirstOrDefault(e => e.ContientIdCoach(this.IdCoach)); }
         }
 
         [XmlIgnore]
+        [JsonIgnore]
         public string PseudoNafOuNormal
         {
             get
@@ -107,10 +115,15 @@ namespace Skitter.Object
         }
         #endregion
 
-        public Coach()
+        #region Constructeurs
+        /// <summary>
+        /// Chargement par sérialisation
+        /// </summary>
+        internal Coach()
 		{
-            _idCoach = Tournoi.GetInstance().NouvelIdCoach;
+            
 		}
+        #endregion
 
         #region Roster joué selon la ronde
         public Roster GetRosterSelonRondeJouee(eTypeRosterJoue typRoster)
@@ -143,22 +156,28 @@ namespace Skitter.Object
 
             if (typRoster == eTypeRosterJoue.EchangeRonde2)
             {
-                if (Equipe.Capitaine.IdCoach == IdCoach)
-                    return Equipe.Equipier1;
-                if (Equipe.Equipier1.IdCoach == IdCoach)
-                    return Equipe.Equipier2;
-                if (Equipe.Equipier2.IdCoach == IdCoach)
-                    return Equipe.Capitaine;
+                for (int iCoach = 0; iCoach < Equipe.ListeIdCoaches.Count; iCoach++)
+                {
+                    if (Equipe.ListeIdCoaches[iCoach] == IdCoach)
+                    {
+                        if (iCoach >= Equipe.ListeIdCoaches.Count)
+                            return Tournoi.GetCoach(Equipe.ListeIdCoaches[0]);
+                        return Tournoi.GetCoach(Equipe.ListeIdCoaches[iCoach + 1]);
+                    }
+                }
             }
 
             if (typRoster == eTypeRosterJoue.EchangeRonde4)
             {
-                if (Equipe.Capitaine.IdCoach == IdCoach)
-                    return Equipe.Equipier2;
-                if (Equipe.Equipier1.IdCoach == IdCoach)
-                    return Equipe.Capitaine;
-                if (Equipe.Equipier2.IdCoach == IdCoach)
-                    return Equipe.Equipier1;
+                for (int iCoach = 0; iCoach < Equipe.ListeIdCoaches.Count; iCoach++)
+                {
+                    if (Equipe.ListeIdCoaches[iCoach] == IdCoach)
+                    {
+                        if (iCoach == 0)
+                            return Tournoi.GetCoach(Equipe.ListeIdCoaches.Last());
+                        return Tournoi.GetCoach(Equipe.ListeIdCoaches[iCoach - 1]);
+                    }
+                }
             }
 
             return null;
@@ -180,6 +199,42 @@ namespace Skitter.Object
 
             return eTypeRosterJoue.RosterClassique;
         }
+        #endregion
+
+        #region IParticipant Members
+
+        [XmlIgnore]
+        [JsonIgnore]
+        public string NomParticipant
+        {
+            get { return NomCoach; }
+            set { NomCoach = value; }
+        }
+
+        [XmlIgnore]
+        [JsonIgnore]
+        public int IdParticipant
+        {
+            get { return IdCoach; }
+        }
+
+        [XmlIgnore]
+        [JsonIgnore]
+        public List<Coach> ListeCoaches
+        {
+            get { return new List<Coach>() { this }; }
+        }
+
+        public string GetErreurs()
+        {
+            if (string.IsNullOrEmpty(NomParticipant))
+                return "Le nom du coach est nécessaire.";
+            if (Roster == null)
+                return "Le roster doit être sélectionné.";
+
+            return string.Empty;
+        }
+
         #endregion
     }
 }
