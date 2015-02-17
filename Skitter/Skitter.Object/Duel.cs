@@ -49,5 +49,16 @@ namespace Skitter.Object
             _resultatCoach1 = new Resultat();
             _resultatCoach2 = new Resultat();
         }
+
+        /// <summary>
+        /// Le coach indiqué a-t-il pris part à ce Duel ?
+        /// </summary>
+        public bool APrisPartAuDuel(Coach coach)
+        {
+            if (coach == null)
+                return false;
+
+            return (coach.IdCoach == IdCoach1) || (coach.IdCoach == IdCoach2);
+        }
     }
 }
