@@ -29,7 +29,7 @@ namespace Skitter.ViewModel.ViewModels
 
         private static void CopierPP_ListeCoachesRoster(int iRonde)
         {
-            List<Coach> lsCoaches = Tournoi.GetInstance().Coaches
+            List<Coach> lsCoaches = Tournoi.ListeCoaches
                 .OrderBy(c => IsCoachEtRoster_NAF(c.IdCoach, c.GetRosterSelonRondeJouee(iRonde)) ? 0 : 1)
                 .ToList();
             
@@ -53,14 +53,8 @@ namespace Skitter.ViewModel.ViewModels
         public static void CopierPP_ListeRencontres(int iRonde)
         {
             List<Rencontre> lsRencontres = Tournoi.GetRencontresSelonRonde(iRonde);
-            List<Duel> lsDuels = new List<Duel>();
-            foreach(Rencontre rnc in lsRencontres)
-            {
-                lsDuels.Add(rnc.Duel1);
-                lsDuels.Add(rnc.Duel2);
-                lsDuels.Add(rnc.Duel3);
-            }
-
+            List<Duel> lsDuels = lsRencontres.SelectMany(rnc => rnc.ListeDuels).ToList();
+            
             lsDuels = lsDuels.OrderBy(d => (IsCoachEtRoster_NAF(d.IdCoach1, Coach.GetRosterSelonRondeJouee(d.IdCoach1, iRonde)) ? 0 : 1)
                                         + (IsCoachEtRoster_NAF(d.IdCoach2, Coach.GetRosterSelonRondeJouee(d.IdCoach2, iRonde)) ? 0 : 1)
                                      )

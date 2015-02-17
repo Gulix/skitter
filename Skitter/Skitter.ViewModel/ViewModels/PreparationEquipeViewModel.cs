@@ -94,17 +94,17 @@ namespace Skitter.ViewModel.ViewModels
         {
             if (_rencontre != null)
             {
-                bool bEquipe1 = (_rencontre.IdEquipe1 == _equipe.IdEquipe);
-                _coachRang1 = RenseignerCoachSelonDuel(_rencontre.Duel1, bEquipe1);
-                _coachRang2 = RenseignerCoachSelonDuel(_rencontre.Duel2, bEquipe1);
-                _coachRang3 = RenseignerCoachSelonDuel(_rencontre.Duel3, bEquipe1);
+                bool bEquipe1 = (_rencontre.IdParticipant1 == _equipe.IdEquipe);
+                _coachRang1 = RenseignerCoachSelonDuel(_rencontre.ListeDuels[0], bEquipe1);
+                _coachRang2 = RenseignerCoachSelonDuel(_rencontre.ListeDuels[1], bEquipe1);
+                _coachRang3 = RenseignerCoachSelonDuel(_rencontre.ListeDuels[2], bEquipe1);
             }
 
             if ((_coachRang1 == null) && (_coachRang2 == null) && (_coachRang3 == null))
             {
-                _coachRang1 = new CoachRondeViewModel(_equipe.Capitaine, _iNumeroRonde);
-                _coachRang2 = new CoachRondeViewModel(_equipe.Equipier1, _iNumeroRonde);
-                _coachRang3 = new CoachRondeViewModel(_equipe.Equipier2, _iNumeroRonde);
+                _coachRang1 = new CoachRondeViewModel(_equipe.ListeCoaches[0], _iNumeroRonde);
+                _coachRang2 = new CoachRondeViewModel(_equipe.ListeCoaches[1], _iNumeroRonde);
+                _coachRang3 = new CoachRondeViewModel(_equipe.ListeCoaches[2], _iNumeroRonde);
             }
         }
 
@@ -112,12 +112,10 @@ namespace Skitter.ViewModel.ViewModels
         {
             if (duel != null)
             {
-                if ((bEquipe1 && (duel.IdCoach1 == _equipe.Capitaine.IdCoach)) || (!bEquipe1 && (duel.IdCoach2 == _equipe.Capitaine.IdCoach)))
-                    return new CoachRondeViewModel(_equipe.Capitaine, _iNumeroRonde);
-                else if ((bEquipe1 && (duel.IdCoach1 == _equipe.Equipier1.IdCoach)) || (!bEquipe1 && (duel.IdCoach2 == _equipe.Equipier1.IdCoach)))
-                    return new CoachRondeViewModel(_equipe.Equipier1, _iNumeroRonde);
-                else if ((bEquipe1 && (duel.IdCoach1 == _equipe.Equipier2.IdCoach)) || (!bEquipe1 && (duel.IdCoach2 == _equipe.Equipier2.IdCoach)))
-                    return new CoachRondeViewModel(_equipe.Equipier2, _iNumeroRonde);
+                Coach coach = _equipe.ListeCoaches.FirstOrDefault(c => c.IdCoach == (bEquipe1 ? duel.IdCoach1 : duel.IdCoach2));
+                if (coach == null)
+                    return null;
+                return new CoachRondeViewModel(coach, _iNumeroRonde);
             }
 
             return null;
@@ -131,15 +129,15 @@ namespace Skitter.ViewModel.ViewModels
             _coachRang1 = _coachRang2;
             _coachRang2 = coachTmp;
 
-            if (_rencontre.IdEquipe1 == _equipe.IdEquipe)
+            if (_rencontre.IdParticipant1 == _equipe.IdEquipe)
             {
-                _rencontre.Duel1.IdCoach1 = _coachRang1.IdCoach;
-                _rencontre.Duel2.IdCoach1 = _coachRang2.IdCoach;
+                _rencontre.ListeDuels[0].IdCoach1 = _coachRang1.IdCoach;
+                _rencontre.ListeDuels[1].IdCoach1 = _coachRang2.IdCoach;
             }
-            else if (_rencontre.IdEquipe2 == _equipe.IdEquipe)
+            else if (_rencontre.IdParticipant2 == _equipe.IdEquipe)
             {
-                _rencontre.Duel1.IdCoach2 = _coachRang1.IdCoach;
-                _rencontre.Duel2.IdCoach2 = _coachRang2.IdCoach;
+                _rencontre.ListeDuels[0].IdCoach2 = _coachRang1.IdCoach;
+                _rencontre.ListeDuels[1].IdCoach2 = _coachRang2.IdCoach;
             }
 
 
@@ -154,15 +152,15 @@ namespace Skitter.ViewModel.ViewModels
             _coachRang3 = _coachRang2;
             _coachRang2 = coachTmp;
 
-            if (_rencontre.IdEquipe1 == _equipe.IdEquipe)
+            if (_rencontre.IdParticipant1 == _equipe.IdEquipe)
             {
-                _rencontre.Duel2.IdCoach1 = _coachRang2.IdCoach;
-                _rencontre.Duel3.IdCoach1 = _coachRang3.IdCoach;
+                _rencontre.ListeDuels[1].IdCoach1 = _coachRang2.IdCoach;
+                _rencontre.ListeDuels[2].IdCoach1 = _coachRang3.IdCoach;
             }
-            else if (_rencontre.IdEquipe2 == _equipe.IdEquipe)
+            else if (_rencontre.IdParticipant2 == _equipe.IdEquipe)
             {
-                _rencontre.Duel2.IdCoach2 = _coachRang2.IdCoach;
-                _rencontre.Duel3.IdCoach2 = _coachRang3.IdCoach;
+                _rencontre.ListeDuels[1].IdCoach2 = _coachRang2.IdCoach;
+                _rencontre.ListeDuels[2].IdCoach2 = _coachRang3.IdCoach;
             }
 
             RaisePropertyChanged("CoachRang3");

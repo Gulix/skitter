@@ -33,11 +33,11 @@ namespace Skitter.ViewModel.ViewModels
         private void RenseignerEquipe1(PreparationEquipeViewModel equipe)
         {
             _equipe1ViewModel = equipe;
-            
-            _rencontre.IdEquipe1 = _equipe1ViewModel.IdEquipe;
-            _rencontre.Duel1.IdCoach1 = _equipe1ViewModel.CoachRang1.IdCoach;
-            _rencontre.Duel2.IdCoach1 = _equipe1ViewModel.CoachRang2.IdCoach;
-            _rencontre.Duel3.IdCoach1 = _equipe1ViewModel.CoachRang3.IdCoach;
+
+            _rencontre.IdParticipant1 = _equipe1ViewModel.IdEquipe;
+            _rencontre.ListeDuels[0].IdCoach1 = _equipe1ViewModel.CoachRang1.IdCoach;
+            _rencontre.ListeDuels[1].IdCoach1 = _equipe1ViewModel.CoachRang2.IdCoach;
+            _rencontre.ListeDuels[2].IdCoach1 = _equipe1ViewModel.CoachRang3.IdCoach;
 
             _equipe1ViewModel.ModifierRencontre(_rencontre);
         }
@@ -46,10 +46,10 @@ namespace Skitter.ViewModel.ViewModels
         {
             _equipe2ViewModel = equipe;
 
-            _rencontre.IdEquipe2 = _equipe2ViewModel.IdEquipe;
-            _rencontre.Duel1.IdCoach2 = _equipe2ViewModel.CoachRang1.IdCoach;
-            _rencontre.Duel2.IdCoach2 = _equipe2ViewModel.CoachRang2.IdCoach;
-            _rencontre.Duel3.IdCoach2 = _equipe2ViewModel.CoachRang3.IdCoach;
+            _rencontre.IdParticipant2 = _equipe2ViewModel.IdEquipe;
+            _rencontre.ListeDuels[0].IdCoach2 = _equipe2ViewModel.CoachRang1.IdCoach;
+            _rencontre.ListeDuels[1].IdCoach2 = _equipe2ViewModel.CoachRang2.IdCoach;
+            _rencontre.ListeDuels[2].IdCoach2 = _equipe2ViewModel.CoachRang3.IdCoach;
 
             _equipe2ViewModel.ModifierRencontre(_rencontre);
         }
@@ -164,17 +164,7 @@ namespace Skitter.ViewModel.ViewModels
 
         private bool IsRencontreDejaJouee()
         {
-            bool bDejaJouee = false;
-            if (_iNumeroRonde > 1)
-                bDejaJouee = bDejaJouee || Tournoi.GetInstance().RencontresRonde1.Any(r => IsRencontresIdentiques(r, _rencontre));
-            if (_iNumeroRonde > 2)
-                bDejaJouee = bDejaJouee || Tournoi.GetInstance().RencontresRonde2.Any(r => IsRencontresIdentiques(r, _rencontre));
-            if (_iNumeroRonde > 3)
-                bDejaJouee = bDejaJouee || Tournoi.GetInstance().RencontresRonde3.Any(r => IsRencontresIdentiques(r, _rencontre));
-            if (_iNumeroRonde > 4)
-                bDejaJouee = bDejaJouee || Tournoi.GetInstance().RencontresRonde4.Any(r => IsRencontresIdentiques(r, _rencontre));
-
-            return bDejaJouee;
+            return Tournoi.GetRencontresAvant(_iNumeroRonde).Any(r => IsRencontresIdentiques(r, _rencontre));
         }
 
         private bool IsRencontresIdentiques(Rencontre rencontre1, Rencontre rencontre2)
@@ -182,8 +172,8 @@ namespace Skitter.ViewModel.ViewModels
             if ((rencontre1 == null) || (rencontre2 == null))
                 return false;
 
-            return ((rencontre1.IdEquipe1 == rencontre2.IdEquipe1) && (rencontre1.IdEquipe2 == rencontre2.IdEquipe2))
-                || ((rencontre1.IdEquipe1 == rencontre2.IdEquipe2) && (rencontre1.IdEquipe2 == rencontre2.IdEquipe1));
+            return ((rencontre1.IdParticipant1 == rencontre2.IdParticipant1) && (rencontre1.IdParticipant2 == rencontre2.IdParticipant2))
+                || ((rencontre1.IdParticipant1 == rencontre2.IdParticipant2) && (rencontre1.IdParticipant2 == rencontre2.IdParticipant1));
         }
 
         private SolidColorBrush GetBrushSelected()
@@ -214,11 +204,11 @@ namespace Skitter.ViewModel.ViewModels
             _iNumeroTable = iNumeroTable;
             _iNumeroRonde = iNumeroRonde;
 
-            Equipe equipe = Tournoi.GetInstance().Equipes.FirstOrDefault(e => e.IdEquipe == _rencontre.IdEquipe1);
+            Equipe equipe = Tournoi.GetParticipant(_rencontre.IdParticipant1) as Equipe;
             if (equipe == null)
                 throw new ArgumentException("Il n'y a pas d'équipe 1 pour la rencontre.");
             _equipe1ViewModel = new PreparationEquipeViewModel(equipe, rencontre, _iNumeroRonde, typRosterJoue, RafraichirControle);
-            equipe = Tournoi.GetInstance().Equipes.FirstOrDefault(e => e.IdEquipe == _rencontre.IdEquipe2);
+            equipe = Tournoi.GetParticipant(_rencontre.IdParticipant2) as Equipe;
             if (equipe == null)
                 throw new ArgumentException("Il n'y a pas d'équipe 2 pour la rencontre.");
             _equipe2ViewModel = new PreparationEquipeViewModel(equipe, rencontre, _iNumeroRonde, typRosterJoue, RafraichirControle);
