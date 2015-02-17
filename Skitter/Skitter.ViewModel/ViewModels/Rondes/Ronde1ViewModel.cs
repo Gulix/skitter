@@ -9,22 +9,14 @@ namespace Skitter.ViewModel.ViewModels.Rondes
 {
     public class Ronde1ViewModel : RondeViewModel
     {
-        protected override List<Rencontre> RencontresDeLaRonde
-        {
-            get
-            {
-                return Tournoi.GetInstance().RencontresRonde1;
-            }
-        }
-
         public override string InformationsChoixInitialisation
         {
             get
             {
-                return "La génération de la première ronde va bloquer définitivement la configuration des équipes du tournoi.\n"
-                  + string.Format("Il y a {0} équipe{1} d'inscrite{1} au tournoi.",
-                                  Tournoi.GetInstance().Equipes.Count,
-                                  (Tournoi.GetInstance().Equipes.Count > 1) ? "s" : string.Empty);
+                return "La génération de la première ronde va bloquer définitivement la configuration des participants au tournoi.\n"
+                  + string.Format("Il y a {0} participant{1} inscrit{1} au tournoi.",
+                                  Tournoi.ListeParticipants.Count,
+                                  (Tournoi.ListeParticipants.Count > 1) ? "s" : string.Empty);
             }
         }
 
@@ -32,7 +24,7 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         {
             get
             {
-                return (Tournoi.GetInstance().PhaseEnCours == Tournoi.eTypePhaseTournoi.Configuration)
+                return (Tournoi.TypePhaseTournoi <= Tournoi.eTypePhaseTournoi.ConfigurationParticipants)
                           ? Visibility.Visible : Visibility.Collapsed;
             }
         }
@@ -56,31 +48,31 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         #region Phases du tournoi
         protected override void ChangerEtatTournoiSurAnnulationOrganisation()
         {
-            Tournoi.GetInstance().PhaseEnCours = Tournoi.eTypePhaseTournoi.Configuration;
+            Tournoi.TypePhaseTournoi = Tournoi.eTypePhaseTournoi.ConfigurationParticipants;
         }
 
         protected override void ChangerEtatTournoiPhaseOrganisation()
         {
-            Tournoi.GetInstance().PhaseEnCours = Tournoi.eTypePhaseTournoi.GenerationRonde1;
+            Tournoi.TypePhaseTournoi = Tournoi.eTypePhaseTournoi.GenerationRonde1;
         }
         
         protected override void ChangerEtatTournoiPhaseSaisie()
         {
-            Tournoi.GetInstance().PhaseEnCours = Tournoi.eTypePhaseTournoi.SaisieRonde1;
+            Tournoi.TypePhaseTournoi = Tournoi.eTypePhaseTournoi.SaisieRonde1;
         }
 
         protected override void ChangerEtatTournoiValiderRonde()
         {
-            Tournoi.GetInstance().PhaseEnCours = Tournoi.eTypePhaseTournoi.GenerationRonde2;
+            Tournoi.TypePhaseTournoi = Tournoi.eTypePhaseTournoi.GenerationRonde2;
         }
 
         protected override void InitialiserEtatRonde()
         {
-            if (Tournoi.GetInstance().PhaseEnCours == Tournoi.eTypePhaseTournoi.GenerationRonde1)
+            if (Tournoi.TypePhaseTournoi == Tournoi.eTypePhaseTournoi.GenerationRonde1)
                 _typEtatRonde = eTypeEtatRonde.OrganisationMatches;
-            else if (Tournoi.GetInstance().PhaseEnCours == Tournoi.eTypePhaseTournoi.SaisieRonde1)
+            else if (Tournoi.TypePhaseTournoi == Tournoi.eTypePhaseTournoi.SaisieRonde1)
                 _typEtatRonde = eTypeEtatRonde.SaisieScore;
-            else if (Tournoi.GetInstance().PhaseEnCours > Tournoi.eTypePhaseTournoi.SaisieRonde1)
+            else if (Tournoi.TypePhaseTournoi > Tournoi.eTypePhaseTournoi.SaisieRonde1)
                 _typEtatRonde = eTypeEtatRonde.AffichageResultats;
             else
                 _typEtatRonde = eTypeEtatRonde.ChoixInitialisation;
@@ -91,11 +83,6 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         public override List<Equipe> GetListeEquipesSelonClassement()
         {
             return new List<Equipe>();
-        }
-        
-        public override Skitter.ViewModel.ViewModels.Classements.ClassementCoachesViewModel GetClassementDesCoaches()
-        {
-            return null;
         }
         #endregion
     }

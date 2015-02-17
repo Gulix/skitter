@@ -39,16 +39,25 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         protected abstract void InitialiserEtatRonde();
 
         public abstract Visibility InformationAvantGenerationVisibility { get; }
-        protected abstract List<Rencontre> RencontresDeLaRonde { get; }
         public abstract string InformationsChoixInitialisation { get; }
         
         public abstract bool IsBoutonOrganiserSelonClassementEnabled { get; }
         
         public abstract List<Equipe> GetListeEquipesSelonClassement();
-        public abstract ClassementCoachesViewModel GetClassementDesCoaches();
-
+        
         public abstract Coach.eTypeRosterJoue TypeRosterJoue { get; }
         public abstract int NumeroRonde { get; }
+        #endregion
+
+        #region Classements précédents
+        protected ClassementCoachesViewModel GetClassementDesCoaches()
+        {
+            List<Rencontre> lsRencontres = Tournoi.GetRencontresAvant(NumeroRonde);
+            if ((lsRencontres == null) || !lsRencontres.Any())
+                return null;
+            
+            return new Classements.ClassementCoachesViewModel(lsRencontres);
+        }
         #endregion
 
         #region Liste des rencontres
@@ -107,6 +116,11 @@ namespace Skitter.ViewModel.ViewModels.Rondes
                     vm.RafraichirControle();
             }
         }
+
+        protected List<Rencontre> RencontresDeLaRonde 
+        {
+            get { return Tournoi.GetRencontresSelonRonde(this.NumeroRonde); }
+        }
         #endregion
 
         #region Etat "Non-accessible"
@@ -144,12 +158,12 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         {
             get 
             {
-                if (Tournoi.GetInstance().Equipes.Count % 2 == 1)
-                    return "Le nombre d'équipes est impair.";
+                if (Tournoi.ListeParticipants.Count % 2 == 1)
+                    return "Le nombre de participants est impair.";
 
-                if (Tournoi.GetInstance().Equipes.Select(e => new EquipeViewModel(e))
-                                                 .Any(vm => !string.IsNullOrEmpty(vm.Erreur)))
-                    return "Une équipe au moins est encore en erreur.";
+                if (Tournoi.ListeParticipants.Select(e => new ParticipantViewModel(e))
+                                             .Any(vm => !string.IsNullOrEmpty(vm.Erreur)))
+                    return "Des erreurs existent pour au moins un des participants.";
 
                 return string.Empty;
             }
@@ -190,25 +204,19 @@ namespace Skitter.ViewModel.ViewModels.Rondes
             RencontresDeLaRonde.Clear();
             
             // Nouvelle liste des équipes triées aléatoirement
-            Random rand = new Random(Tournoi.GetInstance().Equipes.Sum(e => e.ValeurRosterEquipe));
-            List<Equipe> lsEquipesAleatoire = Tournoi.GetInstance().Equipes.OrderBy(c => rand.Next()).ToList();
+            Random rand = new Random(Tournoi.ListeParticipants.Sum(p => p.ListeCoaches.Sum(c => c.ValeurRoster)) + NumeroRonde);
+            List<Equipe> lsEquipesAleatoire = Tournoi.ListeEquipes.OrderBy(c => rand.Next()).ToList();
             
             for (int i = 0; i < lsEquipesAleatoire.Count; i += 2)
             {
                 Rencontre rencontre = new Rencontre();
                 Equipe equipe1 = lsEquipesAleatoire[i];
                 Equipe equipe2 = lsEquipesAleatoire[i + 1];
-                rencontre.IdEquipe1 = equipe1.IdEquipe;
-                rencontre.IdEquipe2 = equipe2.IdEquipe;
-                rencontre.Duel1 = new Duel();
-                rencontre.Duel1.IdCoach1 = equipe1.Capitaine.IdCoach;
-                rencontre.Duel1.IdCoach2 = equipe2.Capitaine.IdCoach;
-                rencontre.Duel2 = new Duel();
-                rencontre.Duel2.IdCoach1 = equipe1.Equipier1.IdCoach;
-                rencontre.Duel2.IdCoach2 = equipe2.Equipier1.IdCoach;
-                rencontre.Duel3 = new Duel();
-                rencontre.Duel3.IdCoach1 = equipe1.Equipier2.IdCoach;
-                rencontre.Duel3.IdCoach2 = equipe2.Equipier2.IdCoach;
+                rencontre.IdParticipant1 = equipe1.IdEquipe;
+                rencontre.IdParticipant2 = equipe2.IdEquipe;
+                for (int iCoach = 0; iCoach < 3; iCoach++)
+                    rencontre.ListeDuels.Add(new Duel() { IdCoach1 = equipe1.ListeIdCoaches[iCoach], IdCoach2 = equipe2.ListeIdCoaches[iCoach] });
+                                
                 RencontresDeLaRonde.Add(rencontre);
             }
             GenererRencontresViewModel();
@@ -232,19 +240,13 @@ namespace Skitter.ViewModel.ViewModels.Rondes
                 Rencontre rencontre = new Rencontre();
                 Equipe equipe1 = lsEquipesClassement[i];
                 Equipe equipe2 = lsEquipesClassement[i + 1];
-                rencontre.IdEquipe1 = equipe1.IdEquipe;
-                rencontre.IdEquipe2 = equipe2.IdEquipe;
+                rencontre.IdParticipant1 = equipe1.IdEquipe;
+                rencontre.IdParticipant2 = equipe2.IdEquipe;
                 List<int> lsCoachesEquipe1 = GetListeCoachesEquipeSelonClassement(equipe1, classementCoaches);
                 List<int> lsCoachesEquipe2 = GetListeCoachesEquipeSelonClassement(equipe2, classementCoaches);
-                rencontre.Duel1 = new Duel();
-                rencontre.Duel1.IdCoach1 = lsCoachesEquipe1[0];
-                rencontre.Duel1.IdCoach2 = lsCoachesEquipe2[0];
-                rencontre.Duel2 = new Duel();
-                rencontre.Duel2.IdCoach1 = lsCoachesEquipe1[1];
-                rencontre.Duel2.IdCoach2 = lsCoachesEquipe2[1];
-                rencontre.Duel3 = new Duel();
-                rencontre.Duel3.IdCoach1 = lsCoachesEquipe1[2];
-                rencontre.Duel3.IdCoach2 = lsCoachesEquipe2[2];
+                for (int iNbDuels = 0; iNbDuels < 3; iNbDuels++)
+                    rencontre.ListeDuels.Add(new Duel() { IdCoach1 = lsCoachesEquipe1[iNbDuels], IdCoach2 = lsCoachesEquipe2[iNbDuels] });
+
                 RencontresDeLaRonde.Add(rencontre);
             }
             GenererRencontresViewModel();
@@ -257,10 +259,9 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         private List<int> GetListeCoachesEquipeSelonClassement(Equipe equipe, ClassementCoachesViewModel classementCoaches)
         {
             Dictionary<int, int> dicCoachesEquipe = new Dictionary<int, int>();
-            dicCoachesEquipe.Add(classementCoaches.ObtenirClassementCoach(equipe.Capitaine.IdCoach), equipe.Capitaine.IdCoach);
-            dicCoachesEquipe.Add(classementCoaches.ObtenirClassementCoach(equipe.Equipier1.IdCoach), equipe.Equipier1.IdCoach);
-            dicCoachesEquipe.Add(classementCoaches.ObtenirClassementCoach(equipe.Equipier2.IdCoach), equipe.Equipier2.IdCoach);
-        
+            for (int iCoach = 0; iCoach < equipe.ListeIdCoaches.Count; iCoach++)
+                dicCoachesEquipe.Add(classementCoaches.ObtenirClassementCoach(equipe.ListeIdCoaches[iCoach]), equipe.ListeIdCoaches[iCoach]);
+                    
             return dicCoachesEquipe.OrderBy(k => k.Key).Select(k => k.Value).ToList();
         }
         #endregion

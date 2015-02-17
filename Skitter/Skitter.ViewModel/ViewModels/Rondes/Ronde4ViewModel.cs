@@ -13,14 +13,6 @@ namespace Skitter.ViewModel.ViewModels.Rondes
     /// </summary>
     public class Ronde4ViewModel : RondeViewModel
     {
-        protected override List<Rencontre> RencontresDeLaRonde
-        {
-            get
-            {
-                return Tournoi.GetInstance().RencontresRonde4;
-            }
-        }
-
         public override string InformationsChoixInitialisation
         {
             get
@@ -33,7 +25,7 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         {
             get
             {
-                return (Tournoi.GetInstance().PhaseEnCours <= Tournoi.eTypePhaseTournoi.GenerationRonde4)
+                return (Tournoi.TypePhaseTournoi <= Tournoi.eTypePhaseTournoi.GenerationRonde4)
                           ? Visibility.Visible : Visibility.Collapsed;
             }
         }
@@ -57,37 +49,37 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         #region Phases du tournoi
         protected override void ChangerEtatTournoiSurAnnulationOrganisation()
         {
-            Tournoi.GetInstance().PhaseEnCours = Tournoi.eTypePhaseTournoi.SaisieRonde3;
+            Tournoi.TypePhaseTournoi = Tournoi.eTypePhaseTournoi.SaisieRonde3;
         }
 
         protected override void ChangerEtatTournoiPhaseOrganisation()
         {
-            Tournoi.GetInstance().PhaseEnCours = Tournoi.eTypePhaseTournoi.GenerationRonde4;
+            Tournoi.TypePhaseTournoi = Tournoi.eTypePhaseTournoi.GenerationRonde4;
         }
 
         protected override void ChangerEtatTournoiPhaseSaisie()
         {
-            Tournoi.GetInstance().PhaseEnCours = Tournoi.eTypePhaseTournoi.SaisieRonde4;
+            Tournoi.TypePhaseTournoi = Tournoi.eTypePhaseTournoi.SaisieRonde4;
         }
 
         protected override void ChangerEtatTournoiValiderRonde()
         {
-            Tournoi.GetInstance().PhaseEnCours = Tournoi.eTypePhaseTournoi.GenerationRonde5;
+            Tournoi.TypePhaseTournoi = Tournoi.eTypePhaseTournoi.GenerationRonde5;
         }
 
         protected override void InitialiserEtatRonde()
         {
-            if (Tournoi.GetInstance().PhaseEnCours == Tournoi.eTypePhaseTournoi.GenerationRonde4)
+            if (Tournoi.TypePhaseTournoi == Tournoi.eTypePhaseTournoi.GenerationRonde4)
             {
-                if (Tournoi.GetInstance().RencontresRonde4.Any())
+                if (RencontresDeLaRonde.Any())
                     _typEtatRonde = eTypeEtatRonde.OrganisationMatches;
                 else
                     _typEtatRonde = eTypeEtatRonde.ChoixInitialisation;
             }
                 
-            else if (Tournoi.GetInstance().PhaseEnCours == Tournoi.eTypePhaseTournoi.SaisieRonde4)
+            else if (Tournoi.TypePhaseTournoi == Tournoi.eTypePhaseTournoi.SaisieRonde4)
                 _typEtatRonde = eTypeEtatRonde.SaisieScore;
-            else if (Tournoi.GetInstance().PhaseEnCours > Tournoi.eTypePhaseTournoi.SaisieRonde4)
+            else if (Tournoi.TypePhaseTournoi > Tournoi.eTypePhaseTournoi.SaisieRonde4)
                 _typEtatRonde = eTypeEtatRonde.AffichageResultats;
             else
                 _typEtatRonde = eTypeEtatRonde.PasAccessible;
@@ -102,20 +94,10 @@ namespace Skitter.ViewModel.ViewModels.Rondes
             List<Equipe> lsEquipes = new List<Equipe>();
             foreach(ResultatsEquipeViewModel resultatEquipe in resultats.ListeResultatsEquipes)
             {
-                lsEquipes.Add(Tournoi.GetInstance().Equipes.FirstOrDefault(e => e.IdEquipe == resultatEquipe.IdEquipe));
+                lsEquipes.Add(Tournoi.ListeEquipes.FirstOrDefault(e => e.IdEquipe == resultatEquipe.IdEquipe));
             }
             
             return lsEquipes;
-        }
-        
-        public override Skitter.ViewModel.ViewModels.Classements.ClassementCoachesViewModel GetClassementDesCoaches()
-        {
-            List<Rencontre> lsRencontres = new List<Rencontre>();
-            lsRencontres.AddRange(Tournoi.GetInstance().RencontresRonde1);
-            lsRencontres.AddRange(Tournoi.GetInstance().RencontresRonde2);
-            lsRencontres.AddRange(Tournoi.GetInstance().RencontresRonde3);
-            
-            return new Classements.ClassementCoachesViewModel(lsRencontres);
         }
         #endregion
     }

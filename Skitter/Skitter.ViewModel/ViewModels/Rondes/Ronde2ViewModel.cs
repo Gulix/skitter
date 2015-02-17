@@ -10,14 +10,6 @@ namespace Skitter.ViewModel.ViewModels.Rondes
 {
     public class Ronde2ViewModel : RondeViewModel
     {
-        protected override List<Rencontre> RencontresDeLaRonde
-        {
-            get
-            {
-                return Tournoi.GetInstance().RencontresRonde2;
-            }
-        }
-
         public override string InformationsChoixInitialisation
         {
             get
@@ -30,7 +22,7 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         {
             get
             {
-                return (Tournoi.GetInstance().PhaseEnCours <= Tournoi.eTypePhaseTournoi.GenerationRonde2)
+                return (Tournoi.TypePhaseTournoi <= Tournoi.eTypePhaseTournoi.GenerationRonde2)
                           ? Visibility.Visible : Visibility.Collapsed;
             }
         }
@@ -54,37 +46,37 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         #region Phases du tournoi
         protected override void ChangerEtatTournoiSurAnnulationOrganisation()
         {
-            Tournoi.GetInstance().PhaseEnCours = Tournoi.eTypePhaseTournoi.SaisieRonde1;
+            Tournoi.TypePhaseTournoi = Tournoi.eTypePhaseTournoi.SaisieRonde1;
         }
 
         protected override void ChangerEtatTournoiPhaseOrganisation()
         {
-            Tournoi.GetInstance().PhaseEnCours = Tournoi.eTypePhaseTournoi.GenerationRonde2;
+            Tournoi.TypePhaseTournoi = Tournoi.eTypePhaseTournoi.GenerationRonde2;
         }
 
         protected override void ChangerEtatTournoiPhaseSaisie()
         {
-            Tournoi.GetInstance().PhaseEnCours = Tournoi.eTypePhaseTournoi.SaisieRonde2;
+            Tournoi.TypePhaseTournoi = Tournoi.eTypePhaseTournoi.SaisieRonde2;
         }
 
         protected override void ChangerEtatTournoiValiderRonde()
         {
-            Tournoi.GetInstance().PhaseEnCours = Tournoi.eTypePhaseTournoi.GenerationRonde3;
+            Tournoi.TypePhaseTournoi = Tournoi.eTypePhaseTournoi.GenerationRonde3;
         }
 
         protected override void InitialiserEtatRonde()
         {
-            if (Tournoi.GetInstance().PhaseEnCours == Tournoi.eTypePhaseTournoi.GenerationRonde2)
+            if (Tournoi.TypePhaseTournoi == Tournoi.eTypePhaseTournoi.GenerationRonde2)
             {
-                if (Tournoi.GetInstance().RencontresRonde2.Any())
+                if (RencontresDeLaRonde.Any())
                     _typEtatRonde = eTypeEtatRonde.OrganisationMatches;
                 else
                     _typEtatRonde = eTypeEtatRonde.ChoixInitialisation;
             }
                 
-            else if (Tournoi.GetInstance().PhaseEnCours == Tournoi.eTypePhaseTournoi.SaisieRonde2)
+            else if (Tournoi.TypePhaseTournoi == Tournoi.eTypePhaseTournoi.SaisieRonde2)
                 _typEtatRonde = eTypeEtatRonde.SaisieScore;
-            else if (Tournoi.GetInstance().PhaseEnCours > Tournoi.eTypePhaseTournoi.SaisieRonde2)
+            else if (Tournoi.TypePhaseTournoi > Tournoi.eTypePhaseTournoi.SaisieRonde2)
                 _typEtatRonde = eTypeEtatRonde.AffichageResultats;
             else
                 _typEtatRonde = eTypeEtatRonde.PasAccessible;
@@ -99,16 +91,11 @@ namespace Skitter.ViewModel.ViewModels.Rondes
             List<Equipe> lsEquipes = new List<Equipe>();
             foreach(ResultatsEquipeViewModel resultatEquipe in resultats.ListeResultatsEquipes)
             {
-                lsEquipes.Add(Tournoi.GetInstance().Equipes.FirstOrDefault(e => e.IdEquipe == resultatEquipe.IdEquipe));
+                lsEquipes.Add(Tournoi.ListeEquipes.FirstOrDefault(e => e.IdEquipe == resultatEquipe.IdEquipe));
             }
             
             return lsEquipes;
-        }
-        
-        public override Skitter.ViewModel.ViewModels.Classements.ClassementCoachesViewModel GetClassementDesCoaches()
-        {
-            return new Classements.ClassementCoachesViewModel(Tournoi.GetInstance().RencontresRonde1);
-        }
+        }        
         #endregion
     }
 }
