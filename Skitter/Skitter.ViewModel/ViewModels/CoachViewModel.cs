@@ -23,6 +23,7 @@ namespace Skitter.ViewModel.ViewModels
         Coach _coach;
 
         Action _onRosterModifie;
+        Action _onNomModifie;
         #endregion
         
         #region Accesseurs
@@ -33,6 +34,7 @@ namespace Skitter.ViewModel.ViewModels
             {
                 _coach.NomCoach = value;
                 RaisePropertyChanged("NomCoach");
+                OnNomModifie();
             }
         }
 
@@ -120,15 +122,16 @@ namespace Skitter.ViewModel.ViewModels
         #endregion
 
         public CoachViewModel(Coach coach)
-            : this(coach, null)
+            : this(coach, null, null)
         {
 
         }
 
-        public CoachViewModel(Coach coach, Action onRosterModifie)
+        public CoachViewModel(Coach coach, Action onRosterModifie, Action onNomModifie)
         {
             _coach = coach;
             _onRosterModifie = onRosterModifie;
+            _onNomModifie = onNomModifie;
         }
         
         private void OnRosterModifie()
@@ -136,6 +139,13 @@ namespace Skitter.ViewModel.ViewModels
             RaisePropertyChanged("ValeurRoster");
             if (_onRosterModifie != null)
                 _onRosterModifie();
+        }
+
+        private void OnNomModifie()
+        {
+            RaisePropertyChanged("NomCoach");
+            if (_onNomModifie != null)
+                _onNomModifie();
         }
         
         #region INotifyPropertyChanged members
@@ -146,7 +156,14 @@ namespace Skitter.ViewModel.ViewModels
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(sPropertyChanged));
         }
-        
+
+        internal void RafraichirNom()
+        {
+            RaisePropertyChanged("NomCoach");
+        }
+
         #endregion
+
+        
     }
 }

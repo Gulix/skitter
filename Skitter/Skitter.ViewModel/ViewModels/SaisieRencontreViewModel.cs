@@ -18,24 +18,24 @@ namespace Skitter.ViewModel.ViewModels
         #endregion
 
         #region Accesseurs
-        public string NomEquipe1
+        public string NomParticipant1
         {
-            get { return Tournoi.GetInstance().Equipes.FirstOrDefault(e => e.IdEquipe == _rencontre.IdEquipe1).NomEquipe; }
+            get { return Tournoi.GetNomParticipant(_rencontre.IdParticipant1); }
         }
 
-        public string NomEquipe2
+        public string NomParticipant2
         {
-            get { return Tournoi.GetInstance().Equipes.FirstOrDefault(e => e.IdEquipe == _rencontre.IdEquipe2).NomEquipe; }
+            get { return Tournoi.GetNomParticipant(_rencontre.IdParticipant2); }
         }
 
-        public string ScoreEquipe1
+        public string NbVictoiresParticipant1
         {
-            get { return _rencontre.ScoreEquipe1.ToString(); }
+            get { return _rencontre.NbVictoiresParticipant1.ToString(); }
         }
 
-        public string ScoreEquipe2
+        public string NbVictoiresParticipant2
         {
-            get { return _rencontre.ScoreEquipe2.ToString(); }
+            get { return _rencontre.NbVictoiresParticipant2.ToString(); }
         }
 
         public SaisieDuelViewModel Duel1
@@ -64,9 +64,9 @@ namespace Skitter.ViewModel.ViewModels
         {
             _rencontre = rencontre;
 
-            _duel1VM = new SaisieDuelViewModel(_rencontre.Duel1, OnScoreModifie, typRosterJoue);
-            _duel2VM = new SaisieDuelViewModel(_rencontre.Duel2, OnScoreModifie, typRosterJoue);
-            _duel3VM = new SaisieDuelViewModel(_rencontre.Duel3, OnScoreModifie, typRosterJoue);
+            _duel1VM = new SaisieDuelViewModel(_rencontre.ListeDuels[0], OnScoreModifie, typRosterJoue);
+            _duel2VM = new SaisieDuelViewModel(_rencontre.ListeDuels[1], OnScoreModifie, typRosterJoue);
+            _duel3VM = new SaisieDuelViewModel(_rencontre.ListeDuels[2], OnScoreModifie, typRosterJoue);
         }
 
         #region INotifyPropertyChanged members
