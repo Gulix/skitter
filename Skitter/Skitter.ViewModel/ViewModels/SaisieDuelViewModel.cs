@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using Skitter.Object;
+using Skitter.ViewModel.Fonctionnel;
 using Skitter.ViewModel.ViewModels.Rondes;
 
 namespace Skitter.ViewModel.ViewModels
@@ -88,7 +89,7 @@ namespace Skitter.ViewModel.ViewModels
             get { return _duel.ResultatCoach1.NbTD.ToString(); }
             set
             {
-                _duel.ResultatCoach1.NbTD = IntVersEntier(_duel.ResultatCoach1.NbTD, value);
+                _duel.ResultatCoach1.NbTD = Conv.IntStringVersInt(_duel.ResultatCoach1.NbTD, value);
                 RaisePropertyChanged("TdCoach1");
                 OnModificationScore();
             }
@@ -99,7 +100,7 @@ namespace Skitter.ViewModel.ViewModels
             get { return _duel.ResultatCoach1.NbSorties.ToString(); }
             set
             {
-                _duel.ResultatCoach1.NbSorties = IntVersEntier(_duel.ResultatCoach1.NbSorties, value);
+                _duel.ResultatCoach1.NbSorties = Conv.IntStringVersInt(_duel.ResultatCoach1.NbSorties, value);
                 RaisePropertyChanged("SortiesCoach1");
             }
         }
@@ -109,7 +110,7 @@ namespace Skitter.ViewModel.ViewModels
             get { return _duel.ResultatCoach1.NbSortiesVicieuses.ToString(); }
             set
             {
-                _duel.ResultatCoach1.NbSortiesVicieuses = IntVersEntier(_duel.ResultatCoach1.NbSortiesVicieuses, value);
+                _duel.ResultatCoach1.NbSortiesVicieuses = Conv.IntStringVersInt(_duel.ResultatCoach1.NbSortiesVicieuses, value);
                 RaisePropertyChanged("SortiesVicieusesCoach1");
             }
         }
@@ -119,7 +120,7 @@ namespace Skitter.ViewModel.ViewModels
             get { return _duel.ResultatCoach2.NbTD.ToString(); }
             set
             {
-                _duel.ResultatCoach2.NbTD = IntVersEntier(_duel.ResultatCoach2.NbTD, value);
+                _duel.ResultatCoach2.NbTD = Conv.IntStringVersInt(_duel.ResultatCoach2.NbTD, value);
                 RaisePropertyChanged("TdCoach2");
                 OnModificationScore();
             }
@@ -130,7 +131,7 @@ namespace Skitter.ViewModel.ViewModels
             get { return _duel.ResultatCoach2.NbSorties.ToString(); }
             set
             {
-                _duel.ResultatCoach2.NbSorties = IntVersEntier(_duel.ResultatCoach2.NbSorties, value);
+                _duel.ResultatCoach2.NbSorties = Conv.IntStringVersInt(_duel.ResultatCoach2.NbSorties, value);
                 RaisePropertyChanged("SortiesCoach2");
             }
         }
@@ -140,7 +141,7 @@ namespace Skitter.ViewModel.ViewModels
             get { return _duel.ResultatCoach2.NbSortiesVicieuses.ToString(); }
             set
             {
-                _duel.ResultatCoach2.NbSortiesVicieuses = IntVersEntier(_duel.ResultatCoach2.NbSortiesVicieuses, value);
+                _duel.ResultatCoach2.NbSortiesVicieuses = Conv.IntStringVersInt(_duel.ResultatCoach2.NbSortiesVicieuses, value);
                 RaisePropertyChanged("SortiesVicieusesCoach2");
             }
         }
@@ -152,16 +153,6 @@ namespace Skitter.ViewModel.ViewModels
             _typRosterJoue = typRosterJoue;
             _duel = duel;
             ModificationScore += scoreModifie;
-        }
-        #endregion
-
-        #region Valeur string vers entier
-        private int IntVersEntier(int valeurExistante, string nouvelleValeur)
-        {
-            int iConvert = 0;
-            if (int.TryParse(nouvelleValeur, out iConvert))
-                return iConvert;
-            return valeurExistante;
         }
         #endregion
 
