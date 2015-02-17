@@ -3,134 +3,131 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
+using Skitter.Object.Interfaces;
 
 namespace Skitter.Object
 {
     /// <summary>
-    /// Rencontre entre deux triplettes
+    /// Rencontre entre deux IParticipant. Une liste de Duel a lieu, selon le nombre de Coach dans les IParticipant (Solo ou par Equipe).
+    /// Une Rencontre a lieu au cours d'une unique ronde, indiquée par son index
     /// </summary>
     [Serializable]
     public class Rencontre
     {
         #region Variables
-        int _idEquipe1;
-        int _idEquipe2;
-        Duel _duel1;
-        Duel _duel2;
-        Duel _duel3;
+        int _idParticipant1;
+        int _idParticipant2;
+
+        List<Duel> _lsDuels;
+        int _iIndexRonde;
         #endregion
 
-        #region Accesseurs
-        public int IdEquipe1
+        #region Accesseurs sérialisés
+        public int IdParticipant1
         {
-            get { return _idEquipe1; }
-            set { _idEquipe1 = value; }
+            get { return _idParticipant1; }
+            set { _idParticipant1 = value; }
         }
 
-        public int IdEquipe2
+        public int IdParticipant2
         {
-            get { return _idEquipe2; }
-            set { _idEquipe2 = value; }
+            get { return _idParticipant2; }
+            set { _idParticipant2 = value; }
         }
 
-        public Duel Duel1
+        public List<Duel> ListeDuels
         {
-            get { return _duel1; }
-            set { _duel1 = value; }
+            get { return _lsDuels; }
+            set { _lsDuels = value; }
         }
 
-        public Duel Duel2
+        public int IndexRonde
         {
-            get { return _duel2; }
-            set { _duel2 = value; }
-        }
-
-        public Duel Duel3
-        {
-            get { return _duel3; }
-            set { _duel3 = value; }
+            get { return _iIndexRonde; }
+            set { _iIndexRonde = value; }
         }
         #endregion
 
         #region Accesseurs non-sérialisés
         [XmlIgnore]
-        public int ScoreEquipe1
+        [JsonIgnore]
+        public int NbVictoiresParticipant1
         {
-            get
-            {
-                return ((Duel1.ResultatCoach1.NbTD > Duel1.ResultatCoach2.NbTD) ? 1 : 0)
-                    + ((Duel2.ResultatCoach1.NbTD > Duel2.ResultatCoach2.NbTD) ? 1 : 0)
-                    + ((Duel3.ResultatCoach1.NbTD > Duel3.ResultatCoach2.NbTD) ? 1 : 0);
-            }
+            get { return _lsDuels.Count(d => d.ResultatCoach1.NbTD > d.ResultatCoach2.NbTD); }
         }
 
         [XmlIgnore]
-        public int ScoreEquipe2
+        [JsonIgnore]
+        public int NbVictoiresParticipant2
         {
-            get
-            {
-                return ((Duel1.ResultatCoach1.NbTD < Duel1.ResultatCoach2.NbTD) ? 1 : 0)
-                    + ((Duel2.ResultatCoach1.NbTD < Duel2.ResultatCoach2.NbTD) ? 1 : 0)
-                    + ((Duel3.ResultatCoach1.NbTD < Duel3.ResultatCoach2.NbTD) ? 1 : 0);
-            }
+            get { return _lsDuels.Count(d => d.ResultatCoach2.NbTD > d.ResultatCoach1.NbTD); }
         }
 
         [XmlIgnore]
+        [JsonIgnore]
         public int TDEquipe1
         {
-            get { return Duel1.ResultatCoach1.NbTD + Duel2.ResultatCoach1.NbTD + Duel3.ResultatCoach1.NbTD; }
+            get { return _lsDuels.Sum(d => d.ResultatCoach1.NbTD); }
         }
 
         [XmlIgnore]
+        [JsonIgnore]
         public int TDEquipe2
         {
-            get { return Duel1.ResultatCoach2.NbTD + Duel2.ResultatCoach2.NbTD + Duel3.ResultatCoach2.NbTD; }
+            get { return _lsDuels.Sum(d => d.ResultatCoach2.NbTD); }
         }
 
         [XmlIgnore]
+        [JsonIgnore]
         public int SortiesEquipe1
         {
-            get { return Duel1.ResultatCoach1.NbSorties + Duel2.ResultatCoach1.NbSorties + Duel3.ResultatCoach1.NbSorties; }
+            get { return _lsDuels.Sum(d => d.ResultatCoach1.NbSorties); }
         }
 
         [XmlIgnore]
+        [JsonIgnore]
         public int SortiesEquipe2
         {
-            get { return Duel1.ResultatCoach2.NbSorties + Duel2.ResultatCoach2.NbSorties + Duel3.ResultatCoach2.NbSorties; }
+            get { return _lsDuels.Sum(d => d.ResultatCoach2.NbSorties); }
         }
 
         [XmlIgnore]
+        [JsonIgnore]
         public int SortiesVicieusesEquipe1
         {
-            get { return Duel1.ResultatCoach1.NbSortiesVicieuses + Duel2.ResultatCoach1.NbSortiesVicieuses + Duel3.ResultatCoach1.NbSortiesVicieuses; }
+            get { return _lsDuels.Sum(d => d.ResultatCoach1.NbSortiesVicieuses); }
         }
 
         [XmlIgnore]
+        [JsonIgnore]
         public int SortiesVicieusesEquipe2
         {
-            get { return Duel1.ResultatCoach2.NbSortiesVicieuses + Duel2.ResultatCoach2.NbSortiesVicieuses + Duel3.ResultatCoach2.NbSortiesVicieuses; }
+            get { return _lsDuels.Sum(d => d.ResultatCoach2.NbSortiesVicieuses); }
         }
 
         [XmlIgnore]
-        public string LibelleEquipe1
+        [JsonIgnore]
+        public string NomParticipant1
         {
             get
             {
-                Equipe equipe = Tournoi.GetInstance().Equipes.FirstOrDefault(e => e.IdEquipe == IdEquipe1);
-                if (equipe != null)
-                    return equipe.NomEquipe;
+                IParticipant participant = Tournoi.ListeParticipants.FirstOrDefault(p => p.IdParticipant == IdParticipant1);
+                if (participant != null)
+                    return participant.NomParticipant;
                 return string.Empty;
             }
         }
 
         [XmlIgnore]
-        public string LibelleEquipe2
+        [JsonIgnore]
+        public string NomParticipant2
         {
             get
             {
-                Equipe equipe = Tournoi.GetInstance().Equipes.FirstOrDefault(e => e.IdEquipe == IdEquipe2);
-                if (equipe != null)
-                    return equipe.NomEquipe;
+                IParticipant participant = Tournoi.ListeParticipants.FirstOrDefault(p => p.IdParticipant == IdParticipant2);
+                if (participant != null)
+                    return participant.NomParticipant;
                 return string.Empty;
             }
         }
@@ -138,7 +135,7 @@ namespace Skitter.Object
 
         public Rencontre()
         {
-
+            _lsDuels = new List<Duel>();
         }
     }
 }
