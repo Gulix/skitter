@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
+using Skitter.Object.Interfaces;
 
 namespace Skitter.Object
 {
@@ -12,20 +14,20 @@ namespace Skitter.Object
     {
         #region Variables
         List<Equipe> _lsEquipes;
+        List<Coach> _lsCoaches;
         eTypePhaseTournoi _typPhaseEnCours;
-        List<Rencontre> _lsRencontresRonde1;
-        List<Rencontre> _lsRencontresRonde2;
-        List<Rencontre> _lsRencontresRonde3;
-        List<Rencontre> _lsRencontresRonde4;
-        List<Rencontre> _lsRencontresRonde5;
+        Dictionary<int, List<Rencontre>> _dicRencontresParRonde;
 
         string _sFichier;
+
+        ConfigurationTournoi _configurationTournoi;
         #endregion
 
         #region Enumération "Phase du tournoi"
         public enum eTypePhaseTournoi
         {
-            Configuration = 1,
+            ConfigurationTournoi = 0,
+            ConfigurationParticipants = 1,
             GenerationRonde1 = 2,
             SaisieRonde1 = 3,
             GenerationRonde2 = 4,
@@ -40,11 +42,17 @@ namespace Skitter.Object
         }
         #endregion
 
-        #region Accesseurs
+        #region Accesseurs sérialisés
         public List<Equipe> Equipes
         {
             get { return _lsEquipes; }
             set { _lsEquipes = value; }
+        }
+
+        public List<Coach> Coaches
+        {
+            get { return _lsCoaches; }
+            set { _lsCoaches = value; }
         }
 
         public eTypePhaseTournoi PhaseEnCours
@@ -53,52 +61,34 @@ namespace Skitter.Object
             set { _typPhaseEnCours = value; }
         }
 
-        public List<Rencontre> RencontresRonde1
+        public Dictionary<int, List<Rencontre>> RencontresParRonde
         {
-            get { return _lsRencontresRonde1; }
-            set { _lsRencontresRonde1 = value; }
+            get { return _dicRencontresParRonde; }
+            set { _dicRencontresParRonde = value; }
         }
 
-        public List<Rencontre> RencontresRonde2
+        public ConfigurationTournoi ConfigurationTournoi
         {
-            get { return _lsRencontresRonde2; }
-            set { _lsRencontresRonde2 = value; }
-        }
-
-        public List<Rencontre> RencontresRonde3
-        {
-            get { return _lsRencontresRonde3; }
-            set { _lsRencontresRonde3 = value; }
-        }
-        
-        public List<Rencontre> RencontresRonde4
-        {
-            get { return _lsRencontresRonde4; }
-            set { _lsRencontresRonde4 = value; }
-        }
-
-        public List<Rencontre> RencontresRonde5
-        {
-            get { return _lsRencontresRonde5; }
-            set { _lsRencontresRonde5 = value; }
+            get { return _configurationTournoi; }
+            set { _configurationTournoi = value; }
         }
         #endregion
 
         private Tournoi()
         {
             _lsEquipes = new List<Equipe>();
-            _lsRencontresRonde1 = new List<Rencontre>();
-            _lsRencontresRonde2 = new List<Rencontre>();
-            _lsRencontresRonde3 = new List<Rencontre>();
-            _lsRencontresRonde4 = new List<Rencontre>();
-            _lsRencontresRonde5 = new List<Rencontre>();
-            _typPhaseEnCours = eTypePhaseTournoi.Configuration;
+            _lsCoaches = new List<Coach>();
+            _dicRencontresParRonde = new Dictionary<int, List<Rencontre>>();
+            _typPhaseEnCours = eTypePhaseTournoi.ConfigurationTournoi;
 
             _sFichier = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "dragonbowl.xml");
+
+            _configurationTournoi = new ConfigurationTournoi();
         }
 
         #region Génération des ID
         [XmlIgnore]
+        [JsonIgnore]
         public int NouvelIdEquipe 
         {
             get
@@ -110,56 +100,64 @@ namespace Skitter.Object
         }
 
         int? _iNextIdCoach = null;
-
-        [XmlIgnore]
-        public int NouvelIdCoach
+        private int GenererNouvelIdCoach()
         {
-            get
+            if (!_iNextIdCoach.HasValue)
             {
-                if (!_iNextIdCoach.HasValue)
-                {
-                    if (!_lsEquipes.Any())
-                        _iNextIdCoach = 1;
-                    else 
-                        _iNextIdCoach = _lsEquipes.Max(e => Math.Max(e.Capitaine.IdCoach, Math.Max(e.Equipier1.IdCoach, e.Equipier2.IdCoach))) + 1;
-                }
-                _iNextIdCoach++;
-                return _iNextIdCoach.Value - 1;                
+                if (!Coaches.Any())
+                    _iNextIdCoach = 1;
+                else
+                    _iNextIdCoach = Coaches.Max(c => c.IdCoach) + 1;
             }
+            _iNextIdCoach++;
+            return _iNextIdCoach.Value - 1;                
         }
         #endregion
 
         #region Accesseurs non sérialisés
         [XmlIgnore]
-        public List<Coach> Coaches
-        {
-            get { return _lsEquipes.SelectMany(e => new List<Coach>() { e.Capitaine, e.Equipier1, e.Equipier2 }).ToList(); }
-        }
-
-        [XmlIgnore]
+        [JsonIgnore]
         public string NomFichier
         {
             get { return _sFichier; }
             set { _sFichier = value; }
         }
-        #endregion
 
-        #region XML serialization
-        public void EnregistrerXml(string sPath)
+        /// <summary>
+        /// Participants au tournoi (Liste de coaches ou d'équipes, selon la configuration)
+        /// </summary>
+        [XmlIgnore]
+        [JsonIgnore]
+        public List<IParticipant> Participants
         {
-            XmlSerializer xs = new XmlSerializer(typeof(Tournoi));
-            using (StreamWriter wr = new StreamWriter(sPath))
+            get
             {
-                xs.Serialize(wr, this);
+                if (_configurationTournoi.TypeParticipantTournoi == ConfigurationTournoi.eTypeParticipantTournoi.Equipe)
+                    return Equipes.Cast<IParticipant>().ToList();
+                if (_configurationTournoi.TypeParticipantTournoi == ConfigurationTournoi.eTypeParticipantTournoi.Solo)
+                    return Coaches.Cast<IParticipant>().ToList();
+
+                return new List<IParticipant>();
             }
         }
         #endregion
 
-        #region Static
+        #region JSON serialization
+        public void EnregistrerJSON(string sPath)
+        {
+            string sOutput = JsonConvert.SerializeObject(this);
+            using (StreamWriter writer = new StreamWriter(sPath))
+            {
+                writer.Write(sOutput);
+            }
+        }
+        #endregion
+
+        #region Static - Singleton
         #region Une seule instance à gérer
         private static Tournoi _instance;
 
-        public static Tournoi GetInstance()
+        private static Tournoi GetInstance()
         {
             if (_instance == null)
                 _instance = new Tournoi();
@@ -174,20 +172,28 @@ namespace Skitter.Object
             _instance = new Tournoi();
         }
 
-        public static void ChargerXml(string sPath)
+        #region Serialisation via JSON
+        public static void ChargerJSON(string sPath)
         {
-            XmlSerializer xs = new XmlSerializer(typeof(Tournoi));
+            string sInput = string.Empty;
             using (StreamReader rd = new StreamReader(sPath))
             {
-                Tournoi tournoi = xs.Deserialize(rd) as Tournoi;
-
-                if (tournoi == null)
-                    throw new Exception("Le type de données ne correspond pas.");
-
-                _instance = tournoi;
-                _instance.NomFichier = sPath;
+                sInput = rd.ReadToEnd();
             }
+
+            Tournoi tournoi = JsonConvert.DeserializeObject<Tournoi>(sInput);
+            if (tournoi == null)
+                throw new Exception("Le type de données ne correspond pas.");
+
+            _instance = tournoi;
+            _instance.NomFichier = sPath;
         }
+
+        public static void SauvegarderTournoi()
+        {
+            GetInstance().EnregistrerJSON(Tournoi.FichierSauvegarde);
+        }
+        #endregion
 
         #region Récupération des libellés
         public static string GetNomCoach(int idCoach)
@@ -207,12 +213,26 @@ namespace Skitter.Object
         }
         #endregion
 
-        #region Récupération des éléments selon ID
-        public static Coach GetCoach(int idCoach)
+        #region Accesseurs divers
+        public static eTypePhaseTournoi TypePhaseTournoi
         {
-            return GetInstance().Coaches.FirstOrDefault(c => c.IdCoach == idCoach);
+            get { return GetInstance().PhaseEnCours; }
+            set { GetInstance().PhaseEnCours = value; }
         }
 
+        public static ConfigurationTournoi Configuration
+        {
+            get { return GetInstance().ConfigurationTournoi; }
+        }
+
+        public static string FichierSauvegarde
+        {
+            get { return GetInstance().NomFichier; }
+            set { GetInstance().NomFichier = value; }
+        }
+        #endregion
+
+        #region Rosters
         public static Roster GetRoster(int idRoster)
         {
             return Roster.GetListeComplete().FirstOrDefault(r => r.IdRoster == idRoster);
@@ -223,14 +243,8 @@ namespace Skitter.Object
         public static List<Rencontre> GetRencontresAvant(int iNumeroRonde)
         {
             List<Rencontre> lsRencontres = new List<Rencontre>();
-            if (iNumeroRonde > 1)
-                lsRencontres.AddRange(GetInstance().RencontresRonde1);
-            if (iNumeroRonde > 2)
-                lsRencontres.AddRange(GetInstance().RencontresRonde2);
-            if (iNumeroRonde > 3)
-                lsRencontres.AddRange(GetInstance().RencontresRonde3);
-            if (iNumeroRonde > 4)
-                lsRencontres.AddRange(GetInstance().RencontresRonde4);
+            for(int iRonde = 1; iRonde < iNumeroRonde; iRonde++)
+                lsRencontres.AddRange(GetInstance().RencontresParRonde[iRonde]);
 
             return lsRencontres;
         }
@@ -238,36 +252,112 @@ namespace Skitter.Object
         public static List<Rencontre> GetRencontresApres(int iNumeroRonde)
         {
             List<Rencontre> lsRencontres = new List<Rencontre>();
-            if (iNumeroRonde >= 1)
-                lsRencontres.AddRange(GetInstance().RencontresRonde1);
-            if (iNumeroRonde >= 2)
-                lsRencontres.AddRange(GetInstance().RencontresRonde2);
-            if (iNumeroRonde >= 3)
-                lsRencontres.AddRange(GetInstance().RencontresRonde3);
-            if (iNumeroRonde >= 4)
-                lsRencontres.AddRange(GetInstance().RencontresRonde4);
-            if (iNumeroRonde >= 5)
-                lsRencontres.AddRange(GetInstance().RencontresRonde5);
-
+            for (int iRonde = iNumeroRonde; iRonde <= Configuration.NbRondes; iRonde++)
+                lsRencontres.AddRange(GetInstance().RencontresParRonde[iRonde]);
+            
             return lsRencontres;
         }
-        #endregion
-        #endregion
 
         public static List<Rencontre> GetRencontresSelonRonde(int i)
         {
-            if (i == 1)
-                return Tournoi.GetInstance().RencontresRonde1;
-            if (i == 2)
-                return Tournoi.GetInstance().RencontresRonde2;
-            if (i == 3)
-                return Tournoi.GetInstance().RencontresRonde3;
-            if (i == 4)
-                return Tournoi.GetInstance().RencontresRonde4;
-            if (i == 5)
-                return Tournoi.GetInstance().RencontresRonde5;
-
-            return new List<Rencontre>();
+            return GetInstance().RencontresParRonde[i];
         }
+        #endregion
+
+        #region Participants
+        public static List<IParticipant> ListeParticipants
+        {
+            get { return GetInstance().Participants; }
+        }
+
+        public static IParticipant GetParticipant(int idParticipant)
+        {
+            return ListeParticipants.FirstOrDefault(p => p.IdParticipant == idParticipant);
+        }
+
+        public static string GetNomParticipant(int idParticipant)
+        {
+            IParticipant participant = GetParticipant(idParticipant);
+            if (participant == null)
+                return string.Empty;
+
+            return participant.NomParticipant;
+        }
+
+        public static int GenererNouveauParticipant()
+        {
+            if (Configuration.TypeParticipantTournoi == ConfigurationTournoi.eTypeParticipantTournoi.Equipe)
+                return Tournoi.GenererNouvelleEquipe();
+            if (Configuration.TypeParticipantTournoi == ConfigurationTournoi.eTypeParticipantTournoi.Solo)
+                return Tournoi.GenererNouveauCoach();
+
+            return 0;
+        }
+
+        public static void SupprimerParticipant(int idParticipant)
+        {
+            if (Configuration.TypeParticipantTournoi == ConfigurationTournoi.eTypeParticipantTournoi.Equipe)
+                GetInstance()._lsEquipes.RemoveAll(e => e.IdEquipe == idParticipant);
+            if (Configuration.TypeParticipantTournoi == ConfigurationTournoi.eTypeParticipantTournoi.Solo)
+                GetInstance()._lsCoaches.RemoveAll(c => c.IdCoach == idParticipant);
+        }
+        #endregion
+
+        #region Coaches
+        public static List<Coach> ListeCoaches
+        {
+            get { return GetInstance().Coaches; }
+        }
+
+        public static Coach GetCoach(int idCoach)
+        {
+            return ListeCoaches.FirstOrDefault(c => c.IdCoach == idCoach);
+        }
+
+        internal static List<Coach> GetListeCoach(List<int> _lsIdCoaches)
+        {
+            return GetInstance().Coaches.Where(c => _lsIdCoaches.Any(id => id == c.IdCoach)).ToList();
+        }
+
+        internal static int NouvelIdCoach
+        {
+            get { return GetInstance().GenererNouvelIdCoach(); }
+        }
+
+        internal static int GenererNouveauCoach()
+        {
+            Coach coach = new Coach();
+            coach.IdCoach = NouvelIdCoach;
+            
+            Tournoi.ListeCoaches.Add(coach);
+
+            return coach.IdCoach;
+        }
+        #endregion
+
+        #region Equipes
+        public static List<Equipe> ListeEquipes
+        {
+            get { return GetInstance()._lsEquipes; }
+        }
+
+        public static int GenererNouvelleEquipe()
+        {
+            Equipe equipe = new Equipe();
+            equipe.IdEquipe = Tournoi.GetInstance().NouvelIdEquipe;
+            equipe.NomEquipe = "Nouvelle équipe";
+
+            for (int iCoach = 0; iCoach < Tournoi.Configuration.NbCoachesParEquipe; iCoach++)
+            {
+                int iIDCoach = Tournoi.GenererNouveauCoach();
+                equipe.ListeIdCoaches.Add(iIDCoach);                
+            }
+            GetInstance()._lsEquipes.Add(equipe);
+
+            return equipe.IdEquipe;
+        }
+        #endregion
+
+        #endregion
     }
 }
