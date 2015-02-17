@@ -23,7 +23,7 @@ namespace Skitter.ViewModel.ViewModels.Classements
         public ResultatsEquipeViewModel(Equipe equipe, List<Rencontre> lsRencontres, ClassementCoachesViewModel classementCoach)
         {
             _equipe = equipe;
-            _lsRencontres = lsRencontres.Where(r => (r.IdEquipe1 == _equipe.IdEquipe) || (r.IdEquipe2 == _equipe.IdEquipe)).ToList();
+            _lsRencontres = lsRencontres.Where(r => (r.IdParticipant1 == _equipe.IdEquipe) || (r.IdParticipant2 == _equipe.IdEquipe)).ToList();
             _classementCoaches = classementCoach;
         }
         #endregion
@@ -53,23 +53,23 @@ namespace Skitter.ViewModel.ViewModels.Classements
         {
             get
             {
-                return _lsRencontres.Where(r => ((r.IdEquipe1 == _equipe.IdEquipe) && (r.ScoreEquipe1 > r.ScoreEquipe2))
-                                             || ((r.IdEquipe2 == _equipe.IdEquipe) && (r.ScoreEquipe1 < r.ScoreEquipe2)))
+                return _lsRencontres.Where(r => ((r.IdParticipant1 == _equipe.IdEquipe) && (r.NbVictoiresParticipant1 > r.NbVictoiresParticipant2))
+                                             || ((r.IdParticipant2 == _equipe.IdEquipe) && (r.NbVictoiresParticipant1 < r.NbVictoiresParticipant2)))
                                     .Count();
             }
         }
 
         public int NbNuls
         {
-            get { return _lsRencontres.Where(r => r.ScoreEquipe1 == r.ScoreEquipe2).Count(); }
+            get { return _lsRencontres.Where(r => r.NbVictoiresParticipant1 == r.NbVictoiresParticipant2).Count(); }
         }
 
         public int NbDefaites
         {
             get
             {
-                return _lsRencontres.Where(r => ((r.IdEquipe1 == _equipe.IdEquipe) && (r.ScoreEquipe1 < r.ScoreEquipe2))
-                                             || ((r.IdEquipe2 == _equipe.IdEquipe) && (r.ScoreEquipe1 > r.ScoreEquipe2)))
+                return _lsRencontres.Where(r => ((r.IdParticipant1 == _equipe.IdEquipe) && (r.NbVictoiresParticipant1 < r.NbVictoiresParticipant2))
+                                             || ((r.IdParticipant2 == _equipe.IdEquipe) && (r.NbVictoiresParticipant1 > r.NbVictoiresParticipant2)))
                                     .Count();
             }
         }
@@ -81,49 +81,45 @@ namespace Skitter.ViewModel.ViewModels.Classements
 
         public int DuelsRemportes
         {
-            get { return _lsRencontres.Sum(r => (r.IdEquipe1 == _equipe.IdEquipe) ? r.ScoreEquipe1 : r.ScoreEquipe2); }
+            get { return _lsRencontres.Sum(r => (r.IdParticipant1 == _equipe.IdEquipe) ? r.NbVictoiresParticipant1 : r.NbVictoiresParticipant2); }
         }
 
         public int ClassementMeilleurJoueur
         {
             get
             {
-                return Math.Min(_classementCoaches.ObtenirClassementCoach(_equipe.Capitaine.IdCoach),
-                                Math.Min(_classementCoaches.ObtenirClassementCoach(_equipe.Equipier1.IdCoach),
-                                         _classementCoaches.ObtenirClassementCoach(_equipe.Equipier2.IdCoach)
-                                        )
-                               );
+                return _equipe.ListeIdCoaches.Select(id => _classementCoaches.ObtenirClassementCoach(id)).Min();
             }
         }
 
         public int TDMarques
         {
-            get { return _lsRencontres.Sum(r => (r.IdEquipe1 == _equipe.IdEquipe) ? r.TDEquipe1 : r.TDEquipe2); }
+            get { return _lsRencontres.Sum(r => (r.IdParticipant1 == _equipe.IdEquipe) ? r.TDEquipe1 : r.TDEquipe2); }
         }
 
         public int TDEncaisses
         {
-            get { return _lsRencontres.Sum(r => (r.IdEquipe1 == _equipe.IdEquipe) ? r.TDEquipe2 : r.TDEquipe1); }
+            get { return _lsRencontres.Sum(r => (r.IdParticipant1 == _equipe.IdEquipe) ? r.TDEquipe2 : r.TDEquipe1); }
         }
 
         public int SortiesEffectuees
         {
-            get { return _lsRencontres.Sum(r => (r.IdEquipe1 == _equipe.IdEquipe) ? r.SortiesEquipe1 : r.SortiesEquipe2); }
+            get { return _lsRencontres.Sum(r => (r.IdParticipant1 == _equipe.IdEquipe) ? r.SortiesEquipe1 : r.SortiesEquipe2); }
         }
 
         public int SortiesSubies
         {
-            get { return _lsRencontres.Sum(r => (r.IdEquipe1 == _equipe.IdEquipe) ? r.SortiesEquipe2 : r.SortiesEquipe1); }
+            get { return _lsRencontres.Sum(r => (r.IdParticipant1 == _equipe.IdEquipe) ? r.SortiesEquipe2 : r.SortiesEquipe1); }
         }
 
         public int SortiesVicieusesEffectuees
         {
-            get { return _lsRencontres.Sum(r => (r.IdEquipe1 == _equipe.IdEquipe) ? r.SortiesVicieusesEquipe1 : r.SortiesVicieusesEquipe2); }
+            get { return _lsRencontres.Sum(r => (r.IdParticipant1 == _equipe.IdEquipe) ? r.SortiesVicieusesEquipe1 : r.SortiesVicieusesEquipe2); }
         }
 
         public int SortiesVicieusesSubies
         {
-            get { return _lsRencontres.Sum(r => (r.IdEquipe1 == _equipe.IdEquipe) ? r.SortiesVicieusesEquipe2 : r.SortiesVicieusesEquipe1); }
+            get { return _lsRencontres.Sum(r => (r.IdParticipant1 == _equipe.IdEquipe) ? r.SortiesVicieusesEquipe2 : r.SortiesVicieusesEquipe1); }
         }
 
         public int TotalSortiesSubies
@@ -151,46 +147,34 @@ namespace Skitter.ViewModel.ViewModels.Classements
         {
             get
             {
-                return string.Format("{0} ({1})\n{2} ({3})\n{4} ({5})",
-                    _equipe.Capitaine.NomCoach, _equipe.Capitaine.NomRoster,
-                    _equipe.Equipier1.NomCoach, _equipe.Equipier1.NomRoster,
-                    _equipe.Equipier2.NomCoach, _equipe.Equipier2.NomRoster);
+                string sRetour = string.Empty;
+                foreach(Coach coach in _equipe.ListeCoaches)
+                {
+                    sRetour += (string.IsNullOrEmpty(sRetour) ? string.Empty : "\n")
+                        + string.Format("{0} ({1})", coach.NomCoach, coach.NomRoster);
+                }
+
+                return sRetour;
             }
         }
         #endregion
 
         #region Résultats individuels
-        ResultatsCoachViewModel _resultatsCapitaine;
-        ResultatsCoachViewModel _resultatsEquipier1;
-        ResultatsCoachViewModel _resultatsEquipier2;
-        
-        public ResultatsCoachViewModel ResultatsCapitaine
+        List<ResultatsCoachViewModel> _lsResultatsCoachViewModels;
+        void InitResultatsCoachVM()
         {
-            get
-            {
-                if (_resultatsCapitaine == null)
-                    _resultatsCapitaine = new ResultatsCoachViewModel(_equipe.Capitaine, _lsRencontres);
-                return _resultatsCapitaine;
-            }
+            _lsResultatsCoachViewModels = new List<ResultatsCoachViewModel>();
+            foreach (Coach c in _equipe.ListeCoaches)
+                _lsResultatsCoachViewModels.Add(new ResultatsCoachViewModel(c, _lsRencontres));
         }
 
-        public ResultatsCoachViewModel ResultatsEquipier1
+        List<ResultatsCoachViewModel> ListeResultatsCoachViewModels
         {
             get
             {
-                if (_resultatsEquipier1 == null)
-                    _resultatsEquipier1 = new ResultatsCoachViewModel(_equipe.Equipier1, _lsRencontres);
-                return _resultatsEquipier1;
-            }
-        }
-
-        public ResultatsCoachViewModel ResultatsEquipier2
-        {
-            get
-            {
-                if (_resultatsEquipier2 == null)
-                    _resultatsEquipier2 = new ResultatsCoachViewModel(_equipe.Equipier2, _lsRencontres);
-                return _resultatsEquipier2;
+                if (_lsResultatsCoachViewModels == null)
+                    InitResultatsCoachVM();
+                return _lsResultatsCoachViewModels;
             }
         }
         #endregion
