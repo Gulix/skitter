@@ -32,10 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FirstFloor.ModernUI">
-      <HintPath>..\..\..\Librairies\ModernUI\ModernUI.1.0.5\net40\FirstFloor.ModernUI.dll</HintPath>
+      <HintPath>..\external\FirstFloor.ModernUI.dll</HintPath>
     </Reference>
     <Reference Include="Nustache.Core">
-      <HintPath>..\..\..\..\Downloads\Nustache\Nustache.Core\obj\Debug\Nustache.Core.dll</HintPath>
+      <HintPath>..\external\Nustache.Core.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
