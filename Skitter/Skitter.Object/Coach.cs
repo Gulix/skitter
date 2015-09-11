@@ -64,7 +64,7 @@ namespace Skitter.Object
         [XmlIgnore]
         private Roster Roster
         {
-            get { return Roster.GetListeComplete().FirstOrDefault(r => r.IdRoster == IdRoster); }
+            get { return Tournoi.GetRoster(IdRoster); }
         }
 
         [XmlIgnore]

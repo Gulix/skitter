@@ -63,7 +63,7 @@ namespace Skitter.ViewModel.ViewModels
         {
             if (_S_lsRosters == null)
                 _S_lsRosters = 
-                    Roster.GetListeComplete()
+                    Tournoi.GetInstance().Configuration.Rosters
                     .Select(r => new RosterViewModel(r))
                     .OrderBy(r => r.NomRoster)
                     .ToList();

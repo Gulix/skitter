@@ -164,6 +164,9 @@
     <Compile Include="Systeme\PageInitialisation.xaml.cs">
       <DependentUpon>PageInitialisation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Configuration\PageRosters.xaml.cs">
+      <DependentUpon>PageRosters.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Systeme\PageSauvegarde.xaml.cs">
       <DependentUpon>PageSauvegarde.xaml</DependentUpon>
     </Compile>
@@ -245,6 +248,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Systeme\PageInitialisation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Configuration\PageRosters.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

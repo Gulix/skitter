@@ -20,6 +20,8 @@ namespace Skitter.Object
         List<Rencontre> _lsRencontresRonde5;
 
         string _sFichier;
+
+        TournamentConfiguration _tournamentConfiguration;
         #endregion
 
         #region Enumération "Phase du tournoi"
@@ -82,6 +84,12 @@ namespace Skitter.Object
             get { return _lsRencontresRonde5; }
             set { _lsRencontresRonde5 = value; }
         }
+
+        public TournamentConfiguration Configuration
+        {
+            get { return _tournamentConfiguration; }
+            set { _tournamentConfiguration = value; }
+        }
         #endregion
 
         private Tournoi()
@@ -93,6 +101,7 @@ namespace Skitter.Object
             _lsRencontresRonde4 = new List<Rencontre>();
             _lsRencontresRonde5 = new List<Rencontre>();
             _typPhaseEnCours = eTypePhaseTournoi.Configuration;
+            _tournamentConfiguration = new TournamentConfiguration();
 
             _sFichier = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "dragonbowl.xml");
         }
@@ -215,7 +224,7 @@ namespace Skitter.Object
 
         public static Roster GetRoster(int idRoster)
         {
-            return Roster.GetListeComplete().FirstOrDefault(r => r.IdRoster == idRoster);
+            return GetInstance().Configuration.Rosters.FirstOrDefault(r => r.IdRoster == idRoster);
         }
         #endregion
 

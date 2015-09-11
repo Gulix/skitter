@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="Skitter.Wpf.Configuration.PageRosters"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <UserControl.Resources>
+        <DataTemplate x:Key="DT_Roster">
+            <TextBlock Text="{Binding Path=NomRoster}" />            
+        </DataTemplate>
+        
+    </UserControl.Resources>
+    
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ListView Grid.Row="1" Grid.Column="0" 
+              x:Name="lvRosters"
+              SelectedItem="{Binding Path=SelectedRoster}"
+              ItemsSource="{Binding Path=RostersList}"
+              ItemTemplate="{StaticResource DT_Roster}"
+              SelectionMode="Single"
+              />
+        
+
+        <!-- Initialize & Clear -->
+        <UniformGrid Columns="2" Grid.Row="0" Grid.Column="0" >
+            <Button Content="Par défaut" Grid.Column="0"  x:Name="btnDefaultRosters" IsEnabled="{Binding Path=IsDeleteEnabled}" />
+            <Button Content="Vider" Grid.Column="1"  x:Name="btnClearRosters" IsEnabled="{Binding Path=IsDeleteEnabled}" />
+        </UniformGrid>
+        
+        <!-- Add & Delete -->
+        <UniformGrid Columns="2" Grid.Row="2" Grid.Column="0" >
+            <Button Content="Ajouter" Grid.Column="0"  x:Name="btnAddRoster" IsEnabled="{Binding Path=IsAddEnabled}" />
+            <Button Content="Supprimer" Grid.Column="1"  x:Name="btnDeleteRoster" IsEnabled="{Binding Path=IsDeleteEnabled}" />
+        </UniformGrid>
+
+        <!-- Détail d'une équipe --><!--
+        <local:DetailEquipe Grid.Row="1" Grid.Column="1" Margin="10,0"
+                        DataContext="{Binding Path=EquipeSelectionnee}"
+                        Visibility="{Binding Converter={StaticResource nullToVisConverter}}"
+                         />-->
+    </Grid>
+</UserControl>

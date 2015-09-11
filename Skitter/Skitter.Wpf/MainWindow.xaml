@@ -16,6 +16,7 @@
 		</mui:LinkGroup>
 		<mui:LinkGroup DisplayName="Configuration">
 			<mui:LinkGroup.Links>
+                <mui:Link DisplayName="Rosters" Source="/Configuration/PageRosters.xaml" />
 				<mui:Link DisplayName="Equipes" Source="/Configuration/PageListeEquipes.xaml" />
 			</mui:LinkGroup.Links>
 		</mui:LinkGroup>
