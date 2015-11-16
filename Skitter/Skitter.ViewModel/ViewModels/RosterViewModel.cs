@@ -27,6 +27,7 @@ namespace Skitter.ViewModel.ViewModels
         public string NomRoster
         {
             get {return _roster.NomRoster;}
+            set { _roster.NomRoster = value; RaisePropertyChanged("NomRoster"); }
         }
         
         public int IdRoster
@@ -37,6 +38,33 @@ namespace Skitter.ViewModel.ViewModels
         public int ValeurRoster
         {
             get {return _roster.ValeurRoster;}
+        }
+
+        public string ValeurRosterChaine
+        {
+            get { return _roster.ValeurRoster.ToString(); }
+            set
+            {
+                int iValeurRoster = -1;
+                if (int.TryParse(value, out iValeurRoster))
+                {
+                    _roster.ValeurRoster = iValeurRoster;
+                }
+                RaisePropertyChanged("ValeurRosterChaine");
+                RaisePropertyChanged("ValeurRoster");
+            }
+        }
+
+        public bool IsRosterNAF
+        {
+            get { return _roster.IsNaf; }
+            set { _roster.IsNaf = value; RaisePropertyChanged("IsRosterNAF"); }
+        }
+
+        public string NomRosterNaf
+        {
+            get { return _roster.NomNaf; }
+            set { _roster.NomNaf = value; RaisePropertyChanged("NomNaf"); }
         }
         #endregion
         

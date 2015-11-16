@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Skitter.ViewModel.Fonctionnel.ControleRencontreCoach" Collapsed="true">
+    <Position X="19" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABQAABAAAAQAAAAAABAAA=</HashCode>
+      <FileName>Fonctionnel\ControleRencontreCoach.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.Fonctionnel.DuelRonde" Collapsed="true">
+    <Position X="20.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAABABgAAAAAIAgAAAgAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Fonctionnel\DuelRonde.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.Fonctionnel.ExportExcel" Collapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Fonctionnel\ExportExcel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.Fonctionnel.FileAndDirectory" Collapsed="true">
+    <Position X="17.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIBAACAAAAAAAAAAIAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Fonctionnel\FileAndDirectory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.Fonctionnel.Mp3Player" Collapsed="true">
+    <Position X="17.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Fonctionnel\Mp3Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.Fonctionnel.ResultatPalmares" Collapsed="true">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBAAAAAAAAAAAAAAAAgAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Fonctionnel\ResultatPalmares.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Classements.ClassementCoachesViewModel">
+    <Position X="13" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIACAAAAAAAAAAABIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Classements\ClassementCoachesViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_lsResultatsCoaches" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Classements.ResultatsCoachViewModel">
+    <Position X="16" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEoAggAAAEAAAAAAAiAAACAAAICBEAAIAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Classements\ResultatsCoachViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_coach" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_lsDuels" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Classements.ResultatsEquipeViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKkgAgiAAhEQoAABwEKkIEAgAIICAEhYIAAAAYKQAE=</HashCode>
+      <FileName>ViewModels\Classements\ResultatsEquipeViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Classements.ResultatsRonde1ViewModel" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAQAAAAAAAAAAAAAAIAIAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Classements\ResultatsRonde1ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Classements.ResultatsRonde2ViewModel" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAQAAAAAAAAAAAAAAIAIAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Classements\ResultatsRonde2ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Classements.ResultatsRonde3ViewModel" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAQAAAAAAAAAAAAAAIAIAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Classements\ResultatsRonde3ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Classements.ResultatsRonde4ViewModel" Collapsed="true">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAQAAAAAAAAAAAAAAIAIAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Classements\ResultatsRonde4ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Classements.ResultatsRonde5ViewModel" Collapsed="true">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAQAAAAAAAAAAAAAAIAIAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Classements\ResultatsRonde5ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Classements.ResultatsRondeViewModel" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAASCAAgJAkkUQCAqAAAEgAgQCCKCYRAAAEAMgAA=</HashCode>
+      <FileName>ViewModels\Classements\ResultatsViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.CoachRondeViewModel" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAgAAAAAAAAABAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ViewModels\CoachRondeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.CoachViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiQCAAACAABAAAAAAFAwEAACgAAAABAAAAAIAAAAAAA=</HashCode>
+      <FileName>ViewModels\CoachViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.ConfigurationListeEquipesViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAACAAAAAAAAAAAAEAAAgAAAAAQAgUACCAGAAAA=</HashCode>
+      <FileName>ViewModels\ConfigurationListeEquipesViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.EquipeViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAACAAQAgBAABAAQAAAAgACABAAAAAAAEAQAQgA=</HashCode>
+      <FileName>ViewModels\EquipeViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.ExportNaf" Collapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAQAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAACCA=</HashCode>
+      <FileName>ViewModels\ExportNaf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.HymneViewModel" Collapsed="true">
+    <Position X="13.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\HymneViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.InitialisationViewModel" Collapsed="true">
+    <Position X="15.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\InitialisationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.PreparationEquipeViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAIAQEgCDoABAAQABAAAAAAArAAQAAAAAgIAwAQAQgA=</HashCode>
+      <FileName>ViewModels\PreparationEquipeViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.PreparationRencontreViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAQAQICgKDQgAAAQIAAAAAAkgAABCAAAJJKEAIAQCg=</HashCode>
+      <FileName>ViewModels\PreparationRencontreViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.RosterViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAACAAAAAAAAAAAAAAACgAAAAAEAAAAIBAAAAQA=</HashCode>
+      <FileName>ViewModels\RosterViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.SaisieDuelViewModel" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUACCAAKAAAAAENAABABAAEAggAAAAAAAAAAAIEAQAA=</HashCode>
+      <FileName>ViewModels\SaisieDuelViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_duel" />
+      <Property Name="Coach1" />
+      <Property Name="Coach2" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.SaisieRencontreViewModel" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAyAIAAAAAAAAAAAAAAgAQQAIAAAEAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\SaisieRencontreViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_duel1VM" />
+      <Field Name="_duel2VM" />
+      <Field Name="_duel3VM" />
+      <Field Name="_rencontre" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.SauvegardeViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAACAEAAAAAAACAAAAAAhAABAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>ViewModels\SauvegardeViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Configuration.RostersListViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFAAAACAAAAAAAAAAAAABAEgAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Configuration\RostersListViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Rondes.GenerationFeuilleResultatViewModel" Collapsed="true">
+    <Position X="12" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAQAAAAAAAAAAgAAAAAAAAAAAAAAAAIAAAAAQBA=</HashCode>
+      <FileName>ViewModels\Rondes\GenerationFeuilleResultatViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Rondes.GenerationFeuilleResultatRencontreViewModel" Collapsed="true">
+    <Position X="20.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIAACAIAAAAAAAAAAAAAQCAAAACAQAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Rondes\GenerationFeuilleResultatViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Rondes.GenerationFeuilleResultatDuelViewModel" Collapsed="true">
+    <Position X="19" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAQAAAwQIAAAAAAABAAAAAAAAAAAAAAAAAABABAADA=</HashCode>
+      <FileName>ViewModels\Rondes\GenerationFeuilleResultatViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Rondes.Ronde1ViewModel" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAASAABQAAEAAACAAAACCAAAAABCIIAAAAAACA=</HashCode>
+      <FileName>ViewModels\Rondes\Ronde1ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Rondes.Ronde2ViewModel" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAASAABQAAEAAACAAAACCAAAAABCIIAAAAAACA=</HashCode>
+      <FileName>ViewModels\Rondes\Ronde2ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Rondes.Ronde3ViewModel" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAASAABQAAEAAACAAAACCAAAAABCIIAAAAAACA=</HashCode>
+      <FileName>ViewModels\Rondes\Ronde3ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Rondes.Ronde4ViewModel" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAASAABQAAEAAACAAAACCAAAAABCIIAAAAAACA=</HashCode>
+      <FileName>ViewModels\Rondes\Ronde4ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Rondes.Ronde5ViewModel" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAASAABQAAEAAACAAAACCAAAAABCIIAAAAAACA=</HashCode>
+      <FileName>ViewModels\Rondes\Ronde5ViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Skitter.ViewModel.ViewModels.Rondes.RondeViewModel" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GgCACgACSAAhwAAUABgCAFSAzSABAAQBCIIAAgMCADg=</HashCode>
+      <FileName>ViewModels\Rondes\RondeViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Skitter.Object.Coach" Collapsed="true">
+    <Position X="19.5" Y="8" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Skitter.Object.Duel" Collapsed="true">
+    <Position X="21.5" Y="7" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Skitter.Object.Rencontre" Collapsed="true">
+    <Position X="19.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

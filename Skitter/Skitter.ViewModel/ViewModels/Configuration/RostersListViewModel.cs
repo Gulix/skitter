@@ -22,6 +22,16 @@ namespace Skitter.ViewModel.ViewModels.Configuration
             _tournoi = Tournoi.GetInstance();
         }
 
+        #region Selection
+        RosterViewModel _selectedVM;
+
+        public RosterViewModel SelectedRoster
+        {
+            get { return _selectedVM; }
+            set { _selectedVM = value; RaisePropertyChanged("SelectedRoster"); }
+        }
+        #endregion
+
         #region List of current rosters
         public List<RosterViewModel> RostersList
         {

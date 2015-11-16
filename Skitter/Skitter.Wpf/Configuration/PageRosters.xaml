@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:conv="clr-namespace:Skitter.Wpf.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     
@@ -10,6 +11,8 @@
         <DataTemplate x:Key="DT_Roster">
             <TextBlock Text="{Binding Path=NomRoster}" />            
         </DataTemplate>
+        
+        <conv:NullableToVisibilityConverter x:Key="nullVisibilityConverter" />
         
     </UserControl.Resources>
     
@@ -46,10 +49,40 @@
             <Button Content="Supprimer" Grid.Column="1"  x:Name="btnDeleteRoster" IsEnabled="{Binding Path=IsDeleteEnabled}" />
         </UniformGrid>
 
-        <!-- Détail d'une équipe --><!--
-        <local:DetailEquipe Grid.Row="1" Grid.Column="1" Margin="10,0"
-                        DataContext="{Binding Path=EquipeSelectionnee}"
-                        Visibility="{Binding Converter={StaticResource nullToVisConverter}}"
-                         />-->
+        <!-- Roster details -->
+        <Grid Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" 
+              Margin="10,5,5,5"
+              Visibility="{Binding Path=SelectedRoster, Converter={StaticResource nullVisibilityConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right"
+                   Margin="0,0,10,0" Content="Nom du roster" />
+            <TextBox Grid.Row="0" Grid.Column="1" x:Name="tbNomRoster"
+                     Text="{Binding Path=SelectedRoster.NomRoster}" />
+
+            <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"
+                   Margin="0,0,10,0" Content="Valeur du roster" />
+            <TextBox Grid.Row="1" Grid.Column="1" x:Name="tbValeurRoster"
+                     Text="{Binding Path=SelectedRoster.ValeurRosterChaine}" />
+
+            <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right"
+                   Margin="0,0,10,0" Content="Roster NAF ?" />
+            <CheckBox Grid.Row="2" Grid.Column="1" x:Name="chkIsNAF"
+                      IsChecked="{Binding Path=SelectedRoster.IsRosterNAF}" />
+
+            <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right"
+                   Margin="0,0,10,0" Content="Nom NAF" />
+            <TextBox Grid.Row="3" Grid.Column="1" x:Name="tbNomNaf"
+                     Text="{Binding Path=SelectedRoster.NomRosterNaf}" />
+        </Grid>
     </Grid>
 </UserControl>
