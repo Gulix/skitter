@@ -31,6 +31,24 @@ namespace Skitter.Wpf.Configuration
             ReinitialiserPage();
 
             btnDefaultRosters.Click += btnDefaultRosters_Click;
+            btnAddRoster.Click += btnAddRoster_Click;
+            btnDeleteRoster.Click += btnDeleteRoster_Click;
+            btnClearRosters.Click += btnClearRosters_Click;
+        }
+
+        void btnClearRosters_Click(object sender, RoutedEventArgs e)
+        {
+            _pageViewModel.ClearList();
+        }
+
+        void btnDeleteRoster_Click(object sender, RoutedEventArgs e)
+        {
+            _pageViewModel.DeleteSelectedRoster();
+        }
+
+        void btnAddRoster_Click(object sender, RoutedEventArgs e)
+        {
+            _pageViewModel.AddNewRoster();
         }
 
         void btnDefaultRosters_Click(object sender, RoutedEventArgs e)

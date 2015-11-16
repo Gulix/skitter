@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Windows;
 using Skitter.Object;
 
 namespace Skitter.ViewModel.ViewModels.Configuration
@@ -32,7 +33,51 @@ namespace Skitter.ViewModel.ViewModels.Configuration
         }
         #endregion
 
+        #region Actions
+        public bool IsDeleteEnabled
+        {
+            get 
+            {
+                return (_tournoi.PhaseEnCours == Tournoi.eTypePhaseTournoi.Configuration)
+                    && !_tournoi.Equipes.Any();
+            }
+        }
+
+        public bool IsAddEnabled
+        {
+            get { return _tournoi.PhaseEnCours == Tournoi.eTypePhaseTournoi.Configuration; }
+        }
+
+        public void AddNewRoster()
+        {
+            Roster roster = _tournoi.Configuration.AddNewRoster();
+            RefreshListeRosters();
+
+            SelectedRoster = _lsRostersVM.FirstOrDefault(r => r.IdRoster == roster.IdRoster);
+        }
+
+        public void DeleteSelectedRoster()
+        {
+            if (SelectedRoster != null)
+            {
+                MessageBoxResult result = MessageBox.Show("Confirmez-vous la suppression de ce roster ?", "Suppression", MessageBoxButton.YesNo);
+                if (result == MessageBoxResult.Yes)
+                {
+                    _tournoi.Configuration.Rosters.RemoveAll(r => r.IdRoster == SelectedRoster.IdRoster);
+                    RefreshListeRosters();
+                }
+            }
+        }
+
+        #endregion
+
         #region List of current rosters
+        private void RefreshListeRosters()
+        {
+            _lsRostersVM = null;
+            RaisePropertyChanged("RostersList");
+        }
+
         public List<RosterViewModel> RostersList
         {
             get
@@ -72,17 +117,15 @@ namespace Skitter.ViewModel.ViewModels.Configuration
             _tournoi.Configuration.AddNewRoster("Ogres", "Ogres", 5);
             _tournoi.Configuration.AddNewRoster("Vampires", "Vampires", 5);
             _tournoi.Configuration.AddNewRoster("Bas-Fonds", "Underworld", 5);
-            
-            _lsRostersVM = null;
-            RaisePropertyChanged("RostersList");
+
+            RefreshListeRosters();
         }
 
         public void ClearList()
         {
             _tournoi.Configuration.Rosters.Clear();
-            
-            _lsRostersVM = null;
-            RaisePropertyChanged("RostersList");
+
+            RefreshListeRosters();
         }
         #endregion
 
