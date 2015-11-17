@@ -19,18 +19,21 @@
                     <Grid>
                         <Grid.Resources>
                             <conv:NullableToVisibilityConverter x:Key="nullToVisConverter" />
-
+                            
                             <DataTemplate x:Key="DT_PreparationRencontre">
                                 <deroulement:UCPreparationRencontre DataContext="{Binding}" Margin="0,5"/>
                             </DataTemplate>
 
+                            <!-- Display in the left list of the Match-ups of a Round (Select to register scores)-->
                             <DataTemplate x:Key="DT_SaisieRencontre">
-                                <UniformGrid Rows="5">
-                                    <TextBlock Grid.Row="0" HorizontalAlignment="Left" FontWeight="Bold" Text="{Binding Path=NomEquipe1}" Margin="0"/>
+                                <UniformGrid Rows="6">
+                                    <TextBlock Grid.Row="0" HorizontalAlignment="Left" FontWeight="Bold" Text="{Binding Path=NomEquipe1}" Margin="0"
+                                               />
                                     <TextBlock Grid.Row="1" HorizontalAlignment="Right" FontWeight="Bold" Text="{Binding Path=NomEquipe2}" Margin="0"/>
-                                    <TextBlock Grid.Row="2" HorizontalAlignment="Center" FontStyle="Italic" Text="{Binding Path=Duel1.DescriptionMatch}" />
-                                    <TextBlock Grid.Row="3" HorizontalAlignment="Center" FontStyle="Italic" Text="{Binding Path=Duel2.DescriptionMatch}" />
-                                    <TextBlock Grid.Row="4" HorizontalAlignment="Center" FontStyle="Italic" Text="{Binding Path=Duel3.DescriptionMatch}" />
+                                    <TextBlock Grid.Row="2" HorizontalAlignment="Center" FontWeight="Bold" Text="{Binding Path=ScoreFinal}" Margin="0" />
+                                    <TextBlock Grid.Row="3" HorizontalAlignment="Center" FontStyle="Italic" Text="{Binding Path=Duel1.DescriptionMatch}" />
+                                    <TextBlock Grid.Row="4" HorizontalAlignment="Center" FontStyle="Italic" Text="{Binding Path=Duel2.DescriptionMatch}" />
+                                    <TextBlock Grid.Row="5" HorizontalAlignment="Center" FontStyle="Italic" Text="{Binding Path=Duel3.DescriptionMatch}" />
                                 </UniformGrid>
                             </DataTemplate>
                         </Grid.Resources>
@@ -114,9 +117,9 @@
                             <UniformGrid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Columns="2" 
                                          x:Name="PART_grdBtn"
                                          IsEnabled="{Binding Path=IsSaisieMatchesEnabled}">
-                                <Button x:Name="PART_btnAnnulerSaisie" Content="Annuler"
+                                <Button x:Name="PART_btnAnnulerSaisie" Content="Revenir à l'organisation de la ronde"
                                         Margin="5" Grid.Row="0" Grid.Column="0"/>
-                                <Button x:Name="PART_btnValiderSaisie" Content="Valider"
+                                <Button x:Name="PART_btnValiderSaisie" Content="Clôturer la saisie des résultats"
                                         Margin="5" Grid.Row="0" Grid.Column="1"/>
                             </UniformGrid>
 

@@ -18,6 +18,8 @@ namespace Skitter.Object
         Duel _duel1;
         Duel _duel2;
         Duel _duel3;
+
+        bool _bScoreRegistered;
         #endregion
 
         #region Accesseurs
@@ -49,6 +51,12 @@ namespace Skitter.Object
         {
             get { return _duel3; }
             set { _duel3 = value; }
+        }
+
+        public bool IsScoreRegistered
+        {
+            get { return _bScoreRegistered; }
+            set { _bScoreRegistered = value; }
         }
         #endregion
 

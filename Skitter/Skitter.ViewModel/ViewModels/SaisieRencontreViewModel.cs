@@ -38,6 +38,18 @@ namespace Skitter.ViewModel.ViewModels
             get { return _rencontre.ScoreEquipe2.ToString(); }
         }
 
+        public string ScoreFinal
+        {
+            get
+            {
+                if (IsScoreRegistered)
+                {
+                    return string.Format("{0} - {1}", ScoreEquipe1, ScoreEquipe2);
+                }
+                return string.Empty;
+            }
+        }
+
         public SaisieDuelViewModel Duel1
         {
             get { return _duel1VM; }
@@ -52,12 +64,24 @@ namespace Skitter.ViewModel.ViewModels
         {
             get { return _duel3VM; }
         }
+
+        public bool IsScoreRegistered
+        {
+            get { return _rencontre.IsScoreRegistered; }
+            set
+            {
+                _rencontre.IsScoreRegistered = value;
+                RaisePropertyChanged("IsScoreRegistered");
+                OnScoreModifie();
+            }
+        }
         #endregion
 
         private void OnScoreModifie()
         {
             RaisePropertyChanged("ScoreEquipe1");
             RaisePropertyChanged("ScoreEquipe2");
+            RaisePropertyChanged("ScoreFinal");
         }
 
         public SaisieRencontreViewModel(Rencontre rencontre, Coach.eTypeRosterJoue typRosterJoue)

@@ -11,6 +11,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -37,5 +38,9 @@
                             DataContext="{Binding Path=Duel2}" Margin="0,5"/>
         <local:UCSaisieDuel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5"
                             DataContext="{Binding Path=Duel3}" Margin="0,5"/>
+        
+        <CheckBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Center"
+                  Content="Les résultats de la rencontre ont été enregistrés"
+                  IsChecked="{Binding Path=IsScoreRegistered}" />
     </Grid>
 </UserControl>
