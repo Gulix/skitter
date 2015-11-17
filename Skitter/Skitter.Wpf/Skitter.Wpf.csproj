@@ -277,10 +277,9 @@
       <Name>Skitter.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="Resources\bugle-call.png" />
     <Content Include="template_rencontres.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
