@@ -44,11 +44,6 @@ namespace Skitter.ViewModel.ViewModels.Classements
             get { return _equipe; }
         }
 
-        public string Hymne
-        {
-            get { return _equipe.HymneEquipe; }
-        }
-
         public int NbVictoires
         {
             get
@@ -156,6 +151,24 @@ namespace Skitter.ViewModel.ViewModels.Classements
                     _equipe.Equipier1.NomCoach, _equipe.Equipier1.NomRoster,
                     _equipe.Equipier2.NomCoach, _equipe.Equipier2.NomRoster);
             }
+        }
+        #endregion
+
+        #region Anthem
+        /// <summary>
+        /// Anthem to be played for the Team
+        /// </summary>
+        public string Anthem
+        {
+            get { return _equipe.HymneEquipe; }
+        }
+
+        /// <summary>
+        /// Is the Anthem button visible ?
+        /// </summary>
+        public Visibility AnthemVisibility
+        {
+            get { return string.IsNullOrEmpty(Anthem) ? Visibility.Hidden : Visibility.Visible; }
         }
         #endregion
 

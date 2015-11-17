@@ -92,8 +92,8 @@
     <Compile Include="Controls\BoutonIntervertirHautBas.xaml.cs">
       <DependentUpon>BoutonIntervertirHautBas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\BoutonLireHymne.xaml.cs">
-      <DependentUpon>BoutonLireHymne.xaml</DependentUpon>
+    <Compile Include="Controls\PlayAnthemButton.xaml.cs">
+      <DependentUpon>PlayAnthemButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ClickSelectTextBox.cs" />
     <Compile Include="Converters\BoolToVisibilityConverter.cs" />
@@ -183,7 +183,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\BoutonLireHymne.xaml">
+    <Page Include="Controls\PlayAnthemButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

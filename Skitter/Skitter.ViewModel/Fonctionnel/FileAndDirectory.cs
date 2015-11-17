@@ -16,20 +16,29 @@ namespace Skitter.ViewModel.Fonctionnel
             }
         }
 
-        public static string HymnesDirectory
+        /// <summary>
+        /// Directory where to put the mp3 files for the Anthems
+        /// </summary>
+        public static string AnthemsDirectory
         {
             get
             {
-                return Path.Combine(ExeDirectory, "Hymnes");
+                return Path.Combine(ExeDirectory, "Anthems");
             }
         }
 
-        public static string GetCheminCompletPourHymne(string sHymne)
+        /// <summary>
+        /// Get the full path to an Anthem
+        /// </summary>
+        /// <param name="sAnthem">The mp3 file anthem name</param>
+        public static string GetAnthemFullPath(string sAnthem)
         {
-            string sFullPath = Path.Combine(FileAndDirectory.HymnesDirectory, sHymne);
-            if (File.Exists(sFullPath))
-                return sFullPath;
-            return string.Empty;
+            string sFullPath = Path.Combine(FileAndDirectory.AnthemsDirectory, sAnthem);
+            if (!File.Exists(sFullPath))
+            {
+                sFullPath = string.Empty;
+            }
+            return sFullPath;
         }
         
         public static string DlcPlayerExe

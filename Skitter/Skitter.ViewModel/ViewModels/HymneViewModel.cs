@@ -15,11 +15,11 @@ namespace Skitter.ViewModel.ViewModels
         /// <returns></returns>
         public static List<string> GetListeHymnesDisponibles()
         {
-            // Les MP3 doivent être présents dans le répertoire de l'application, dans un sous-répertoire "Hymnes"
+            // Les MP3 doivent être présents dans le répertoire de l'application, dans un sous-répertoire "Anthems"
             List<string> lsHymnes = new List<string>();
             try
             {
-                string[] tHymnes = Directory.GetFiles(FileAndDirectory.HymnesDirectory, "*.mp3");
+                string[] tHymnes = Directory.GetFiles(FileAndDirectory.AnthemsDirectory, "*.mp3");
                 lsHymnes = tHymnes.ToList()
                                   .Select(f => new FileInfo(f))
                                   .Select(fi => fi.Name)

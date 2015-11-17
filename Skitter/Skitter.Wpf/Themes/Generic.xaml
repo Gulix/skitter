@@ -180,7 +180,7 @@
                                         <TextBlock HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding Path=NomEquipe}"
                                                TextWrapping="Wrap" ToolTip="{Binding Path=TooltipEquipe}"/>
                                     </Canvas>
-                                    <ctrls:BoutonLireHymne Grid.Column="2" DataContext="{Binding Path=Hymne}" />
+                                    <ctrls:PlayAnthemButton Grid.Column="2" Anthem="{Binding Path=Anthem}" Visibility="{Binding Path=AnthemVisibility}" />
                                     <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                Text="{Binding Path=NbVictoires}" 
                                                FontWeight="{Binding Path=NbVictoiresFontWeight}"/>
