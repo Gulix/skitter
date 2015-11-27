@@ -126,6 +126,14 @@ namespace Skitter.ViewModel.ViewModels.Classements
             get { return SortiesSubies + SortiesVicieusesSubies; }
         }
 
+        public int DifferentielSortiesTD
+        {
+            get
+            {
+                return (SortiesEffectuees + SortiesVicieusesEffectuees + TDMarques) - (TotalSortiesSubies + TDEncaisses);
+            }
+        }
+
         public int RangEquipe
         {
             get { return _iRang; }

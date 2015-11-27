@@ -2,7 +2,7 @@
 <html>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <head>
-    <title>Feuille de résultats - {{DescriptifRondeCourt}}</title>
+    <title>Feuille de merde - {{DescriptifRondeCourt}}</title>
     <style>
         body {
             margin: 5px;
@@ -60,6 +60,12 @@
             font-size: 10px;
             font-style: italic;
         }
+
+        .table-prochain-roster {
+            margin-bottom: 15px;
+            font-size: 10px;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -69,7 +75,7 @@
     
       <table cellpadding="0px" cellspacing="0px">
         <tr>
-          <th colspan="3">{{DescriptifRondeLong}}</tr>
+          <th colspan="3">{{DescriptifRondeLong}}</th>
         </tr>
         <tr class="nomsEquipes">
           <td class="elemLeft colonneLaterale">{{NomEquipe1}}</td>
@@ -107,6 +113,13 @@
       </table>
       <p class="info">Dans <b>Sorties</b>, indiquez toutes les sorties sauf <b>Vicieuses</b> subies par votre adversaire : blocage, esquive, paquet, public, rocher, ...</p>
       <p class="info">Dans <b>Vicieuses</b>, indiquez toutes les sorties obtenues par Aggression, Poignard, Tronçonneuse, Bombes, ...</p>
+    <table cellpadding="0" cellspacing="0" class="table-prochain-roster">
+        <tr class="donnees">
+            <td class="colonneLaterale">{{NextRoster1}}</td>
+            <td class="elemCentre colonneCentre">Prochain roster</td>
+            <td class="colonneLaterale">{{NextRoster2}}</td>
+        </tr>
+    </table>
     
     {{/Duels}}
 

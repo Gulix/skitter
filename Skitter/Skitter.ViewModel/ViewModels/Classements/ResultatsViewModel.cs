@@ -107,7 +107,7 @@ namespace Skitter.ViewModel.ViewModels.Classements
                                                 .ThenByDescending(r => r.NbNuls)
                                                 .ThenByDescending(r => r.ValeurEquipe)
                                                 .ThenByDescending(r => r.DuelsRemportes)
-                                                .ThenBy(r => r.ClassementMeilleurJoueur)
+                                                .ThenBy(r => r.DifferentielSortiesTD)
                                                 .ToList();
             ModifierTypeTri(eTypeTri.General);
         }

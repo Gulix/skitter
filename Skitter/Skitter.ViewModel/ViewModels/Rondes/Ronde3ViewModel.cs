@@ -49,6 +49,11 @@ namespace Skitter.ViewModel.ViewModels.Rondes
             get { return Coach.eTypeRosterJoue.RosterClassique; }
         }
 
+        public override Coach.eTypeRosterJoue? TypeNextRosterJoue
+        {
+            get { return Coach.eTypeRosterJoue.EchangeRonde4; }
+        }
+
         public override int NumeroRonde
         {
             get { return 3; }

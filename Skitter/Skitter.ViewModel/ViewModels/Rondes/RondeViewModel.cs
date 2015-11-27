@@ -48,6 +48,7 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         public abstract ClassementCoachesViewModel GetClassementDesCoaches();
 
         public abstract Coach.eTypeRosterJoue TypeRosterJoue { get; }
+        public abstract Coach.eTypeRosterJoue? TypeNextRosterJoue { get; }
         public abstract int NumeroRonde { get; }
         #endregion
 
@@ -358,7 +359,7 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         public void GenererHTML()
         {
             GenerationFeuilleResultatViewModel generationVM =
-                new GenerationFeuilleResultatViewModel(RencontresDeLaRonde, NumeroRonde, TypeRosterJoue);
+                new GenerationFeuilleResultatViewModel(RencontresDeLaRonde, NumeroRonde, TypeRosterJoue, TypeNextRosterJoue);
 
             string exeDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
 

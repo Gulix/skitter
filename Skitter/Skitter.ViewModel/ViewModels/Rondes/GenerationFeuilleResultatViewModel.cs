@@ -12,6 +12,7 @@ namespace Skitter.ViewModel.ViewModels.Rondes
     {
         List<GenerationFeuilleResultatRencontreViewModel> _lsRencontres;
         Coach.eTypeRosterJoue _typRosterJoue;
+        Coach.eTypeRosterJoue? _typNextRosterJoue;
         int _iNumeroRonde;
 
         #region DataMembers
@@ -46,13 +47,19 @@ namespace Skitter.ViewModel.ViewModels.Rondes
             get { return _typRosterJoue; }
         }
 
-        public GenerationFeuilleResultatViewModel(List<Rencontre> lsRencontres, int iNumRonde, Coach.eTypeRosterJoue typRoster)
+        public GenerationFeuilleResultatViewModel(List<Rencontre> lsRencontres, int iNumRonde, Coach.eTypeRosterJoue typRoster, Coach.eTypeRosterJoue? typNextRoster)
         {
             _iNumeroRonde = iNumRonde;
             _typRosterJoue = typRoster;
+            _typNextRosterJoue = typNextRoster;
             _lsRencontres = new List<GenerationFeuilleResultatRencontreViewModel>();
             for(int iNumTable = 0; iNumTable < lsRencontres.Count; iNumTable++)
                 _lsRencontres.Add(new GenerationFeuilleResultatRencontreViewModel(this, lsRencontres[iNumTable], iNumTable + 1));            
+        }
+
+        public Coach.eTypeRosterJoue? TypeRosterJoue_Next
+        {
+            get { return _typNextRosterJoue; }
         }
     }
 
@@ -145,6 +152,18 @@ namespace Skitter.ViewModel.ViewModels.Rondes
         {
             get { return string.Format("Table {0}-{1}", _rencontreVM.NumeroTable, _iNumeroMatch); }
         }
+
+        [DataMember]
+        public string NextRoster1
+        {
+            get { return ChaineProchainRosterJoue(_duel.IdCoach1); }
+        }
+
+        [DataMember]
+        public string NextRoster2
+        {
+            get { return ChaineProchainRosterJoue(_duel.IdCoach2); }
+        }
         #endregion
 
         public string ChaineRosterJoue(int idCoach)
@@ -160,6 +179,30 @@ namespace Skitter.ViewModel.ViewModels.Rondes
                 return coachRoster.NomRoster;
 
             return string.Format("{0} de {1}", coachRoster.NomRoster, coachRoster.NomCoach);
+        }
+
+        public string ChaineProchainRosterJoue(int idCoach)
+        {
+            Coach coach = Tournoi.GetCoach(idCoach);
+            if (coach == null)
+                return string.Empty;
+
+            Coach.eTypeRosterJoue? typRosterNext = _rencontreVM.RondeVM.TypeRosterJoue_Next;
+
+            if (typRosterNext.HasValue)
+            {
+                Coach coachRoster = coach.GetCoachRosterSelonRondeJouee(typRosterNext.Value);
+                if (coachRoster == null)
+                    return string.Empty;
+                if (coachRoster.IdCoach == idCoach)
+                    return coachRoster.NomRoster;
+
+                return string.Format("{0} de {1}", coachRoster.NomRoster, coachRoster.NomCoach);
+            }
+            else
+            {
+                return string.Empty;
+            }
         }
 
         public string ChaineCoach(int idCoach)
