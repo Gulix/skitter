@@ -244,9 +244,10 @@
                                 <Button x:Name="PART_btnTriPoingsEnMousse" Content="Poings en mousse" Margin="5" Background="{Binding Path=BrushTriPoingsEnMousse}"/>                                
                             </UniformGrid>
                             
-                            <UniformGrid Grid.Row="3" Columns="3">
+                            <UniformGrid Grid.Row="3" Columns="4">
                                 <Button x:Name="PART_btnVersExcel" Content="Vers Excel ..." Margin="5" />
                                 <Button x:Name="PART_btnExport" Content="Exports ..." Margin="5" />
+                                <Button x:Name="PART_btnIndividuel" Content="Individuel ..." Margin="5" />
                                 <Button x:Name="PART_btnPalmares" Content="Palmares ..." Margin="5" />
                             </UniformGrid>
 
