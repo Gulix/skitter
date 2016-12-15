@@ -59,6 +59,8 @@ namespace Skitter.Wpf.Resultats
             btnVersExcel.Click += btnVersExcel_Click;
             Button btnExport = (Button)Template.FindName("PART_btnExport", this);
             btnExport.Click += btnExport_Click;
+            Button btnIndividuel = (Button)Template.FindName("PART_btnIndividuel", this);
+            btnIndividuel.Click += btnIndividuel_Click;
             Button btnPalmares = (Button)Template.FindName("PART_btnPalmares", this);
             btnPalmares.Click += btnPalmares_Click;
         }
@@ -119,6 +121,15 @@ namespace Skitter.Wpf.Resultats
             if (_viewModel != null)
             {
                 _viewModel.CopierVersExcel();
+                MessageBox.Show("Les résultats ont été placés dans le presse-papiers.");
+            }
+        }
+
+        void btnIndividuel_Click(object sender, RoutedEventArgs e)
+        {
+            if (_viewModel != null)
+            {
+                _viewModel.CopierIndividuelVersExcel();
                 MessageBox.Show("Les résultats ont été placés dans le presse-papiers.");
             }
         }
