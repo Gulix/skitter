@@ -12,6 +12,13 @@ namespace Skitter.ViewModel.ViewModels.Classements
         List<ResultatsCoachViewModel> _lsResultatsCoaches;
         #endregion
 
+        #region Accesseurs
+        public List<ResultatsCoachViewModel> ResultatsIndividuels
+        {
+            get { return _lsResultatsCoaches; }
+        }
+        #endregion
+
         #region Constructeur
         public ClassementCoachesViewModel(List<Rencontre> lsRencontres)
         {

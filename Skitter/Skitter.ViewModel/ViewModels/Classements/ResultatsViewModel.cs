@@ -181,6 +181,27 @@ namespace Skitter.ViewModel.ViewModels.Classements
 
             ExportExcel.CopierDonneesExcelVersPressePapier(sAvecTab);
         }
+
+        public void CopierIndividuelVersExcel()
+        {
+            // Génération de la ligne d'en-tête
+            string sAvecTab = "Equipe\tCoach\tRace\tCoeff.\tV\tN\tD\tTD+\tTD-\tSorties+\tSorties-\tVicieux+\tVicieux-\tBless. subies\t";
+                                                       
+            // Génération des lignes des coaches
+            List<Rencontre> lsRencontres = GetListeRencontres();
+            ClassementCoachesViewModel classementCoaches = new ClassementCoachesViewModel(lsRencontres);
+            foreach(ResultatsCoachViewModel resCoach in classementCoaches.ResultatsIndividuels)
+            {
+                Coach coach = Tournoi.GetCoach(resCoach.IdCoach);
+                sAvecTab += "\n" + coach.Equipe.NomEquipe + "\t" + coach.NomCoach + "\t" + coach.NomRoster + "\t" + coach.ValeurRoster 
+                    + "\t" + resCoach.NbVictoires + "\t" + resCoach.NbNuls + "\t" + resCoach.NbDefaites
+                    + "\t" + resCoach.TDMarques + "\t" + resCoach.TDEncaisses
+                    + "\t" + resCoach.SortiesEffectuees + "\t" + resCoach.SortiesSubies + "\t" + resCoach.SortiesVicieusesEffectuees
+                    + "\t" + resCoach.SortiesVicieusesSubies + "\t" + resCoach.TotalSortiesSubies + "\t";
+            }            
+
+            ExportExcel.CopierDonneesExcelVersPressePapier(sAvecTab);
+        }
         #endregion
 
         #region Couleurs des boutons de tri
